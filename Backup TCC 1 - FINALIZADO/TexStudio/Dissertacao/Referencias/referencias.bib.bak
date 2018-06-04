@@ -1,0 +1,197 @@
+% Encoding: windows-1252
+
+@Book{sommerville2011engenharia,
+  title     = {Engenharia de software},
+  publisher = {PEARSON BRASIL},
+  year      = {2011},
+  author    = {Sommerville, I.},
+  isbn      = {9788579361081},
+  url       = {https://books.google.com.br/books?id=H4u5ygAACAAJ},
+}
+
+@Book{silva2008jquery,
+  title     = {jQuery - A Biblioteca do Programador JavaScript - 1{\textordfeminine} Edi{\c{c}}{\~a}o: Aprenda a criar efeitos de alto impacto em seu site com a biblioteca JavaScript mais utilizada pelos desenvolvedores web},
+  publisher = {NOVATEC},
+  year      = {2008},
+  author    = {Silva, M.S.},
+  isbn      = {9788575221785},
+  url       = {https://books.google.com.br/books?id=VafU5WLalwwC},
+}
+
+@Book{flanagan2011javascript,
+  title     = {JavaScript: The Definitive Guide},
+  publisher = {O'Reilly Media, Incorporated},
+  year      = {2011},
+  author    = {Flanagan, D.},
+  series    = {Definitive Guide Series},
+  isbn      = {9780596805524},
+  lccn      = {2011377767},
+  url       = {https://books.google.com.br/books?id=4RChxt67lvwC},
+}
+
+@Book{massari2014gerenciamento,
+  title     = {Gerenciamento {\'A}gil de Projetos:},
+  publisher = {Brasport},
+  year      = {2014},
+  author    = {Massari, V.L.},
+  isbn      = {9788574526966},
+  url       = {https://books.google.com.br/books?id=P66lBQAAQBAJ},
+}
+
+@Book{marquesone2016big,
+  title     = {Big Data: T{\'e}cnicas e tecnologias para extra{\c{c}}{\~a}o de valor dos dados},
+  publisher = {Casa do C{\'o}digo},
+  year      = {2016},
+  author    = {Marquesone, R.},
+  isbn      = {9788555192326},
+  url       = {https://books.google.com.br/books?id=cbWlDQAAQBAJ},
+}
+
+@Book{morettin,
+  title     = {Estat{\'\i}stica b{\'a}sica},
+  publisher = {Saraiva},
+  year      = {2010},
+  author    = {Morettin, P.A. and de Oliveira Bussab, W.},
+  isbn      = {9788502081772},
+  url       = {https://books.google.com.br/books?id=8mUrywAACAAJ},
+}
+
+@Book{bootstrapMS,
+  title     = {Bootstrap 3.3.5: Aprenda a usar o framework Bootstrap para criar layouts CSS complexos e responsivos},
+  publisher = {NOVATEC},
+  year      = {2015},
+  author    = {Silva, M.S.},
+  isbn      = {9788575224601},
+}
+
+@Misc{conte,
+  author = {Osmar Conte and others},
+  title  = {Resultados do manejo integrado de pragas da soja na safra de 2016/17 no Paraná},
+  year   = {2017},
+}
+
+@Misc{barreto,
+  author = {ALDO DE ALBUQUERQUE BARRETO},
+  title  = {A QUESTÃO DA INFORMAÇÃO},
+  year   = {1994},
+}
+
+@MastersThesis{vieira,
+  author = {ELIANE APARECIDA VIEIRA},
+  title  = {A GESTÃO DA INFORMAÇÃO NA TOMADA DAS DECISÕES GERENCIAIS: Estudo de caso na Organização Multinacional de Reflorestamento - V \& M FLORESTAL.},
+  school = {FACULDADES INTEGRADAS DE PEDRO LEOPOLDO},
+  year   = {2011},
+}
+
+@MastersThesis{filho,
+  author = {Dairton Luiz Bassi Filho},
+  title  = {Experiências com desenvolvimento ágil},
+  school = {Instituto de Matemática e Estatística da Universidade de São Paulo},
+  year   = {2008},
+  month  = {3},
+}
+
+@Misc{embrapaNumeros,
+  author        = {EMBRAPA},
+  title         = {Soja em números (safra 2016/2017)},
+  year          = {2017},
+  url           = {https://www.embrapa.br/soja/cultivos/soja1/dados-economicos},
+  urlaccessdate = {12 de abril de 2018},
+}
+
+@Misc{embrapaQuemSomos,
+  author        = {EMBRAPA},
+  title         = {Quem somos},
+  year          = {2018},
+  url           = {https://www.embrapa.br/quem-somos},
+  urlaccessdate = {09 de abril de 2018},
+}
+
+@Misc{embrapaMissao,
+  author        = {EMBRAPA},
+  title         = {Missão, visão e valores},
+  year          = {2018},
+  url           = {https://www.embrapa.br/missao-visao-e-valores},
+  urlaccessdate = {09 de abril de 2018},
+}
+
+@Misc{tableless,
+  author        = {tableless},
+  title         = {Google Analytics: o que é e como fazer a configuração inicial},
+  url           = {https://resultadosdigitais.com.br/blog/google-analytics/},
+  urlaccessdate = {27 de abril de 2018},
+}
+
+@Misc{machado,
+  author        = {Rebeca Machado},
+  title         = {O que é JavaScript?},
+  year          = {2017},
+  url           = {http://tableless.github.io/iniciantes/manual/js/},
+  urlaccessdate = {09 de abril de 2018},
+}
+
+@Misc{tablelessDaniel,
+  author        = {Daniel Schmitz},
+  title         = {Tudo que você queria saber sobre Git e GitHub, mas tinha vergonha de perguntar},
+  year          = {2015},
+  url           = {http://tableless.github.io/iniciantes/manual/js/},
+  urlaccessdate = {12 de abril de 2018},
+}
+
+@Misc{ematerHistorico,
+  author        = {EMATER},
+  title         = {Histórico da Extensão Rural Oficial},
+  year          = {2018},
+  url           = {http://www.emater.pr.gov.br/modules/conteudo/conteudo.php?conteudo=43/},
+  urlaccessdate = {07 de abril de 2018},
+}
+
+@Misc{boaspraticas,
+  author        = {BOASPRÁTICAS},
+  title         = {Manejo Integrado de Pragas da Soja (MIP) - safra 2014/15 - Paraná (21 A)},
+  year          = {2015},
+  url           = {http://boaspraticas.org.br/index.php/pt/areas-tematicas/agricultura/517-manejo-integrado-de-pragas-da-soja},
+  urlaccessdate = {09 de abril de 2018},
+}
+
+@Misc{bootstrapoficial,
+  author        = {Bootstrap},
+  title         = {Bootstrap},
+  year          = {2018},
+  url           = {http://getbootstrap.com/},
+  urlaccessdate = {13 de abril de 2018},
+}
+
+@Misc{stateofagile,
+  author = {VERSIONONE},
+  title  = {The 10th annual State of Agile Report},
+  year   = {2016},
+}
+
+@Misc{auday,
+  author        = {Rafael Auday},
+  title         = {Kanban: Do início ao fim!},
+  year          = {2016},
+  url           = {goo.gl/Veum4g},
+  urlaccessdate = {26 de abril de 2018},
+}
+
+@Book{guedesuml,
+  title     = {UML 2 - Uma Abordagem Pr{\'a}tica - 3{\textordfeminine} Edi{\c{c}}{\~a}o:},
+  publisher = {Novatec Editora},
+  year      = {2011},
+  author    = {Guedes, G.T.A.},
+  isbn      = {9788575226469},
+  url       = {https://books.google.com.br/books?id=RUdLDwAAQBAJ},
+}
+
+@Book{pressman2009engenharia,
+  title     = {Engenharia de Software - 7.ed.:},
+  publisher = {McGraw Hill Brasil},
+  year      = {2009},
+  author    = {Pressman, R.S.},
+  isbn      = {9788580550443},
+  url       = {https://books.google.com.br/books?id=y0rH9wuXe68C},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

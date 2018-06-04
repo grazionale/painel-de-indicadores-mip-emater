@@ -1,0 +1,12 @@
+This is makeindex, version 2.15 [TeX Live 2017/W32TeX] (kpathsea + Thai support).
+Scanning style file c:/texlive/texmf-local/makeindex/utfprcptex/utfpr-siglas.ist.......
+** Input style error (file = c:/texlive/texmf-local/makeindex/utfprcptex/utfpr-siglas.ist, line = 69):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = c:/texlive/texmf-local/makeindex/utfprcptex/utfpr-siglas.ist, line = 70):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = c:/texlive/texmf-local/makeindex/utfprcptex/utfpr-siglas.ist, line = 71):
+   -- Unknown specifier lethead_flag.
+.....done (12 attributes redefined, 3 ignored).
+Scanning input file modelo_dissertacao.nlo...done (0 entries accepted, 0 rejected).
+Nothing written in modelo_dissertacao.nls.
+Transcript written in modelo_dissertacao.ilg.

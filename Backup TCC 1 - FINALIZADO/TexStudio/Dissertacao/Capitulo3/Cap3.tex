@@ -1,0 +1,247 @@
+%---------- Terceiro Capitulo ----------
+\chapter{Proposta}
+\label{cap3}
+Neste capítulo é descrito como as tecnologias e ferramentas a serão utilizadas para o desenvolvimento do website.
+
+\section{Tecnologias e Ferramentas}
+
+No desenvolvimento do painel de indicadores, será utilizado a linguagem de marcação HTML em todas as páginas da aplicação. Ela servirá para especificar o conteúdo das páginas, estruturar o \textit{layout} e informar ao navegador o que é cada informação presente nas \textit{tags}. Além do HTML, o CSS será utilizado para estilizar a apresentação das páginas, organizando a forma como os elementos são dispostos, suas cores, tamanhos e formatos. O \textit{framework} Bootstrap será utilizado para adicionar responsividade à aplicação. \cite{bootstrapMS}. Por fim, será utilizado a linguagem de programação Javascript em conjunto com a biblioteca JQuery e D3.js. O JQuery será usado para realizar chamadas Ajax à \sigla{API}{Application Programming Interface} \sigla{REST}{Representation State Transfer} que contém os dados para a elaboração dos gráficos que serão construídos utilizando a biblioteca D3.js. Os gráficos serão utilizados nas análises que estarão presentes no painel de indicadores. 
+
+O código fonte será hospedado no GitHub, um repositório online e gratuito. O GitHub utiliza o Git para realizar o gerenciamento de versões.  
+
+
+\section{Método}
+O desenvolvimento ágil será usado para garantir versões frequentes do sistema, com redução de \textit{overhead} e produção de códigos de alta qualidade \cite{sommerville2011engenharia}.
+
+No desenvolvimento desta proposta iremos utilizar algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.
+
+\begin{itemize}
+	\item Priorizar \textit{backlogs}: trata-se de uma técnica que tem como objetivo priorizar os itens do \textit{backlog}. O \textit{backlog} é como uma "lista de pedidos", no caso desta proposta, será uma "lista de atividades" \cite{auday}. A priorização do \textit{backlog} será realizada através de outra técnica chamada Kanban, na qual será utilizada para gerenciar o fluxo das atividades entre estados de acordo com o tempo e a necessidade da implementação \cite{massari2014gerenciamento}.
+	
+	\item Kanban: Kanban significa "tabuleta", "cartão" ou "sinalização" e sua origem é japonesa, ele foi adotado como metodologia de desenvolvimento inspirado no sistema de fábrica da Toyota. Kanban é formado por um grande quadro, dividido por estágios e preenchido com tarefas escritas com \textit{post-its}, o movimento dessas tarefas passam pelos estágios da esquerda para a direita. Sua finalidade é gerenciar o fluxo de trabalho, buscando melhorar o desempenho e reduzir o desperdício, eliminando atividades que não agregam valor a equipe \cite{massari2014gerenciamento}.
+	
+	\item \textit{Short interations}: realizar curtos \textit{sprints}, geralmente de 2 semanas. Um \textit{sprint} é um planejamento do trabalho que será realizado, os recursos para o desenvolvimento são selecionados e novas funcionalidade e incrementos podem ser implementados \cite{sommerville2011engenharia}.
+
+	
+	\item \textit{Wireframes}: é uma rápida e simples representação gráfica de um produto, por exemplo como um sistema ou um website. \textit{Wireframes} é uma espécie de rascunho de protótipo, que pode ser realizada com papel ou \textit{softwares} de prototipação como Balsamiq. Sua grande vantagem é ter um rápido \textit{feedback} dos interessados, pois torna o entendimento muito mais fácil do que a leitura de um grande documento de requisitos \cite{massari2014gerenciamento}.
+	
+	O \textit{Wireframe} pode ser usado no início do projeto para representar o entendimento do \textit{backlog}, assim o interessado pode avaliar se os requisitos estão de acordo com o esperado ou também pode ser usado no decorrer do projeto caso surja alguma nova mudança ou funcionalidade, onde essa precise de uma fácil representação gráfica \cite{massari2014gerenciamento}.
+	
+\end{itemize}
+
+\section{Arquitetura do Aplicativo}
+\begin{comment}
+Segundo \cite{pressman2009engenharia}, "Arquitetura é um conjunto de artefatos que refletem diferentes visões do sistema". Na descrição arquitetural da aplicação, será utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si \cite{guedesuml} e diagrama de deploy para representar como a aplicação está distribuída. Cada um desses diagramas representam um tipo de visão do sistema, onde cada uma das visões é necessária segundo a perspectiva do interessado \cite{pressman2009engenharia}.
+\end{comment}
+
+Para representar a descrição arquitetural da aplicação, será utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si e diagrama de \textit{deploy} para representar como a aplicação está distribuída.
+
+\subsection{Diagrama de Deploy}
+\begin{figure}[H]
+	\caption{Diagrama de Deploy da Aplicação}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/Deploy.png}
+	\fonte{Autoria Própria}
+	\label{fig:deploy}
+\end{figure}
+Na Figura \ref{fig:deploy} é possível observar que a aplicação estará hospedada em um servidor web, essa aplicação receberá acesso de usuários através de seus navegadores pelo protocolo HTTP, além disso, as requisições dos dados serão feitas através de uma API localizada em outro servidor no qual realizará requisições TCP/IP a uma base de dados. 
+
+\subsection{Diagrama de Classes}
+\begin{figure}[H]
+	\caption{Diagrama de Classes}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/classdiagram.png} 
+	\fonte{Autoria Própria}
+	\label{fig:classes}
+\end{figure}	
+
+Na Figura \ref{fig:classes} é possível visualizar as classes que participaram da aplicação e suas relações. Um Gráfico dependerá de dados que estarão em uma classe de Ocorrência, que por sua vez, depende de diversas outras classes, sendo elas: Região, Praga, Cultivar e Safra, que depende de UR. 
+
+\subsection{Diagrama de Comunicação}
+\begin{figure}[H]
+	\caption{Diagrama de Comunicação}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/communicationdiagram.png} 
+	\fonte{Autoria Própria}
+	\label{fig:comunicacao}
+\end{figure}
+
+Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participaram da geração de gráficos, a partir de um filtro escolhido pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, como safra, região, praga e cultivar, após as escolhas das opções, uma requisição para API será realizada, a requisição retornará os dados em JSON e um gráfico será apresentado na tela do usuário. 
+
+\section{Requisitos}
+Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.  
+
+\subsection{Requisitos Funcionais}
+Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}.
+
+
+
+
+\begin{longtable} {| p{1.5cm} | p{10.8cm} | l |}
+	\caption[Tabela Requisitos Funcionais]{Requisitos Funcionais.}
+	\label{tab:tabelareqfuncionais} 
+	\\
+	\hline
+	\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
+	RF 01 & Permitir a análise dos dados coletados no MIP. & Essencial  \\ \hline
+	RF 02 & Apresentar gráficos sobre a ocorrência dos 4 grupos de lagartas presentes no projeto MIP: Antiarisia Gematalis (lagarta-da-soja), Chrysodeixis includens (lagarta-falsa-medideira), Spodoptera spp e Grupo Heliothinae. & Essencial  \\ \hline
+	RF 2.1 & Um gráfico representando a ocorrência das lagartas no PR e outros cinco gráficos que devem estar separados por regiões (Norte, Noroeste, Oeste, Sudoeste, Sul).
+	& Essencial  \\ \hline
+	RF 2.1.1 & A análise de lagartas deve ser representada por gráficos de barras mostrando o período no qual o MIP se encontra (0-30, 31-60, 61-150 dias) e a porcentagem de ocorrência das lagartas. & Essencial  \\ \hline
+	RF 2.1.2 & A análise de lagartas também deve ser representada por gráficos de composição em setores, representando o percentual do valor total de ocorrência das lagartas no período de 150 dias de aplicação MIP.  & Essencial  \\ \hline
+	RF 2.2 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja Bt (RR2). & Essencial  \\ \hline
+	RF 2.3 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja não Bt (RR1). & Essencial  \\ \hline
+	RF 03 & Criar um gráfico de composição em setores para os grupos de percevejos (Nezara viridula, Piezodorus guildinii, Euschistus heros,Dichelops melacanthus e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
+	RF 04 & Criar gráficos de composição em setores para os grupos de percevejos de acordo com as respectivas regiões, representando sua ocorrência durante o desenvolvimento da soja nas URs participantes. & Essencial  \\ \hline
+	RF 05 & Criar um gráfico de composição em setores representando a praga ou o grupo de pragas que desencadeou a necessidade do uso da primeira aplicação de inseticida, considerando todas as URs participantes do MIP. & Essencial  \\ \hline
+	RF 06 & Criar uma tabela representando as regiões participantes do MIP e o número médio de aplicações de inseticidas, além do tempo médio da primeira aplicação. Independe de a plantação ter o cultivo da soja Bt ou não Bt. & Essencial  \\ \hline
+	RF 07 & Criar uma tabela representando informações relevantes sobre área de soja, produtividade e práticas fitossanitárias em lavouras de soja que não houveram a participação do programa MIP. & Importante \\ \hline
+	RF 08 & Criar uma tabela representando o número médio de aplicações de inseticidas e o tempo decorrido até a primeira aplicação da pulverização em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+	RF 09 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de lagartas em lavouras que não participaram do programa MIP.  & Importante  \\ \hline
+	RF 10 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de lagartas em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+	RF 11 & Criar um gráfico de composição em setores representando a distribuição percentual das lagartas no primeiro controle realizado sem o programa MIP.  & Importante  \\ \hline
+	RF 12 & Criar um gráfico de composição em setores representando a distribuição percentual das lagartas no segundo controle realizado sem o programa MIP.  & Importante \\ \hline
+	RF 13 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+	RF 14 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+	RF 15 & Criar um gráfico de composição em setores representando a distribuição percentual de percevejos que desencadeou o controle em lavouras do Paraná não participantes do programa MIP. & Importante  \\ \hline
+	RF 16 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais possuíam URs que participaram do programa MIP. & Essencial  \\ \hline
+	RF 17 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais não participaram do programa MIP. & Importante  \\ \hline
+	RF 18 & Permitir uma filtragem das análises por regiões, pragas, cidades e ano. & Essencial  \\ \hline
+	RF 19 & Permitir que o usuário possa filtrar suas buscas através da concatenação de itens, como diferentes regiões e pragas. & Essencial  \\ \hline
+	RF 20 & Permitir que o usuário localize análises dos anos anteriores, desde que sejam a partir de 2019. & Essencial  \\ \hline
+	RF 21 & Criar uma seção de assuntos teóricos sobre informações relevantes ao MIP. & Importante  \\ \hline
+	RF 21.1 & Criar uma tabela com uma descrição sumária dos estádios reprodutivos e vegetativos da soja. & Importante  \\ \hline
+	RF 21.2 & Criar uma tabela baseada no programa manejo integrado da soja com os níveis de ação de controle para lagartas e percevejos. & Importante  \\ \hline
+	RF 21.3 & Criar uma tabela com um histórico sobre a distribuição das unidades referências que participaram dos projetos do MIP. & Importante  \\ \hline  
+\end{longtable}
+
+
+
+
+
+\begin{comment}
+	
+
+\begin{table}[H]
+	\caption[Tabela Requisitos Funcionais]{Requisitos Funcionais.}
+	\label{tab:tabelareqfuncionais}
+	\begin{tabular} {| p{1.5cm} | p{10.8cm} | l |}
+		\hline
+		\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
+		RF 01 & Permitir a análise dos dados coletados no MIP. & Essencial  \\ \hline
+		RF 02 & Apresentar gráficos sobre a ocorrência dos 4 grupos de lagartas presentes no projeto MIP: Antiarisia Gematalis (lagarta-da-soja), Chrysodeixis includens (lagarta-falsa-medideira), Spodoptera spp e Grupo Heliothinae. & Essencial  \\ \hline
+		RF 2.1 & Um gráfico representando a ocorrência das lagartas no PR e outros cinco gráficos que devem estar separados por regiões (Norte, Noroeste, Oeste, Sudoeste, Sul).
+		& Essencial  \\ \hline
+		RF 2.1.1 & A análise de lagartas deve ser representada por gráficos de barras mostrando o período no qual o MIP se encontra (0-30, 31-60, 61-150 dias) e a porcentagem de ocorrência das lagartas. & Essencial  \\ \hline
+		RF 2.1.2 & A análise de lagartas também deve ser representada por gráficos de composição em setores (pizza), representando o percentual do valor total de ocorrência das lagartas no período de 150 dias de aplicação MIP.  & Essencial  \\ \hline
+		RF 2.2 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja Bt (RR2). & Essencial  \\ \hline
+		RF 2.3 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja não Bt (RR1). & Essencial  \\ \hline
+		RF 03 & Criar um gráfico de composição em setores (pizza) para os grupos de percevejos (Nezara viridula, Piezodorus guildinii, Euschistus heros,Dichelops melacanthus e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
+	\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+	\caption[Tabela Requisitos Funcionais]{Requisitos Funcionais.}
+	\label{tab:tabelareqfuncionais}
+	\begin{tabular} {| p{1.5cm} | p{10.8cm} | l |}
+		\hline
+		\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
+		RF 04 & Criar gráficos de composição em setores (pizza) para os grupos de percevejos de acordo com as respectivas regiões, representando sua ocorrência durante o desenvolvimento da soja nas URs participantes. & Essencial  \\ \hline
+		RF 05 & Criar um gráfico de composição em setores (pizza) representando a praga ou o grupo de pragas que desencadeou a necessidade do uso da primeira aplicação de inseticida, considerando todas as URs participantes do MIP. & Essencial  \\ \hline
+		RF 06 & Criar uma tabela representando as regiões participantes do MIP e o número médio de aplicações de inseticidas, além do tempo médio da primeira aplicação. Independe de a plantação ter o cultivo da soja Bt ou não Bt. & Essencial  \\ \hline
+		RF 07 & Criar uma tabela representando informações relevantes sobre área de soja, produtividade e práticas fitossanitárias em lavouras de soja que não houveram a participação do programa MIP. & Importante \\ \hline
+		RF 08 & Criar uma tabela representando o número médio de aplicações de inseticidas e o tempo decorrido até a primeira aplicação da pulverização em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+		RF 09 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de lagartas em lavouras que não participaram do programa MIP.  & Importante  \\ \hline
+		RF 10 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de lagartas em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+		RF 11 & Criar um gráfico de composição em setores (pizza) representando a distribuição percentual das lagartas no primeiro controle realizado sem o programa MIP.  & Importante  \\ \hline
+		RF 12 & Criar um gráfico de composição em setores (pizza) representando a distribuição percentual das lagartas no segundo controle realizado sem o programa MIP.  & Importante \\ \hline  
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption[Tabela Requisitos Funcionais]{Requisitos Funcionais.}
+	\label{tab:tabelareqfuncionais}
+	\begin{tabular} {| p{1.5cm} | p{10.8cm} | l |}
+		\hline
+		\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
+		RF 13 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+		RF 14 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
+		RF 15 & Criar um gráfico de composição em setores (pizza) representando a distribuição percentual de percevejos que desencadeou o controle em lavouras do Paraná não participantes do programa MIP. & Importante  \\ \hline
+		RF 16 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais possuíam URs que participaram do programa MIP. & Essencial  \\ \hline
+		RF 17 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais não participaram do programa MIP. & Importante  \\ \hline
+		RF 18 & Permitir uma filtragem das análises por regiões, pragas, cidades e ano. & Essencial  \\ \hline
+		RF 19 & Permitir que o usuário possa filtrar suas buscas através da concatenação de itens, como diferentes regiões e pragas. & Essencial  \\ \hline
+		RF 20 & Permitir que o usuário localize análises dos anos anteriores, desde que sejam a partir de 2019. & Essencial  \\ \hline
+		RF 21 & Criar uma seção de assuntos teóricos sobre informações relevantes ao MIP. & Importante  \\ \hline
+		RF 21.1 & Criar uma tabela com uma descrição sumária dos estádios reprodutivos e vegetativos da soja. & Importante  \\ \hline
+		RF 21.2 & Criar uma tabela baseada no programa manejo integrado da soja com os níveis de ação de controle para lagartas e percevejos. & Importante  \\ \hline
+		RF 21.3 & Criar uma tabela com um histórico sobre a distribuição das unidades referências que participaram dos projetos do MIP. & Importante  \\ \hline
+	\end{tabular}
+\end{table}
+
+\end{comment}
+
+\subsection{Requisitos Não Funcionais}
+
+Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}.
+
+\begin{table}[H]
+	\caption[Tabela Requisitos Não Funcionais]{Requisitos Não Funcionais.}
+	\label{tab:tabelareqnaofuncionais}
+	\begin{tabular}{ | p{1.5cm} | p{10.8cm} | l |}
+		\hline
+		\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
+		RFN 01 & A aplicação deverá funcionar como uma aplicação web. & Essencial  \\ \hline
+		RFN 02 & A aplicação deverá realizar a interação com os usuários por meio de navegadores web.  & Essencial \\ \hline
+		RFN 03 & A aplicação deverá estar hospedada em um servidor online. & Desejável  \\ \hline
+		RFN 04 & A aplicação deverá ser responsiva permitindo o acesso por meio de dispositivos móveis ou desktops/notebooks. & Essencial  \\ \hline
+		RFN 05 & A aplicação deverá armazenar um histórico das análises realizadas em todos os anos. & Importante  \\ \hline
+		RFN 06 & Dados das UR's que participam do MIP e de seus proprietários, não poderam ser acessados por usuários sem permissões. & Essencial \\ \hline	
+	\end{tabular}
+\end{table}
+
+\subsection{Diagramas de Caso de uso}
+
+Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da aplicação proposta, o usuário poderá consultar dados referentes ao programa MIP que é uma das técnicas utilizadas no Projeto Grãos. Além disso, o usuário conseguirá acessar análises dos anos anteriores e utilizar filtros nas análises atuais. 
+
+\begin{figure}[H]
+	\caption{Diagrama de Caso de Uso - Visão Geral}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/CasoDeUso.jpg} 
+	\label{fig:casoDeUso}
+	\fonte{Autoria própria}
+\end{figure}
+
+%\subsection{Diagrama de Classes}
+\subsection{Protótipos de Tela}
+A prototipação sugere um projeto-piloto que tem como objetivo ajudar a identificar os requisitos para o projeto principal, além disso, ela pode ajudar a identificação das tecnologias que podem ser usadas durante o desenvolvimento. Com a prototipação, o cliente consegue ter uma visão mais ampla de como o sistema irá ficar e suas respectivas funcionalidades, tornando mais fácil para o interessado falar a respeito dos seus desejos em relação ao sistema e facilitando o levantamento de novos requisitos e funcionalidades ainda não estabelecidas ou incompletas \cite{filho}.
+
+Para realizar a construção dos protótipos desta aplicação, será útilizado Wireframes, que são uma espécie de rascunho de protótipo, são rápidos, simples e serão gerados pelo software Balsamiq \cite{massari2014gerenciamento}.
+
+\subsubsection{Tela Inicial}
+
+Na Figura \ref{fig:home1} é possível visualizar a tela inicial da aplicação, com gráficos sobre as análises atuais de lagartas e percevejos, com um mapa que servirá de filtros para a escolha de regiões, quadros que mostrarão dados referentes a última análise, como tamanho do território que houve a implantação do MIP e número de aplicações de inseticidas nas culturas da soja, por exemplo. Além das análises, também existirá um menu lateral, no qual irá se expandir ao clique do ícone de menu, nesse menu lateral, conterão diversas seções como, teóricas, filtros de busca, acesso a análises dos anos anteriores, seções institucionais, entre outras. Por fim, existirá uma barra superior com um campo de busca. A barra de busca poderá ser utilizada pelo usuário para buscar análises que já foram realizadas em safras passadas ou buscar informações sobre a análise atual. 
+
+\begin{figure}[H]
+	\caption{Tela Inicial}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/home1.png} 
+	\label{fig:home1}
+	\fonte{Autoria própria}
+\end{figure}
+
+
+\subsubsection{OUTRAS TELAS}
+
+
+Na Figura \ref{fig:home1_menu} mostra como será a expansão do menu lateral. 
+
+\begin{figure}[H]
+	\caption{Tela Inicial - Expansão Menu Lateral}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/home1_menu.png} 
+	\label{fig:home1_menu}
+	\fonte{Autoria própria}
+\end{figure}

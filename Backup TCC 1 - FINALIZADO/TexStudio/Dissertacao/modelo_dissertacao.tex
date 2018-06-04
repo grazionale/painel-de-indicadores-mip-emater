@@ -1,0 +1,260 @@
+%% Exemplo de Utilizacao do Estilo de formatacao utfprcptex2  (http: )
+%% para elaboração de Teses, Dissertações, etc...
+%% Autores: Rodrigo Rodrigues Sumar (sumar@utfpr.edu.br)
+%%          Bruno Augusto Angélico (bangelico@utfpr.edu.br)
+%% Colaboradores:
+%%
+%%
+\documentclass[oneside,       % para impressão somente na frante. Oposto a twoside
+               openright,     % capítulos começam em pág ímpar (insere página vazia caso preciso)
+               a4paper,       % tamanho do papel.
+               12pt,          % tamanho da fonte
+               english,		  % idioma adicional para hifenização
+%               french,		  % idioma adicional para hifenização
+               spanish,		  % idioma adicional para hifenização
+               brazil		  % o último idioma é o principal do documento
+              ]{utfprcptex2}
+
+% ------
+%%% Pacotes diversos
+% ------
+\usepackage[latin1]{inputenc} % pacote para acentuacao direta
+\usepackage{amsmath,amsfonts,amssymb,amsthm} % pacote matematico
+\usepackage{graphicx} % pacote grafico
+\usepackage[bottom]{footmisc}
+\usepackage{subfig}
+\usepackage{threeparttable}
+
+\usepackage{float}
+\usepackage{pgfgantt}
+
+
+\usepackage{verbatim}
+\usepackage{color}
+
+
+\usepackage{multirow}
+\usepackage{colortbl}
+
+\usepackage{longtable}
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ambientes para definições, exemplos e teoremas
+\newtheorem{problema}{Problema}
+\newtheorem{definicao}{Definição}
+\newtheorem{proposicao}{Proposição}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lema}{Lema}
+\newtheorem{corolario}{Corolário}
+\newtheorem{exemplo}{Exemplo}
+\newtheorem*{observacao}{Observação}
+\newenvironment{prova}
+{\noindent {\textit{Demonstração}.}} {{\par\hfill$\Box$ \\}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para fonte Times (Nimbus Roman) descomente linha abaixo
+%\fontetipo{times}
+
+% Para fonte Helvetica (Nimbus Sans) descomente linhas abaixo
+\fontetipo{arial}
+
+
+
+
+%O comando a seguir diz ao Latex para salvar as siglas em um arquivo separado:
+\fazlistasiglas[Lista de Siglas] % Parâmetro opcional é o título da lista.
+
+%%%% Ferramenta para criação de glossários
+\makeglossaries%% Não comente esta linha se estivar usando glossario
+\include{entradas_glossario}%% Entradas do glossário - Comente para remover este item
+%%%%
+
+% ---------- Preambulo ----------
+%%%%%%%% Dados para Capa e outros elementos pretextuais
+\instituicao{Universidade Tecnol\'ogica Federal do Paran\'a}
+\unidade{Câmpus Cornélio Procópio}
+%\diretoria{Diretoria de Graduação}
+%\coordenacao{Programa de gradução em Bacharelado em Engenharia de Software}
+\curso{Curso Superior de Bacharelado em Engenharia de Software}
+\documento{Proposta de Trabalho de Conclusão de Curso}
+\nivel{Graduação}
+\titulacao{Bacharel}
+\area{Engenharia de Software}
+\titulo{Desenvolvimento de um painel online para acompanhamento de resultados do manejo integrado de pragas na cultura da soja.} % titulo do trabalho em português
+\title{Development of online panel to follow the results of Integrated Pest Management (IPM) in soy culture} % titulo do trabalho em inglês
+\autor{Gabriel Grazionale Gomes Fernandes} % autor do trabalho
+\cita{FERNANDES, Gabriel Grazionale Gomes} % sobrenome (maiúsculas), nome do autor do trabalho
+
+\palavraschave{Painel de indicadores. Pragas da soja. Desenvolvimento web. Análises sobre pragas na soja} % palavras-chave do trabalho - Devem ser inseridas de 3 a 5 palavras chave
+\keywords{Indicators panel. Soy pests. Web Development. Analyses of pest in soybean.} % palavras-chave do trabalho em inglês - Devem ser inseridas de 3 a 5 palavras chave
+%\comentario{\UTFPRdocumentodata\ apresentada a \UTFPRcoordenacaodata\ da %\UTFPRinstituicaodata\ como requisito parcial para obten\c{c}\~ao do título de %``\UTFPRtitulacaodata\ em \UTFPRareadata''.}
+\comentario{\UTFPRdocumentodata\ de graduação, apresentado à disciplina Trabalho de Conslusão de Curso I, do curso de Bacharelado em Engenharia de Software da Universidade Tecnológica Federal do Paraná - UTFPR, como requisito parcial para a obtenção do título de Bacharel.}
+
+%%%%%%%%%% Dados de Orientador e Coorientador
+\orientador[Orientador]{Prof. Dr.}{Gabriel Costa Silva} % nome do orientador do trabalho
+%\orientador[Orientadora:]{Nome da Orientadora} % <- no caso de orientadora, usar esta sintaxe
+%\coorientador{Nome do Co-orientador} % nome do co-orientador do trabalho, caso exista
+%\coorientador[Co-orientadora]{Profa. Dra.}{Nome da Co-orientadora} % <- no caso de co-orientadora, usar esta sintaxe
+%\coorientador[Co-orientadores:]{Nome do Co-orientador} % no caso de 2 co-orientadores, usar esta sintaxe
+%\coorientadorb{}	% este comando inclui o nome do 2o co-orientador
+
+\coordenadorUTFPR[Coordenadora]{Grau}{Nome do coordenador} % Coordenador do PPGEEL
+\local{Cornélio Procópio} % cidade
+\data{2018} % Aqui deve ir o ano da defesa.
+
+%%%% Dados para Folha de Aprovação%
+\textoaprovacao{Esta \UTFPRdocumentodata\ foi julgada adequada para obten\c c\~ao do T\'itulo de ``\UTFPRtitulacaodata\ em \UTFPRareadata'' e aprovado em sua forma final pelo \UTFPRcoordenacaodata\ da \UTFPRinstituicaodata.}
+\numerodemembrosnabanca{5} % Isso decide se a lista de assinaturas será colocada em duas colunas
+\orientadornabanca{sim} % Se faz parte da banca definir como sim
+\coorientadornabanca{sim} % Se faz parte da banca definir como sim
+\primeiroassina[Título \\ Universidade]{Primeiro Membro da Banca}
+\segundoassina[Título \\Universidade]{Segundo Membro da Banca}
+\terceiroassina[Título \\Universidade]{Terceiro Membro da Banca}
+%\quartoassina[Título \\Universidade]{Quarto Membro da Banca}
+%\quintoassina[Título \\Universidade]{Quinto Membro da Banca}
+%\sextoassina[Título \\Universidade]{Sexto Membro da Banca}
+%\setimoassina[Título \\Universidade]{Sétimo Membro da Banca}
+\datadefesaUTFPR{25}{05}{2018} %% A data deve ser inserida no formato dd/mm/aaaa
+%%%%% Comentar para versao impressa
+\versaoeletronica{``A Folha de Aprovação assinada encontra-se na Coordenação do Curso do Programa''}% Texto a ser inserido na versão eletronica do documento.
+
+%---------- Inicio do Documento ----------
+\begin{document}
+%\hypersetup{pageanchor=false}
+\capa % geração automática da capa
+\pretextual
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Geracao automatica da folha de rosto
+%%%% Opções da Folha de Rosto
+%%%%    - semficha
+%%%%    - comficha: modelo definido pela classe. Serve para contar paginas na
+%%%%                geração da ficha pela biblioteca.
+%%%%    - pdf: informar o nome do arquivo pdf com a ficha fornecinada
+%%%%           pela bibliteca.
+\folhaderosto[Fichacatalografica]
+
+
+\termodeaprovacao % <- ainda a ser implementado corretamente
+
+%%% Errata
+%\include{errata}
+%%%
+
+%%%%% dedicatória (opcional)
+%\begin{dedicatoria}
+%Texto da dedicat\'oria.
+%\end{dedicatoria}
+
+%%%%%% agradecimentos (opcional)
+%\begin{agradecimentos}
+%Texto dos agradecimentos.
+%\end{agradecimentos}
+
+%%%%% epigrafe (opcional)
+%\begin{epigrafe}
+%Texto da ep\'igrafe.
+%\end{epigrafe}
+%%%%% resumo
+\begin{resumo}
+	O objetivo desta proposta é o desenvolvimento de um painel online para acompanhamento de resultados do \sigla{MIP}{Manejo Integrado de Pragas} na cultura da soja. Esse painel é importante para aumentar a eficiência e eficácia na realização das análises de dados do projeto MIP, implementado pela \sigla{EMATER}{Instituição Paranaense de Assistência Técnica e Extensão Rural}. O painel online será desenvolvido com JQuery para incluir dinamismo nas páginas da aplicação e  realizar chamadas AJAX às APIs REST que fornecem dados para os gráficos do painel. Os gráficos serão construídos com a biblioteca D3.js. O \textit{framework} Bootstrap será utilizado para o desenvolvimento de páginas responsivas. O Git e o GitHub serão utilizados para realizar o controle de versão do código fonte e para gerenciamento do projeto. A aplicação usará as seguintes práticas ágeis durante seu desenvolvimento, priorização do \textit{backlog}, realização de interações com 2 semanas, utilização do quadro Kanban para organizar as atividades e construção da prototipação para auxiliar o levantamento de requisitos. É esperado que o painel facilite a visualização da ocorrência de pragas na cultura da soja durante e após a safra. Consequentemente, o painel deve aumentar a eficiência e eficácia na tomada de decisões em relação ao uso de agrotóxicos na cultura da soja. 
+\end{resumo}
+%
+%%%%% abstract em ingles
+\begin{abstract}
+FERNANDES, Gabriel Grazionale Gomes. \textbf{\UTFPRtitledata.} \UTFPRanodefesa. \pageref{LastPage} f. Proposal of work of conclusion of course in Software Engineering -- Software Engineering, Federal University of Technology - Paraná. Cornélio Procópio, \UTFPRdatadata.
+
+The proposal objective is the development of a online panel to follow the results of Integrate Pest Management (IPM) in soy culture. The panel is important to increase the efficiency and effectiveness in the realization of the IPM project data analysis implemented by the 'Instituição Paranaense de Assistência Técnica e Extensão Rural' (EMATER). The online panel will be developed with JQuery to include dynamism on the application pages and make AJAX calls to the APIs REST that provides data to the panel graphs. The graphs will be constructed with the D3.js library. The Bootstrap framework will be used to the development of responsive pages. The Git and GitHub will be used to make the version management of the source code and project management. The application will use the following agile practices during its development, being them: backlogs prioritization, two weeks interaction, use of the Kanban to organize the activates and prototyping construction to assist the requirements gathering. Is expected that the panel facilitates the visualization of the pest occurrence in the soybean crop during the harvest. Consequently, the panel should increase the efficient and effectiveness in decision making regarding the use of agrochemicals in the soybean crop.
+
+\textbf{Keywords:} \UTFPRkeywordsdata
+\end{abstract}
+
+%%%%% abstract em frances
+%\begin{resume}
+%SOBRENOME, Nome. \textbf{Titre Français.} \UTFPRanodefesa. \pageref{LastPage} f. %Mémoire de Maîtrise -- Programme d'études Supérieures en Génie Électrique, %Université Technologique Fédérale - Paraná. Cornélio Procópio, \UTFPRdatadata.
+
+%Il s'agit d'un résumé en français. (maximum de 500 mots).
+
+%\textbf{Mots-clés:} mot-clé 1. mot-clé 2. (3 à 5 mots)
+%\end{resume}
+
+%%%%%% Lista de Ilustrações conforme ABNT
+%\listadeilustracoes
+%%% Para Gera lista individuais de comentar o comando acima e
+%%% descomentar das listas individuais
+%%%%%%%%%%%
+%%%% listas (opcionais, mas recomenda-se a partir de 5 elementos)
+%%%%
+\listadefiguras % geração automática da lista de figuras
+\listadetabelas % geração automática da lista de tabelas
+%\listadequadros % geração automática da lista de quadros
+%\listadegraficos % geração automática da lista de gráficos
+%\listadefotos % geração automática da lista de fotos
+%\listadefluxogramas % geração automática da lista de fluxogramas
+\listadesiglas  % geração automática da lista de siglas
+%\listadeabreviaturas  % geração automática da lista de abreviaturas
+%\listadeacronimos   % geração automática da lista de acrônimos
+%\listadesimbolos % geração automática da lista de símbolos
+
+%\%listofalgorithms %%%%% EM FASE DE TESTES
+
+% sumario
+\sumario % geração automática do sumario
+
+%\cleardoublepage
+%\hypersetup{pageanchor=true}
+\textual
+
+%---------- Inicio do Texto ----------
+% recomenda-se a escrita de cada capitulo em um arquivo texto separado (exemplo: intro.tex, fund.tex, exper.tex, concl.tex, etc.) e a posterior inclusao dos mesmos no mestre do documento utilizando o comando \input{}, da seguinte forma:
+\input{capitulo1/cap1.tex}
+\input{capitulo2/cap2.tex}
+\input{capitulo3/cap3.tex}
+\input{capitulo4/cap4.tex}
+\input{capitulo5/cap5.tex}
+
+%% Formatação de páginas de elementos pós-textuais
+\postextual%% Não comente esta linha
+%---------- Referencias ----------
+\bibliography{referencias/referencias} % geracao automatica das referencias a partir do arquivo reflatex.bib
+
+%% Glossário
+\incluirglossario%% Comente para remover este item
+
+%---------- Apendices (opcionais) ----------
+%\apendices
+% Imprime uma página indicando o início dos apêndices
+%\partapendices*
+
+%\chapter{Nome do Ap\^endice}
+
+%Use o comando {\ttfamily \textbackslash apendice} e depois comandos {\ttfamily %\textbackslash chapter\{\}}
+%para gerar t\'itulos de ap\^en-dices.
+
+%\section{Teste de Seção em um Apêndice}
+
+% ---------- Anexos (opcionais) ----------
+%\anexos
+% Imprime uma página indicando o início dos anexos
+%\partanexos*
+
+
+
+%\chapter{Nome do Anexo}
+
+%\index{Use} Use o comando {\ttfamily \textbackslash anexo} e depois comandos %{\ttfamily \textbackslash chapter\{\}}
+%para gerar t\'itulos de anexos.
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+%\onecolindex %% Para indice em uma coluna
+%\twocolindex  %% Para indice em duas colunas
+%\indiceremissivo
+%---------------------------------------------------------------------
+
+\end{document} 

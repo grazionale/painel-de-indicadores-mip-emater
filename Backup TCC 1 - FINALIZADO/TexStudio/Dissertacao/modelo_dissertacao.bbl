@@ -1,0 +1,131 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Auday 2016]{auday}
+\abntrefinfo{Auday}{AUDAY}{2016}
+{AUDAY, Rafael. \textbf{Kanban: Do início ao fim!} 2016.
+Dispon{\'\i}vel em: \url{goo.gl/Veum4g}. Acesso em: 26 de abril de 2018.}
+
+\bibitem[BARRETO 1994]{barreto}
+\abntrefinfo{BARRETO}{BARRETO}{1994}
+{BARRETO, ALDO DE~ALBUQUERQUE. \textbf{A QUESTÃO DA INFORMAÇÃO}. 1994.}
+
+\bibitem[BOASPRÁTICAS 2015]{boaspraticas}
+\abntrefinfo{BOASPRÁTICAS}{BOASPRÁTICAS}{2015}
+{BOASPRÁTICAS. \textbf{Manejo Integrado de Pragas da Soja (MIP) - safra 2014/15
+  - Paraná (21 A)}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://boaspraticas.org.br/index.php/pt/areas-tematicas/agricultura/517-manejo-integrado-de-pragas-da-soja}.
+  Acesso em: 09 de abril de 2018.}
+
+\bibitem[Conte et al. 2017]{conte}
+\abntrefinfo{Conte et al.}{CONTE et al.}{2017}
+{CONTE, Osmar et al. \textbf{Resultados do manejo integrado de pragas da soja
+  na safra de 2016/17 no Paraná}. 2017.}
+
+\bibitem[EMATER 2018]{ematerHistorico}
+\abntrefinfo{EMATER}{EMATER}{2018}
+{EMATER. \textbf{Histórico da Extensão Rural Oficial}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://www.emater.pr.gov.br/modules/conteudo/conteudo.php?conteudo=43/}.
+  Acesso em: 07 de abril de 2018.}
+
+\bibitem[EMBRAPA 2018]{embrapaQuemSomos}
+\abntrefinfo{EMBRAPA}{EMBRAPA}{2018}
+{EMBRAPA. \textbf{Quem somos}. 2018.
+Dispon{\'\i}vel em: \url{https://www.embrapa.br/quem-somos}. Acesso em: 09 de
+  abril de 2018.}
+
+\bibitem[Filho 2008]{filho}
+\abntrefinfo{Filho}{FILHO}{2008}
+{FILHO, Dairton Luiz~Bassi.
+\textbf{Experiências com desenvolvimento ágil}.
+3 2008. Disserta\c{c}\~{a}o (Mestrado) --- Instituto de Matemática e
+  Estatística da Universidade de São Paulo, 3 2008.}
+
+\bibitem[Flanagan 2011]{flanagan2011javascript}
+\abntrefinfo{Flanagan}{FLANAGAN}{2011}
+{FLANAGAN, D. \textbf{JavaScript: The Definitive Guide}. O'Reilly Media,
+  Incorporated, 2011.  (Definitive Guide Series).
+ISBN 9780596805524. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=4RChxt67lvwC}.}
+
+\bibitem[Guedes 2011]{guedesuml}
+\abntrefinfo{Guedes}{GUEDES}{2011}
+{GUEDES, G.T.A. \textbf{UML 2 - Uma Abordagem Pr{\'a}tica - 3{\textordfeminine}
+  Edi{\c{c}}{\~a}o:}. Novatec Editora, 2011.
+ISBN 9788575226469. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=RUdLDwAAQBAJ}.}
+
+\bibitem[Machado 2017]{machado}
+\abntrefinfo{Machado}{MACHADO}{2017}
+{MACHADO, Rebeca. \textbf{O que é JavaScript?} 2017.
+Dispon{\'\i}vel em: \url{http://tableless.github.io/iniciantes/manual/js/}.
+  Acesso em: 09 de abril de 2018.}
+
+\bibitem[Marquesone 2016]{marquesone2016big}
+\abntrefinfo{Marquesone}{MARQUESONE}{2016}
+{MARQUESONE, R. \textbf{Big Data: T{\'e}cnicas e tecnologias para
+  extra{\c{c}}{\~a}o de valor dos dados}. Casa do C{\'o}digo, 2016.
+ISBN 9788555192326. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=cbWlDQAAQBAJ}.}
+
+\bibitem[Massari 2014]{massari2014gerenciamento}
+\abntrefinfo{Massari}{MASSARI}{2014}
+{MASSARI, V.L. \textbf{Gerenciamento {\'A}gil de Projetos:}. Brasport, 2014.
+ISBN 9788574526966. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=P66lBQAAQBAJ}.}
+
+\bibitem[Morettin e Bussab 2010]{morettin}
+\abntrefinfo{Morettin e Bussab}{MORETTIN; BUSSAB}{2010}
+{MORETTIN, P.A.; BUSSAB, W. de Oliveira. \textbf{Estat{\'\i}stica b{\'a}sica}.
+  Saraiva, 2010.
+ISBN 9788502081772. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=8mUrywAACAAJ}.}
+
+\bibitem[Pressman 2009]{pressman2009engenharia}
+\abntrefinfo{Pressman}{PRESSMAN}{2009}
+{PRESSMAN, R.S. \textbf{Engenharia de Software - 7.ed.:}. McGraw Hill Brasil,
+  2009.
+ISBN 9788580550443. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=y0rH9wuXe68C}.}
+
+\bibitem[Silva 2008]{silva2008jquery}
+\abntrefinfo{Silva}{SILVA}{2008}
+{SILVA, M.S. \textbf{jQuery - A Biblioteca do Programador JavaScript -
+  1{\textordfeminine} Edi{\c{c}}{\~a}o: Aprenda a criar efeitos de alto impacto
+  em seu site com a biblioteca JavaScript mais utilizada pelos desenvolvedores
+  web}. NOVATEC, 2008.
+ISBN 9788575221785. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=VafU5WLalwwC}.}
+
+\bibitem[Silva 2015]{bootstrapMS}
+\abntrefinfo{Silva}{SILVA}{2015}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{Bootstrap 3.3.5: Aprenda a usar o
+  framework Bootstrap para criar layouts CSS complexos e responsivos}. [S.l.]:
+  NOVATEC, 2015.
+ISBN 9788575224601.}
+
+\bibitem[Sommerville 2011]{sommerville2011engenharia}
+\abntrefinfo{Sommerville}{SOMMERVILLE}{2011}
+{SOMMERVILLE, I. \textbf{Engenharia de software}. PEARSON BRASIL, 2011.
+ISBN 9788579361081. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=H4u5ygAACAAJ}.}
+
+\bibitem[VERSIONONE 2016]{stateofagile}
+\abntrefinfo{VERSIONONE}{VERSIONONE}{2016}
+{VERSIONONE. \textbf{The 10th annual State of Agile Report}. 2016.}
+
+\bibitem[VIEIRA 2011]{vieira}
+\abntrefinfo{VIEIRA}{VIEIRA}{2011}
+{VIEIRA, ELIANE~APARECIDA.
+\textbf{A GESTÃO DA INFORMAÇÃO NA TOMADA DAS DECISÕES GERENCIAIS: Estudo de
+  caso na Organização Multinacional de Reflorestamento - V \& M FLORESTAL.}
+2011. Disserta\c{c}\~{a}o (Mestrado) --- FACULDADES INTEGRADAS DE PEDRO
+  LEOPOLDO, 2011.}
+
+\end{thebibliography}
