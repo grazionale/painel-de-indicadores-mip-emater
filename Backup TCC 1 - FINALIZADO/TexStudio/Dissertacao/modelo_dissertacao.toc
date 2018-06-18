@@ -9,7 +9,7 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c c\~ao}}{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}OBJETIVOS}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Objetivos Gerais}{9}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivo Geral}{9}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Objetivos Espec\IeC {\'\i }ficos}{10}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}ORGANIZA\c C\~AO DO TEXTO}{10}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }

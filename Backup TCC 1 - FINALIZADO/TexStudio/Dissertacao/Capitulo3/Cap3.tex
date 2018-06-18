@@ -1,11 +1,11 @@
 %---------- Terceiro Capitulo ----------
 \chapter{Proposta}
 \label{cap3}
-Neste capítulo é descrito como as tecnologias e ferramentas a serão utilizadas para o desenvolvimento do website.
+Neste capítulo é descrito como as tecnologias e ferramentas serão utilizadas para o desenvolvimento do website.
 
 \section{Tecnologias e Ferramentas}
 
-No desenvolvimento do painel de indicadores, será utilizado a linguagem de marcação HTML em todas as páginas da aplicação. Ela servirá para especificar o conteúdo das páginas, estruturar o \textit{layout} e informar ao navegador o que é cada informação presente nas \textit{tags}. Além do HTML, o CSS será utilizado para estilizar a apresentação das páginas, organizando a forma como os elementos são dispostos, suas cores, tamanhos e formatos. O \textit{framework} Bootstrap será utilizado para adicionar responsividade à aplicação. \cite{bootstrapMS}. Por fim, será utilizado a linguagem de programação Javascript em conjunto com a biblioteca JQuery e D3.js. O JQuery será usado para realizar chamadas Ajax à \sigla{API}{Application Programming Interface} \sigla{REST}{Representation State Transfer} que contém os dados para a elaboração dos gráficos que serão construídos utilizando a biblioteca D3.js. Os gráficos serão utilizados nas análises que estarão presentes no painel de indicadores. 
+No desenvolvimento do painel de indicadores, será utilizada a linguagem de marcação HTML em todas as páginas da aplicação. Ela servirá para especificar o conteúdo das páginas, estruturar o \textit{layout} e informar ao navegador o que é cada informação presente nas \textit{tags}. Além do HTML, o CSS será utilizado para estilizar a apresentação das páginas, organizando a forma como os elementos são dispostos, suas cores, tamanhos e formatos. O \textit{framework} Bootstrap será utilizado para adicionar responsividade à aplicação. Por fim, será utilizada a linguagem de programação Javascript em conjunto com a biblioteca JQuery e D3.js. O JQuery será usado para realizar chamadas Ajax à \sigla{API}{\textit{Application Programming Interface}} \sigla{REST}{\textit{Representation State Transfer}} que contém os dados para a elaboração dos gráficos que serão construídos utilizando a biblioteca D3.js. Os gráficos serão utilizados nas análises que estarão presentes no painel de indicadores. 
 
 O código fonte será hospedado no GitHub, um repositório online e gratuito. O GitHub utiliza o Git para realizar o gerenciamento de versões.  
 
@@ -13,12 +13,12 @@ O código fonte será hospedado no GitHub, um repositório online e gratuito. O Git
 \section{Método}
 O desenvolvimento ágil será usado para garantir versões frequentes do sistema, com redução de \textit{overhead} e produção de códigos de alta qualidade \cite{sommerville2011engenharia}.
 
-No desenvolvimento desta proposta iremos utilizar algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.
+No desenvolvimento desta proposta serão utilizadas algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.
 
 \begin{itemize}
-	\item Priorizar \textit{backlogs}: trata-se de uma técnica que tem como objetivo priorizar os itens do \textit{backlog}. O \textit{backlog} é como uma "lista de pedidos", no caso desta proposta, será uma "lista de atividades" \cite{auday}. A priorização do \textit{backlog} será realizada através de outra técnica chamada Kanban, na qual será utilizada para gerenciar o fluxo das atividades entre estados de acordo com o tempo e a necessidade da implementação \cite{massari2014gerenciamento}.
+	\item Priorizar \textit{backlogs}: trata-se de uma técnica que tem como objetivo priorizar os itens do \textit{backlog}. O \textit{backlog} é como uma "lista de pedidos", no caso desta proposta, será uma "lista de atividades" \cite{auday}. A priorização do \textit{backlog} será realizada através de outra técnica chamada Kanban, que será utilizada para gerenciar o fluxo das atividades entre estados de acordo com o tempo e a necessidade da implementação \cite{massari2014gerenciamento}.
 	
-	\item Kanban: Kanban significa "tabuleta", "cartão" ou "sinalização" e sua origem é japonesa, ele foi adotado como metodologia de desenvolvimento inspirado no sistema de fábrica da Toyota. Kanban é formado por um grande quadro, dividido por estágios e preenchido com tarefas escritas com \textit{post-its}, o movimento dessas tarefas passam pelos estágios da esquerda para a direita. Sua finalidade é gerenciar o fluxo de trabalho, buscando melhorar o desempenho e reduzir o desperdício, eliminando atividades que não agregam valor a equipe \cite{massari2014gerenciamento}.
+	\item Kanban: Kanban significa "tabuleta", "cartão"\ ou "sinalização"\ e sua origem é japonesa, ele foi adotado como metodologia de desenvolvimento inspirado no sistema de fábrica da Toyota. Kanban é formado por um grande quadro, dividido por estágios e preenchido com tarefas escritas com \textit{post-its}, o movimento dessas tarefas passam pelos estágios da esquerda para a direita. Sua finalidade é gerenciar o fluxo de trabalho, buscando melhorar o desempenho e reduzir o desperdício, eliminando atividades que não agregam valor a equipe \cite{massari2014gerenciamento}.
 	
 	\item \textit{Short interations}: realizar curtos \textit{sprints}, geralmente de 2 semanas. Um \textit{sprint} é um planejamento do trabalho que será realizado, os recursos para o desenvolvimento são selecionados e novas funcionalidade e incrementos podem ser implementados \cite{sommerville2011engenharia}.
 
@@ -44,7 +44,7 @@ Para representar a descrição arquitetural da aplicação, será utilizado diagrama 
 	\fonte{Autoria Própria}
 	\label{fig:deploy}
 \end{figure}
-Na Figura \ref{fig:deploy} é possível observar que a aplicação estará hospedada em um servidor web, essa aplicação receberá acesso de usuários através de seus navegadores pelo protocolo HTTP, além disso, as requisições dos dados serão feitas através de uma API localizada em outro servidor no qual realizará requisições TCP/IP a uma base de dados. 
+Na Figura \ref{fig:deploy} é possível observar que a aplicação estará hospedada em um servidor web, essa aplicação receberá acesso de usuários através de seus navegadores pelo protocolo HTTP. Além disso, as requisições dos dados serão feitas através de uma API localizada em outro servidor que realizará requisições TCP/IP a uma base de dados. 
 
 \subsection{Diagrama de Classes}
 \begin{figure}[H]
@@ -55,7 +55,7 @@ Na Figura \ref{fig:deploy} é possível observar que a aplicação estará hospedada 
 	\label{fig:classes}
 \end{figure}	
 
-Na Figura \ref{fig:classes} é possível visualizar as classes que participaram da aplicação e suas relações. Um Gráfico dependerá de dados que estarão em uma classe de Ocorrência, que por sua vez, depende de diversas outras classes, sendo elas: Região, Praga, Cultivar e Safra, que depende de UR. 
+Na Figura \ref{fig:classes} é possível visualizar as classes que participarão da aplicação e suas relações. Um Gráfico dependerá de dados que estarão em uma classe de Ocorrência, que por sua vez, depende de diversas outras classes, sendo elas: Região, Praga, Cultivar e Safra, que depende de UR. 
 
 \subsection{Diagrama de Comunicação}
 \begin{figure}[H]
@@ -66,13 +66,13 @@ Na Figura \ref{fig:classes} é possível visualizar as classes que participaram da
 	\label{fig:comunicacao}
 \end{figure}
 
-Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participaram da geração de gráficos, a partir de um filtro escolhido pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, como safra, região, praga e cultivar, após as escolhas das opções, uma requisição para API será realizada, a requisição retornará os dados em JSON e um gráfico será apresentado na tela do usuário. 
+Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participarão da geração de gráficos, a partir de um filtro escolhido pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, como safra, região, praga e cultivar, após as escolhas das opções, uma requisição para API será realizada, a requisição retornará os dados em JSON e um gráfico será apresentado na tela do usuário. 
 
 \section{Requisitos}
 Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.  
 
 \subsection{Requisitos Funcionais}
-Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}.
+Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}. Os requisitos funcionais da Tabela \ref{tab:tabelareqfuncionais} foram definidos com base nos documentos e planilhas disponibilizados pela EMATER.
 
 
 
@@ -84,14 +84,14 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 	\hline
 	\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
 	RF 01 & Permitir a análise dos dados coletados no MIP. & Essencial  \\ \hline
-	RF 02 & Apresentar gráficos sobre a ocorrência dos 4 grupos de lagartas presentes no projeto MIP: Antiarisia Gematalis (lagarta-da-soja), Chrysodeixis includens (lagarta-falsa-medideira), Spodoptera spp e Grupo Heliothinae. & Essencial  \\ \hline
+	RF 02 & Apresentar gráficos sobre a ocorrência dos 4 grupos de lagartas presentes no projeto MIP: \textit{Antiarisia Gematalis} (lagarta-da-soja), \textit{Chrysodeixis includens} (lagarta-falsa-medideira), \textit{Spodoptera spp} e Grupo Heliothinae. & Essencial  \\ \hline
 	RF 2.1 & Um gráfico representando a ocorrência das lagartas no PR e outros cinco gráficos que devem estar separados por regiões (Norte, Noroeste, Oeste, Sudoeste, Sul).
 	& Essencial  \\ \hline
 	RF 2.1.1 & A análise de lagartas deve ser representada por gráficos de barras mostrando o período no qual o MIP se encontra (0-30, 31-60, 61-150 dias) e a porcentagem de ocorrência das lagartas. & Essencial  \\ \hline
 	RF 2.1.2 & A análise de lagartas também deve ser representada por gráficos de composição em setores, representando o percentual do valor total de ocorrência das lagartas no período de 150 dias de aplicação MIP.  & Essencial  \\ \hline
 	RF 2.2 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja Bt (RR2). & Essencial  \\ \hline
 	RF 2.3 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja não Bt (RR1). & Essencial  \\ \hline
-	RF 03 & Criar um gráfico de composição em setores para os grupos de percevejos (Nezara viridula, Piezodorus guildinii, Euschistus heros,Dichelops melacanthus e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
+	RF 03 & Criar um gráfico de composição em setores para os grupos de percevejos (\textit{Nezara viridula}, \textit{Piezodorus guildinii}, \textit{Euschistus heros},\textit{Dichelops melacanthus	} e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
 	RF 04 & Criar gráficos de composição em setores para os grupos de percevejos de acordo com as respectivas regiões, representando sua ocorrência durante o desenvolvimento da soja nas URs participantes. & Essencial  \\ \hline
 	RF 05 & Criar um gráfico de composição em setores representando a praga ou o grupo de pragas que desencadeou a necessidade do uso da primeira aplicação de inseticida, considerando todas as URs participantes do MIP. & Essencial  \\ \hline
 	RF 06 & Criar uma tabela representando as regiões participantes do MIP e o número médio de aplicações de inseticidas, além do tempo médio da primeira aplicação. Independe de a plantação ter o cultivo da soja Bt ou não Bt. & Essencial  \\ \hline
@@ -185,7 +185,7 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 
 \subsection{Requisitos Não Funcionais}
 
-Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}.
+Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}. Os requisitos não funcionais da Tabela \ref{tab:tabelareqnaofuncionais} foram definidos com base nos documentos e planilhas disponibilizadas pela EMATER.
 
 \begin{table}[H]
 	\caption[Tabela Requisitos Não Funcionais]{Requisitos Não Funcionais.}
@@ -204,7 +204,7 @@ Requisitos não funcionais são restrições as funcionalidades que o sistema fornec
 
 \subsection{Diagramas de Caso de uso}
 
-Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da aplicação proposta, o usuário poderá consultar dados referentes ao programa MIP que é uma das técnicas utilizadas no Projeto Grãos. Além disso, o usuário conseguirá acessar análises dos anos anteriores e utilizar filtros nas análises atuais. 
+Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da aplicação proposta. O usuário poderá consultar dados referentes ao programa MIP, que é uma das técnicas utilizadas no Projeto Grãos. Além disso, o usuário conseguirá acessar análises dos anos anteriores e utilizar filtros nas análises atuais. 
 
 \begin{figure}[H]
 	\caption{Diagrama de Caso de Uso - Visão Geral}	
@@ -222,7 +222,7 @@ Para realizar a construção dos protótipos desta aplicação, será útilizado Wirefr
 
 \subsubsection{Tela Inicial}
 
-Na Figura \ref{fig:home1} é possível visualizar a tela inicial da aplicação, com gráficos sobre as análises atuais de lagartas e percevejos, com um mapa que servirá de filtros para a escolha de regiões, quadros que mostrarão dados referentes a última análise, como tamanho do território que houve a implantação do MIP e número de aplicações de inseticidas nas culturas da soja, por exemplo. Além das análises, também existirá um menu lateral, no qual irá se expandir ao clique do ícone de menu, nesse menu lateral, conterão diversas seções como, teóricas, filtros de busca, acesso a análises dos anos anteriores, seções institucionais, entre outras. Por fim, existirá uma barra superior com um campo de busca. A barra de busca poderá ser utilizada pelo usuário para buscar análises que já foram realizadas em safras passadas ou buscar informações sobre a análise atual. 
+Na Figura \ref{fig:home1} é possível visualizar a tela inicial da aplicação, com gráficos sobre as análises atuais de lagartas e percevejos, com um mapa que servirá de filtros para a escolha de regiões, quadros que mostrarão dados referentes a última análise, como tamanho do território que houve a implantação do MIP e número de aplicações de inseticidas nas culturas da soja, por exemplo. Além das análises, também existirá um menu lateral, que irá se expandir ao clique do ícone de menu, nesse menu lateral, conterão diversas seções como, teóricas, filtros de busca, acesso a análises dos anos anteriores, seções institucionais, entre outras. Por fim, existirá uma barra superior com um campo de busca. A barra de busca poderá ser utilizada pelo usuário para buscar análises que já foram realizadas em safras passadas ou buscar informações sobre a análise atual. 
 
 \begin{figure}[H]
 	\caption{Tela Inicial}
