@@ -16,32 +16,11 @@
 
 
 <script>
-
-    // EXEMPLO JSON 1
-    var data = {
-        labels: ["0-30", "30-60", "60-90 dias"],
-        anticarsia: [{
-            label: "Anticarsia gemmatalis",
-            backgroundColor: "#1048A9",
-            data: [30,20,10]
-        }],
-        chrysodexis: [{
-            label: "Chrysodexis includens",
-            backgroundColor: "#A6120A",
-            data: [50,30,40]
-        }],
-        Spodoptera: [{
-            label: "Spodoptera spp",
-            backgroundColor: "#00B74A",
-            data: [20,50,20]
-        }]
-    };
-
     // EXEMPLO JSON 2 -> IGUAL O DE CIMA PORÉM MAIS CURTO
     var data2 = {
         labels: ["0-30 dias", "30-60 dias", "60-90 dias"],
         pragas: [
-            {label: "Anticarsia gemmatalis", backgroundColor: "#1048A9", data: [30,20,10]},
+            {label: "Anticarsia gemmatalis", backgroundColor: "#1048A9", data: [5,20,10]},
             {label: "Chrysodexis includens", backgroundColor: "#A6120A", data: [50,30,40]},
             {label: "Spodoptera spp", backgroundColor: "#00B74A", data: [10,40,67]},
             {label: "Grupo Heliothinae", backgroundColor: "#FFCB1E", data: [20,50,20]}
@@ -53,43 +32,19 @@
 
     var datasetsAuxiliar = new Array();
 
-    var objeto = new Object();
 
     for(var i = 0; i < data2.pragas.length ; i++){
+        var praga = new Object();
         //console.log(data2.pragas[i].label);
-        objeto.label = data2.pragas[i].label;
-        objeto.backgroundColor = data2.pragas[i].backgroundColor;
-        objeto.data = data2.pragas[i].data;
-        //console.log(objeto);
-        datasetsAuxiliar.push(objeto);
-        console.log(i);
-        console.log(datasetsAuxiliar[i]);
+        praga.label = data2.pragas[i].label;
+        praga.backgroundColor = data2.pragas[i].backgroundColor;
+        praga.data = data2.pragas[i].data;
+        datasetsAuxiliar.push(praga);
     }
-    //console.log(objeto);
-    console.log(datasetsAuxiliar);
 
     var tempData = {
         labels: data2.labels,
-        datasets: [
-            {
-                label: data2.pragas[0].label,
-                backgroundColor: data2.pragas[0].backgroundColor,
-                data: data2.pragas[0].data
-            }, {
-                label: data2.pragas[1].label,
-                backgroundColor: data2.pragas[1].backgroundColor,
-                data: data2.pragas[1].data
-            },
-            {
-                label: data2.pragas[2].label,
-                backgroundColor: data2.pragas[2].backgroundColor,
-                data: data2.pragas[2].data
-            }, {
-                label: data2.pragas[3].label,
-                backgroundColor: data2.pragas[3].backgroundColor,
-                data: data2.pragas[3].data
-            }
-        ]
+        datasets: datasetsAuxiliar
     };
 
     //console.log(tempData);
