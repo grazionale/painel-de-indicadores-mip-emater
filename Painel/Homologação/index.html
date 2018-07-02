@@ -43,16 +43,7 @@
                 <span class="sr-only">Toggle navigation</span>
             </a>
 
-            <div class="navbar-custom-menu">
-                <form action="#" method="get" class="sidebar-form" style="margin-bottom: 10px">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Buscar...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+
         </nav>
     </header>
 
@@ -60,19 +51,18 @@
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-            <!--&lt;!&ndash; search form &ndash;&gt;-->
-            <!--<form action="#" method="get" class="sidebar-form">-->
-                <!--<div class="input-group">-->
-                    <!--<input type="text" name="q" class="form-control" placeholder="Search...">-->
-                    <!--<span class="input-group-btn">-->
-                            <!--<button type="submit" name="search" id="search-btn" class="btn btn-flat">-->
-                                <!--<i class="fa fa-search"></i>-->
-                            <!--</button>-->
-                        <!--</span>-->
-                <!--</div>-->
-            <!--</form>-->
-            <!--&lt;!&ndash; /.search form &ndash;&gt;-->
-            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <!-- search form -->
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                </div>
+            </form>
+            <!-- /.search form -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
 
@@ -146,7 +136,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 connectedSortable">
                     <div class="box box-default">
                         <div class="box-header with-border">
                             <h3 class="box-title">Sobre o MIP</h3>
@@ -165,11 +155,7 @@
                                 nulla, commodo vulputate nulla mi sit amet eros. Cras vitae mi tempor risus vestibulum
                                 pretium. Donec auctor turpis tempor, convallis odio a, feugiat erat. Maecenas facilisis
                                 lorem lorem, at suscipit justo lobortis et. Pellentesque felis massa, cursus vel congue
-                                non, pulvinar vel eros. Integer vel nisl sit amet neque ornare venenatis. Ut ornare purus
-                                vitae turpis congue, nec tincidunt sem vulputate. Integer dignissim metus a mi vehicula
-                                hendrerit. Proin ullamcorper tempus eros sed facilisis. Integer felis nunc, lobortis
-                                non ante vitae, mattis tincidunt turpis. Pellentesque nec est scelerisque, rhoncus enim
-                                eget, aliquet leo.
+                                non, pulvinar vel eros. Integer vel nisl sit amet neque ornare venenatis. 
                             </p>
                         </div>
                     </div>
@@ -285,20 +271,20 @@
                             {
                                 label: "Anticarsia gemmatalis",
                                 backgroundColor: "#1048A9",
-                                data: [133, 221, 783]
+                                data: [10, 20, 30]
                             }, {
                                 label: "Chrysodexis includens",
                                 backgroundColor: "#A6120A",
-                                data: [408, 547, 675]
+                                data: [20, 30, 40]
                             },
                             {
                                 label: "Spodoptera spp",
                                 backgroundColor: "#00B74A",
-                                data: [133, 221, 783]
+                                data: [30, 40, 50]
                             }, {
                                 label: "Grupo Heliothinae",
                                 backgroundColor: "#FFCB1E",
-                                data: [408, 547, 675]
+                                data: [40, 50, 60]
                             }
                         ]
                     },
@@ -306,6 +292,20 @@
                         title: {
                             display: true,
                             text: 'Título'
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+
+                                    min: 0,
+                                    max: 100,
+                                    callback: function(value){return value+ "%"}
+                                },
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: "Percentage"
+                                }
+                            }]
                         }
                     }
                 });
