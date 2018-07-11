@@ -50,7 +50,8 @@ $(function () {
     options: {
       title: {
         display: true,
-        text: 'Título'
+        text: 'Título',
+        fontSize: 15
       },
       legend:{
         position: 'bottom',
@@ -90,7 +91,8 @@ $(function () {
     options: {
       title: {
         display: true,
-        text: 'Titulo'
+        text: 'Titulo',
+        fontSize: 15
       },
       legend:{
         position: 'left',
@@ -104,7 +106,7 @@ $(function () {
 
   var ctx = document.getElementById("pie-chart2").getContext('2d');
   var myChart = new Chart(document.getElementById("pie-chart2"), {
-    type: 'pie',
+    type: 'doughnut',
     data: {
       labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
       datasets: [{
@@ -116,15 +118,16 @@ $(function () {
     options: {  
       title: {
         display: true,
-        text: 'Titulo'
+        text: 'Titulo',
+        fontSize: 15
       },
       legend:{
         position: 'left',
         labels:{
           fontSize: 14,
+          boxWidth: 40
         }
       }
-
     }
 
   });
