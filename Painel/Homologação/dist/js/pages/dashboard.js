@@ -20,7 +20,7 @@ $(function () {
   $('.connectedSortable .box-header, .connectedSortable .nav-tabs-custom').css('cursor', 'move');
 
 
-  
+
   var ctx = document.getElementById("bar-chart-grouped").getContext('2d');
   var myChart = new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
@@ -51,6 +51,12 @@ $(function () {
       title: {
         display: true,
         text: 'Título'
+      },
+      legend:{
+        position: 'bottom',
+        labels:{
+          fontSize: 14,
+        }
       },
       scales: {
         yAxes: [{
@@ -85,6 +91,12 @@ $(function () {
       title: {
         display: true,
         text: 'Titulo'
+      },
+      legend:{
+        position: 'left',
+        labels:{
+          fontSize: 14,
+        }
       }
     }
   });
@@ -101,12 +113,20 @@ $(function () {
         data: [2478, 5267, 734, 784]
       }]
     },
-    options: {
+    options: {  
       title: {
         display: true,
         text: 'Titulo'
+      },
+      legend:{
+        position: 'left',
+        labels:{
+          fontSize: 14,
+        }
       }
+
     }
+
   });
 
 
