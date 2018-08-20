@@ -24,6 +24,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <!-- Style.css -->
   <link rel="stylesheet" href="style/style.css">
+
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 </head>
 
 <body class="hold-transition skin-green-light sidebar-mini">
@@ -107,13 +109,20 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="treeview">
             <a href="#">
               <i class="fa fa-th"></i>
               <span>Conceitos</span>
               <span class="pull-right-container">
-              </span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
             </a>
+            <ul class="treeview-menu">
+                <li>
+                  <a href="pages/estadios.html">
+                    <i class="fa fa-bug"></i> Estágios Vegetativos</a>
+                </li>
+            </ul>
           </li>
           <li>
             <a href="#">
@@ -133,7 +142,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Manejo Integrado de Pragas
+          Manejo Integrado de Pragas - Principais Resultados
           <small>Safra 2019/2020</small>
         </h1>
         <!-- <ol class="breadcrumb">
@@ -233,7 +242,6 @@
         </div>
         <div class="row">
           <section class="col-lg-12">
-            <h2>Principais Resultados</h2>
           </section>
         </div>
         <!-- Main row -->
@@ -348,6 +356,7 @@
 
 
           <section class="col-lg-5 connectedSortable">
+            <h3>O cenário de lagartas e percevejos em soja Bt(RR2) e não Bt(RR1)</h3>
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
                 <li class="active">
@@ -420,7 +429,7 @@
                   <!-- <h3>Análises com Soja não Bt (RR1)</h3> -->
                   <div class="box box-default">
                     <div class="box-header with-border">
-                      <h3 class="box-title">Ocorrência percentual média por grupo de lagartas em três períodos do ciclo da soja Bt (RR2) nas URs
+                      <h3 class="box-title">Ocorrência percentual média por grupo de lagartas em três períodos do ciclo da soja não Bt (RR1) nas URs
                         de MIP no Paraná, safra 2016/17.</h3>
                       <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -448,7 +457,7 @@
 
                   <div class="box box-default">
                     <div class="box-header with-border">
-                      <h3 class="box-title">Distribuição percentual da participação das espécies no complexo de lagartas pragas da soja Bt (RR2)
+                      <h3 class="box-title">Distribuição percentual da participação das espécies no complexo de lagartas pragas da soja não Bt (RR1)
                         nas URs de MIP no Paraná, safra 2016/17.</h3>
                       <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -506,6 +515,9 @@
   <script src="dist/js/demo.js"></script>
 
   <script src="style/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+  <script src="dist/js/generator.js"></script>
 
 </body>
 
