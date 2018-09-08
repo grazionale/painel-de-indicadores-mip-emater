@@ -257,7 +257,7 @@ function buscarPorRegiao(data){
 
 }
 
-function gerarGraficoPizzaDistribuicaoPercentualParana(regiao, sojabt){
+function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
    
     var valor_anticarsia = 0;
     var valor_chrysodeixis = 0;
@@ -525,35 +525,21 @@ function gerarGraficoPizzaDistribuicaoPercentualParana(regiao, sojabt){
     }
 }
 
-function loadJson(){
-    var api_url = "https://elika.com.br/dados.json";
-    var dados = [];
 
-    $.ajax({
-        url: api_url,
-        type: "get",
-        data: dados, 
-        crossDomain: true,
-        dataType: 'json',
-        success: function (data) {
-            localStorage.setItem("dados", JSON.stringify(data));
-            //console.log(localStorage.getItem("dados"));
-        },
-        error: function () {
-            msg.text("Erro ao fazer requisição");
-        }
-    });
-}
 
 
 $(function(){
     loadJson();
     //console.log(buscarSojaBt());
-    gerarGraficoPizzaDistribuicaoPercentualParana("Paraná", false);
-    //gerarGraficoPizzaDistribuicaoPercentualParana("Norte", false);
-    //gerarGraficoPizzaDistribuicaoPercentualParana("Sudoeste", false);
+    //gerarGraficoPizzaDistribuicaoPercentual("Paraná", false);
+    //gerarGraficoPizzaDistribuicaoPercentual("Norte", false);
+    //gerarGraficoPizzaDistribuicaoPercentual("Sudoeste", false);
     
     //console.log(JSON.parse(localStorage.getItem("dados")));
     //buscarTipoSoja();
+
+
+    gerarGraficoBarrasParana();
+    //console.log(gerarDadosPorFase("primeira"));
 });
 

@@ -21,60 +21,7 @@ $(function () {
 
 
 
-  var ctx = document.getElementById("bar-chart-grouped").getContext('2d');
-  var myChart = new Chart(document.getElementById("bar-chart-grouped"), {
-    type: 'bar',
-    data: {
-      labels: ["0-30", "30-60", "60-90 dias"],
-      datasets: [
-        {
-          label: "Anticarsia gemmatalis",
-          backgroundColor: "#1048A9",
-          data: [82.3, 84.1, 57.8]
-        }, {
-          label: "Chrysodexis includens",
-          backgroundColor: "#A6120A",
-          data: [12.4, 14, 34.5]
-        },
-        {
-          label: "Spodoptera spp",
-          backgroundColor: "#00B74A",
-          data: [1.3, 0.7, 4.9]
-        }, {
-          label: "Grupo Heliothinae",
-          backgroundColor: "#FFCB1E",
-          data: [4, 0.7, 2.8]
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: false,
-        text: 'Título',
-        fontSize: 15
-      },
-      legend:{
-        position: 'bottom',
-        labels:{
-          fontSize: 14,
-        }
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-
-            min: 0,
-            max: 100,
-            callback: function (value) { return value + "%" }
-          },
-          scaleLabel: {
-            display: true,
-            labelString: "Percentage"
-          }
-        }]
-      }
-    }
-  });
+  
 
 
   var ctx = document.getElementById("pie-chart").getContext('2d');
