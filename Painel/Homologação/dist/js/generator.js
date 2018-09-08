@@ -278,8 +278,8 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
         if(sojabt){
             
         } else {
-            var sojabt_data = buscarSojaNBt(JSON.parse(localStorage.getItem("dados")));
-            var lagartas = buscarLagartas(sojabt_data);
+            var sojanbt_data = buscarSojaNBt(JSON.parse(localStorage.getItem("dados")));
+            var lagartas = buscarLagartas(sojanbt_data);
             var cont = 0;
 
             $.each(lagartas, function(lagarta, tipo){
@@ -316,22 +316,22 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
 
             var porcentagem_total = porcentagem_anticarsia + porcentagem_chrysodeixis + porcentagem_spodoptera + porcentagem_heliothinae;
 
-            console.log(valor_anticarsia + " Num: " + num_anticarsia + " Media: " + media_anticarsia + " Porcentagem: " + porcentagem_anticarsia);
-            console.log(valor_chrysodeixis+ " Num: " + num_chrysodeixis + " Media: " + media_chrysodeixis + " Porcentagem: " + porcentagem_chrysodeixis);
-            console.log(valor_spodoptera+ " Num: " + num_spodoptera + " Media: " + media_spodoptera + " Porcentagem: " + porcentagem_spodoptera);
-            console.log(valor_heliothinae+ " Num: " + num_heliothinae + " Media: " + media_heliothinae + " Porcentagem: " + porcentagem_heliothinae);
-            console.log("Media total: " + total_media);
-            console.log("Porcentagem total: " + porcentagem_total);
+            // console.log(valor_anticarsia + " Num: " + num_anticarsia + " Media: " + media_anticarsia + " Porcentagem: " + porcentagem_anticarsia);
+            // console.log(valor_chrysodeixis+ " Num: " + num_chrysodeixis + " Media: " + media_chrysodeixis + " Porcentagem: " + porcentagem_chrysodeixis);
+            // console.log(valor_spodoptera+ " Num: " + num_spodoptera + " Media: " + media_spodoptera + " Porcentagem: " + porcentagem_spodoptera);
+            // console.log(valor_heliothinae+ " Num: " + num_heliothinae + " Media: " + media_heliothinae + " Porcentagem: " + porcentagem_heliothinae);
+            // console.log("Media total: " + total_media);
+            // console.log("Porcentagem total: " + porcentagem_total);
 
 
-            var ctx = document.getElementById("pie-chart").getContext('2d');
-            var myChart = new Chart(document.getElementById("pie-chart"), {
-                type: 'pie',
+            var ctx = document.getElementById("bar-chart-sojanbt-pr-total").getContext('2d');
+            var myChart = new Chart(document.getElementById("bar-chart-sojanbt-pr-total"), {
+                type: 'doughnut',
                 data: {
                 labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
                 datasets: [{
                     label: "Paraná",
-                    backgroundColor: ["#1048A9", "#A6120A", "#00B74A", "#FFCB1E"],
+                    backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040"],
                     data: [porcentagem_anticarsia, porcentagem_chrysodeixis, porcentagem_spodoptera, porcentagem_heliothinae]
                 }]
                 },
@@ -531,7 +531,7 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
 $(function(){
     loadJson();
     //console.log(buscarSojaBt());
-    //gerarGraficoPizzaDistribuicaoPercentual("Paraná", false);
+    gerarGraficoPizzaDistribuicaoPercentual("Paraná", false);
     //gerarGraficoPizzaDistribuicaoPercentual("Norte", false);
     //gerarGraficoPizzaDistribuicaoPercentual("Sudoeste", false);
     
@@ -541,5 +541,11 @@ $(function(){
 
     gerarGraficoBarrasParana();
     //console.log(gerarDadosPorFase("primeira"));
+    gerarGraficoPizzaDistribuicaoPercentualLagartasNoParana();
+
+
+    //console.log(gerarDadosPorFaseETipoDeSoja("primeira", false));
+
+    gerarGraficoBarrasParanaSojaNBt();
 });
 
