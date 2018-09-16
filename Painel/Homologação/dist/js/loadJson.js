@@ -1,5 +1,5 @@
 function loadJson(){
-    var api_url = "https://elika.com.br/dados.json";
+    var api_url = "https://elika.com.br/dados2.json";
     var dados = [];
 
     $.ajax({
