@@ -463,16 +463,16 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
 
             var porcentagem_total = porcentagem_anticarsia + porcentagem_chrysodeixis + porcentagem_spodoptera + porcentagem_heliothinae;
 
-            console.log(valor_anticarsia + " Num: " + num_anticarsia + " Media: " + media_anticarsia + " Porcentagem: " + porcentagem_anticarsia);
-            console.log(valor_chrysodeixis+ " Num: " + num_chrysodeixis + " Media: " + media_chrysodeixis + " Porcentagem: " + porcentagem_chrysodeixis);
-            console.log(valor_spodoptera+ " Num: " + num_spodoptera + " Media: " + media_spodoptera + " Porcentagem: " + porcentagem_spodoptera);
-            console.log(valor_heliothinae+ " Num: " + num_heliothinae + " Media: " + media_heliothinae + " Porcentagem: " + porcentagem_heliothinae);
-            console.log("Media total: " + total_media);
-            console.log("Porcentagem total: " + porcentagem_total);
+            // console.log(valor_anticarsia + " Num: " + num_anticarsia + " Media: " + media_anticarsia + " Porcentagem: " + porcentagem_anticarsia);
+            // console.log(valor_chrysodeixis+ " Num: " + num_chrysodeixis + " Media: " + media_chrysodeixis + " Porcentagem: " + porcentagem_chrysodeixis);
+            // console.log(valor_spodoptera+ " Num: " + num_spodoptera + " Media: " + media_spodoptera + " Porcentagem: " + porcentagem_spodoptera);
+            // console.log(valor_heliothinae+ " Num: " + num_heliothinae + " Media: " + media_heliothinae + " Porcentagem: " + porcentagem_heliothinae);
+            // console.log("Media total: " + total_media);
+            // console.log("Porcentagem total: " + porcentagem_total);
 
 
-            var ctx = document.getElementById("pie-chart").getContext('2d');
-            var myChart = new Chart(document.getElementById("pie-chart"), {
+            var ctx = document.getElementById("norte-grafico-pizza-lagartas").getContext('2d');
+            var myChart = new Chart(document.getElementById("norte-grafico-pizza-lagartas"), {
                 type: 'pie',
                 data: {
                 labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
@@ -595,29 +595,134 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
     }
 }
 
+function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
+
+//Dividir o Json em Datas 0-30 dias 31-60 dias 61-150 dias independente do tipo de soja
+function gerarDadosPorFaseERegiao(fase, regiao) {
+
+    if(regiao == "Paraná" || regiao == "PR"){
+        var dados = JSON.parse(localStorage.getItem("dados"));
+        var dados_primeira_fase = []; d1 = 0;
+        var dados_segunda_fase = []; d2 = 0;
+        var dados_terceira_fase = []; d3 = 0;
+
+        var aux_data = dados[0].samplePestSet[0].sampleDate;
+        aux_data = aux_data.split("/");
+        var data_inicial = new Date(aux_data[1] + "-" + aux_data[0] + "-" + aux_data[2]);
+        var data_final_primeira_fase = new Date();
+        var data_final_segunda_fase = new Date();
+
+        data_final_primeira_fase = addDays(data_inicial, 30);
+        data_final_segunda_fase = addDays(data_final_primeira_fase, 30);
+
+        // console.log("Date Inicio: " + data_inicial);
+        // console.log("Date final 1: " + data_final_primeira_fase);
+        // console.log("Date final 2: " + data_final_segunda_fase);
+
+        $.each(dados, function (analises, analise) {
+            //console.log(analise);
+            $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+                //console.log(samplePest.sampleDate);
+                var aux = samplePest.sampleDate;
+                aux = aux.split("/");
+                var data = new Date(aux[1] + "-" + aux[0] + "-" + aux[2]);
+
+                if (data < data_final_primeira_fase) {
+                    //console.log(data + " - 1 Fase");
+                    dados_primeira_fase[d1] = samplePest;
+                    d1++;
+                } else if (data > data_final_primeira_fase && data <= data_final_segunda_fase) {
+                    //console.log(data + " - 2 Fase");
+                    dados_segunda_fase[d2] = samplePest;
+                    d2++;
+                } else {
+                    //console.log(data + " - 3 Fase");
+                    dados_terceira_fase[d3] = samplePest;
+                    d3++;
+                }
+
+            });
+        });
+    } else if (regiao == "Norte"){
+        var dados = buscarPorRegiao(JSON.parse(localStorage.getItem("dados")));
+        dados = dados[0];
+        var dados_primeira_fase = []; d1 = 0;
+        var dados_segunda_fase = []; d2 = 0;
+        var dados_terceira_fase = []; d3 = 0;
+
+        var aux_data = dados[0].samplePestSet[0].sampleDate;
+        //console.log(aux_data);
+        aux_data = aux_data.split("/");
+        var data_inicial = new Date(aux_data[1] + "-" + aux_data[0] + "-" + aux_data[2]);
+        var data_final_primeira_fase = new Date();
+        var data_final_segunda_fase = new Date();
+
+        data_final_primeira_fase = addDays(data_inicial, 30);
+        data_final_segunda_fase = addDays(data_final_primeira_fase, 30);
+
+        //console.log("Date Inicio: " + data_inicial);
+        //console.log("Date final 1: " + data_final_primeira_fase);
+        //console.log("Date final 2: " + data_final_segunda_fase);
+
+        $.each(dados, function (analises, analise) {
+            //console.log(analise);
+            //console.log("Gabriel");
+            $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+                //console.log('teste');
+                //console.log(samplePest.sampleDate);
+                var aux = samplePest.sampleDate;
+                //console.log(aux);
+                aux = aux.split("/");
+                var data = new Date(aux[1] + "-" + aux[0] + "-" + aux[2]);
+
+                if (data < data_final_primeira_fase) {
+                    //console.log(data + " - 1 Fase");
+                    dados_primeira_fase[d1] = samplePest;
+                    d1++;
+                } else if (data > data_final_primeira_fase && data <= data_final_segunda_fase) {
+                    //console.log(data + " - 2 Fase");
+                    dados_segunda_fase[d2] = samplePest;
+                    d2++;
+                } else {
+                    //console.log(data + " - 3 Fase");
+                    dados_terceira_fase[d3] = samplePest;
+                    d3++;
+                }
+
+            });
+        });
+    }
+    
+
+    if (fase == "primeira") {
+        return dados_primeira_fase;
+    } else if (fase == "segunda") {
+        return dados_segunda_fase;
+    } else if (fase == "terceira") {
+        return dados_terceira_fase;
+    } else { }
+
+}
+
 
 
 
 $(function(){
     loadJson();
     //console.log(buscarSojaBt());
-    gerarGraficoPizzaDistribuicaoPercentual("Paraná", false);
-    gerarGraficoPizzaDistribuicaoPercentual("Paraná", true);
+
     //gerarGraficoPizzaDistribuicaoPercentual("Norte", false);
     //gerarGraficoPizzaDistribuicaoPercentual("Sudoeste", false);
-    
+
     //console.log(JSON.parse(localStorage.getItem("dados")));
     //buscarTipoSoja();
-
-
-    gerarGraficoBarrasParana();
     //console.log(gerarDadosPorFase("primeira"));
-    gerarGraficoPizzaDistribuicaoPercentualLagartasNoParana();
-
-
     //console.log(gerarDadosPorFaseETipoDeSoja("primeira", false));
 
-    gerarGraficoBarrasParanaSojaNBt();
-    gerarGraficoBarrasParanaSojaBt();
 });
 
