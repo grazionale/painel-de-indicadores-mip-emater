@@ -714,7 +714,7 @@ function gerarDadosPorFaseETipoDeSoja(fase, bt) {
 function gerarGraficoBarrasParanaSojaNBt() {
     var valores = gerarDadosGraficoBarrasParanaSojaNaoBt();
     
-    console.log(valores);
+    //console.log(valores);
 
     var ctx = document.getElementById("bar-chart-sojanbt-pr").getContext('2d');
     var myChart = new Chart(document.getElementById("bar-chart-sojanbt-pr"), {
@@ -1069,5 +1069,9 @@ $(function(){
     gerarGraficoBarrasParanaSojaNBt();
     gerarGraficoBarrasParanaSojaBt();
 
+    //Extras, contadores, arrumar um local correto para colocar as funções depois
+    totalareacultivada();
+    numero_de_unidades_de_referencia();
+    numero_de_analises_realizadas();
 
 });

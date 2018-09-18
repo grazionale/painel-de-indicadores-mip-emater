@@ -1,5 +1,5 @@
 function loadJson(){
-    var api_url = "https://siraa.com.br/dados3.json";
+    var api_url = "https://siraa.com.br/dados4.json";
     var dados = [];
 
     $.ajax({

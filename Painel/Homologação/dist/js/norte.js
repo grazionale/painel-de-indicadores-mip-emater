@@ -6,7 +6,6 @@ function gerarDadosGraficoBarrasRegiaoNorte() {
     var primeira_fase = gerarDadosPorFaseERegiao("primeira", "Norte");
     var segunda_fase = gerarDadosPorFaseERegiao("segunda", "Norte");
     var terceira_fase = gerarDadosPorFaseERegiao("terceira", "Norte");
-
     var total_anticarsia_primeira_fase = 0; var num_anticaria_primeira_fase = 0;
     var total_chrysodeixis_primeira_fase = 0; var num_chrysodeixis_primeira_fase = 0;
     var total_spodoptera_primeira_fase = 0; var num_spodoptera_primeira_fase = 0;
@@ -14,6 +13,7 @@ function gerarDadosGraficoBarrasRegiaoNorte() {
 
     //Calculos referentes a primeira fase
     $.each(primeira_fase, function (samplePestSet, samplePest) {
+        //console.log("Primeira Fase");
         //console.log(samplePest);
         if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
 
@@ -47,6 +47,7 @@ function gerarDadosGraficoBarrasRegiaoNorte() {
     var total_heliothinae_segunda_fase = 0; var num_heliothinae_segunda_fase = 0;
 
     $.each(segunda_fase, function (samplePestSet, samplePest) {
+        //console.log("Segunda Fase");
         //console.log(samplePest);
         if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
 
@@ -82,31 +83,49 @@ function gerarDadosGraficoBarrasRegiaoNorte() {
     var total_heliothinae_terceira_fase = 0; var num_heliothinae_terceira_fase = 0;
 
     $.each(terceira_fase, function (samplePestSet, samplePest) {
-        //console.log(samplePest);
+        //console.log(samplePest.pest.scientificName);
         if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
-
+            //console.log("Anticarsia");
             total_anticarsia_terceira_fase = total_anticarsia_terceira_fase + samplePest.value;
             num_anticaria_terceira_fase++;
 
         } else if (samplePest.pest.scientificName == "Chrysodeixis includens") {
-
+            //console.log("Chrysodeixis");
             total_chrysodeixis_terceira_fase = total_chrysodeixis_terceira_fase + samplePest.value;
             num_chrysodeixis_terceira_fase++;
 
         } else if (samplePest.pest.scientificName == "Spodoptera spp") {
-
+            //console.log("Spodoptera");
             total_spodoptera_terceira_fase = total_spodoptera_terceira_fase + samplePest.value;
             num_spodoptera_terceira_fase++;
 
         } else if (samplePest.pest.scientificName == "Grupo Heliothinae") {
-
+            //console.log("Heliothinae");
             total_heliothinae_terceira_fase = total_heliothinae_terceira_fase + samplePest.value;
             num_heliothinae_terceira_fase++;
 
         } else {
-
+            
         }
     });
+
+    // console.log("Primeira Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_primeira_fase + " | Num: " + num_anticaria_primeira_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_primeira_fase + " |  Num: " + num_chrysodeixis_primeira_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_primeira_fase + " | Num: " + num_spodoptera_primeira_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_primeira_fase + " | Num: " + num_heliothinae_primeira_fase);
+
+    // console.log("Segunda Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_segunda_fase + " | Num: " + num_anticaria_segunda_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_segunda_fase + " | Num: " + num_chrysodeixis_segunda_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_segunda_fase + " | Num: " + num_spodoptera_segunda_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_segunda_fase + " | Num: " + num_heliothinae_segunda_fase);
+
+    // console.log("Terceira Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_terceira_fase + " | Num: " + num_anticaria_terceira_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_terceira_fase + " | Num: " + num_chrysodeixis_terceira_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_terceira_fase + " | Num: " + num_spodoptera_terceira_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_terceira_fase + " | Num: " + num_heliothinae_terceira_fase);
 
     //Calcular os valores em porcentagem
     //Primeira Fase
