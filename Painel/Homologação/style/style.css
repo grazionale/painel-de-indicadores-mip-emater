@@ -5,3 +5,11 @@
 .box-title{
     width: 93%;
 }
+
+.box.box-default{
+    border-color: #fff;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active{
+    border-color: #00a65a;
+}

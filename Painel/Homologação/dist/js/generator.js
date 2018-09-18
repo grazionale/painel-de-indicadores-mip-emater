@@ -217,6 +217,64 @@ function buscarLagartas(data){
 
 }
 
+function buscarPercevejos(data){
+    var nazera = []; var a = 0;
+    var piezodorus = []; var c = 0;
+    var euschistus = []; var s = 0;
+    var dichelops = []; var h = 0;
+    var outros = []; var o = 0;
+    var percevejos = [];
+    
+    $.each(data, function(i, item) {
+        //console.log(item.samplePestSet); 
+        $.each(item.samplePestSet, function(p, pest){
+            //console.log(pest.pest.scientificName); 
+            if(pest.pest.scientificName == "Nazera viridula"){
+                nazera[a] = pest;  
+                a++;
+                //console.log("Achou Nazera");
+            } 
+            if (pest.pest.scientificName == "Piezodorus guildinii") {
+                piezodorus[c] = pest;
+                c++;
+                //console.log("Achou Piezodorus");
+            } 
+            if (pest.pest.scientificName == "Euschistus heros") {
+                euschistus[s] = pest;
+                s++;
+                //console.log("Achou Euschistus");
+            } 
+            if (pest.pest.scientificName == "Dichelops melacanthus") {
+                dichelops[h] = pest;
+                h++;
+                //console.log("Achou Dichelops");
+            }
+            if (pest.pest.scientificName == "Outros") {
+                outros[o] = pest;
+                o++;
+                //console.log("Achou Dichelops");
+            }
+        });
+
+        percevejos[0] = nazera;
+        percevejos[1] = piezodorus;
+        percevejos[2] = euschistus;
+        percevejos[3] = dichelops;
+        percevejos[4] = outros;
+
+        //console.log(percevejos);
+
+    });
+    //  console.log(nazera);
+    //  console.log(piezodorus);
+    //  console.log(euschistus);
+    //  console.log(dichelops);
+
+    return percevejos;
+
+}
+
+
 function buscarPorRegiao(data){
     var norte = []; var n = 0;
     var noroeste = []; var no = 0;
