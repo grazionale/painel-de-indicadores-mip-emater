@@ -387,7 +387,7 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
                 labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
                 datasets: [{
                     label: "Paraná",
-                    backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040"],
+                    backgroundColor: ["#F63061", "#42478B", "#1EBD94", "#F5B400"],
                     data: [porcentagem_anticarsia, porcentagem_chrysodeixis, porcentagem_spodoptera, porcentagem_heliothinae]
                 }]
                 },
@@ -459,7 +459,7 @@ function gerarGraficoPizzaDistribuicaoPercentual(regiao, sojabt){
                 labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
                 datasets: [{
                     label: "Paraná",
-                    backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040"],
+                    backgroundColor: ["#41C6F3", "#017EC1", "#FDB225", "#EF3D31"],
                     data: [porcentagem_anticarsia, porcentagem_chrysodeixis, porcentagem_spodoptera, porcentagem_heliothinae]
                 }]
                 },

@@ -431,7 +431,7 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
             labels: ["Nazera viridula", "Piezodorus guildinii", "Euschistus heros", "Dichelops melacanthus", "Outros"],
             datasets: [{
                 label: "Norte",
-                backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040", "#FF5850"],
+                backgroundColor: ["#D70000", "#FF540E", "#FFC801", "#93C702", "#22A2E1"],
                 data: [percentagem_nazera, porcentagem_piezodorus, porcentagem_euschistus, porcentagem_dichelops, porcentagem_outros]
             }]
         },

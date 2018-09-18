@@ -224,7 +224,7 @@ function gerarGraficoBarrasParana() {
     var valores = gerarDadosGraficoBarrasParana();
 
     //console.log(valores);
-
+    
     var ctx = document.getElementById("bar-chart-grouped").getContext('2d');
     var myChart = new Chart(document.getElementById("bar-chart-grouped"), {
         type: 'bar',
@@ -711,7 +711,6 @@ function gerarGraficoBarrasParanaSojaNBt() {
     var valores = gerarDadosGraficoBarrasParanaSojaNaoBt();
     
     //console.log(valores);
-
     var ctx = document.getElementById("bar-chart-sojanbt-pr").getContext('2d');
     var myChart = new Chart(document.getElementById("bar-chart-sojanbt-pr"), {
         type: 'bar',
@@ -720,20 +719,20 @@ function gerarGraficoBarrasParanaSojaNBt() {
             datasets: [
                 {
                     label: "Anticarsia gemmatalis",
-                    backgroundColor: "#C10250",
+                    backgroundColor: "#41C6F3",
                     data: [valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor]
                 }, {
                     label: "Chrysodeixis includens",
-                    backgroundColor: "#03BCBF",
+                    backgroundColor: "#017EC1",
                     data: [valores[0].chrysodeixis.valor, valores[1].chrysodeixis.valor, valores[2].chrysodeixis.valor]
                 },
                 {
                     label: "Spodoptera spp",
-                    backgroundColor: "#D3D945",
+                    backgroundColor: "#FDB225",
                     data: [valores[0].spodoptera.valor, valores[1].spodoptera.valor, valores[2].spodoptera.valor]
                 }, {
                     label: "Grupo Heliothinae",
-                    backgroundColor: "#FCB040",
+                    backgroundColor: "#EF3D31",
                     data: [valores[0].heliothinae.valor, valores[1].heliothinae.valor, valores[2].heliothinae.valor]
                 }
             ]
@@ -995,7 +994,7 @@ function gerarGraficoBarrasParanaSojaBt() {
     var valores = gerarDadosGraficoBarrasParanaSojaBt();
     
     //console.log(valores);
-
+    
     var ctx = document.getElementById("bar-chart-sojabt-pr").getContext('2d');
     var myChart = new Chart(document.getElementById("bar-chart-sojabt-pr"), {
         type: 'bar',
@@ -1004,20 +1003,20 @@ function gerarGraficoBarrasParanaSojaBt() {
             datasets: [
                 {
                     label: "Anticarsia gemmatalis",
-                    backgroundColor: "#C10250",
+                    backgroundColor: "#F63061",
                     data: [valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor]
                 }, {
                     label: "Chrysodeixis includens",
-                    backgroundColor: "#03BCBF",
+                    backgroundColor: "#42478B",
                     data: [valores[0].chrysodeixis.valor, valores[1].chrysodeixis.valor, valores[2].chrysodeixis.valor]
                 },
                 {
                     label: "Spodoptera spp",
-                    backgroundColor: "#D3D945",
+                    backgroundColor: "#1EBD94",
                     data: [valores[0].spodoptera.valor, valores[1].spodoptera.valor, valores[2].spodoptera.valor]
                 }, {
                     label: "Grupo Heliothinae",
-                    backgroundColor: "#FCB040",
+                    backgroundColor: "#F5B400",
                     data: [valores[0].heliothinae.valor, valores[1].heliothinae.valor, valores[2].heliothinae.valor]
                 }
             ]
@@ -1117,7 +1116,7 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoParana() {
             labels: ["Nazera viridula", "Piezodorus guildinii", "Euschistus heros", "Dichelops melacanthus", "Outros"],
             datasets: [{
                 label: "Norte",
-                backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040", "#FF5850"],
+                backgroundColor: ["#D70000", "#FF540E", "#FFC801", "#93C702", "#22A2E1"],
                 data: [percentagem_nazera, porcentagem_piezodorus, porcentagem_euschistus, porcentagem_dichelops, porcentagem_outros]
             }]
         },
