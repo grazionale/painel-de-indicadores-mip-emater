@@ -368,12 +368,7 @@ function gerarGraficoPizzaDistribuicaoPercentualLagartasNoNorteDoParana() {
 
 // Gerar gráfico de Pizza da distribuição de percevejos em todos os periodos do MIP no Norte do Paraná (bt e não bt).
 function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
-    //Nazera viridula
-    //Piezodorus guildinii
-    //Euschistus heros
-    //Dichelops melacanthus
-    //Outros
-    
+   
     var valor_nazera = 0;
     var valor_piezodorus = 0;
     var valor_euschistus = 0;
@@ -386,20 +381,12 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
     var num_dichelops = 0;
     var num_outros = 0;
 
-    var media_anticarsia = 0;
-    var media_chrysodeixis = 0;
-    var media_spodoptera = 0;
-    var media_heliothinae = 0;
-    var media_outros = 0;
-
-
-
     var soja_data =JSON.parse(localStorage.getItem("dados"));
-    var lagartas_regioes = buscarPorRegiao(soja_data);
-    var lagartas = buscarPercevejos(lagartas_regioes[0]);
-    //console.log(lagartas);
+    var pragas_regioes = buscarPorRegiao(soja_data);
+    var percevejos = buscarPercevejos(pragas_regioes[0]);
+
     var cont = 0;
-    $.each(lagartas, function (lagarta, tipo) {
+    $.each(percevejos, function (praga, tipo) {
         $.each(tipo, function (items, i) {
             if (cont == 0) {
                 valor_nazera = valor_nazera + i.value;
@@ -423,16 +410,16 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
     
     var total_percevejos = valor_nazera + valor_piezodorus + valor_euschistus + valor_dichelops + valor_outros;
 
-    var porcentagem_anticarsia = parseFloat((valor_nazera * 100) / total_percevejos).toFixed(2);
-    var porcentagem_chrysodeixis = parseFloat((valor_piezodorus * 100) / total_percevejos).toFixed(2);
-    var porcentagem_spodoptera = parseFloat((valor_euschistus * 100) / total_percevejos).toFixed(2);
-    var porcentagem_heliothinae = parseFloat((valor_dichelops * 100) / total_percevejos).toFixed(2);
+    var percentagem_nazera = parseFloat((valor_nazera * 100) / total_percevejos).toFixed(2);
+    var porcentagem_piezodorus = parseFloat((valor_piezodorus * 100) / total_percevejos).toFixed(2);
+    var porcentagem_euschistus = parseFloat((valor_euschistus * 100) / total_percevejos).toFixed(2);
+    var porcentagem_dichelops = parseFloat((valor_dichelops * 100) / total_percevejos).toFixed(2);
     var porcentagem_outros = parseFloat((valor_outros * 100) / total_percevejos).toFixed(2);
 
-    // console.log(valor_nazera + " Num: " + num_nazera + " Porcentagem: " + porcentagem_anticarsia);
-    // console.log(valor_piezodorus + " Num: " + num_piezodorus + " Porcentagem: " + porcentagem_chrysodeixis);
-    // console.log(valor_euschistus + " Num: " + num_euschistus + " Porcentagem: " + porcentagem_spodoptera);
-    // console.log(valor_dichelops + " Num H: " + num_dichelops + " Porcentagem: " + porcentagem_heliothinae);
+    // console.log(valor_nazera + " Num: " + num_nazera + " Porcentagem: " + percentagem_nazera);
+    // console.log(valor_piezodorus + " Num: " + num_piezodorus + " Porcentagem: " + porcentagem_piezodorus);
+    // console.log(valor_euschistus + " Num: " + num_euschistus + " Porcentagem: " + porcentagem_euschistus);
+    // console.log(valor_dichelops + " Num H: " + num_dichelops + " Porcentagem: " + porcentagem_dichelops);
     // console.log(valor_outros + " Num O: " + num_outros + " Media: "  + porcentagem_outros);
     // console.log("Total Percevejos: " + total_percevejos);
 
@@ -445,7 +432,7 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
             datasets: [{
                 label: "Norte",
                 backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040", "#FF5850"],
-                data: [porcentagem_anticarsia, porcentagem_chrysodeixis, porcentagem_spodoptera, porcentagem_heliothinae, porcentagem_outros]
+                data: [percentagem_nazera, porcentagem_piezodorus, porcentagem_euschistus, porcentagem_dichelops, porcentagem_outros]
             }]
         },
         options: {
@@ -476,7 +463,7 @@ $(function(){
 
     gerarGraficoPizzaDistribuicaoPercentualLagartasNoNorteDoParana();
     gerarGraficoBarrasNorte();
-    //Testes
     gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana();
+    //Testes
     
 });

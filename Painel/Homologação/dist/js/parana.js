@@ -283,10 +283,7 @@ function gerarGraficoBarrasParana() {
 }
 
 
-
-
 // Gerar gráfico de Pizza da distribuição de lagartas em todos os periodos do MIP no Paraná (bt e não bt).
-
 function gerarGraficoPizzaDistribuicaoPercentualLagartasNoParana() {
 
     var valor_anticarsia = 0;
@@ -381,7 +378,6 @@ function gerarGraficoPizzaDistribuicaoPercentualLagartasNoParana() {
 
 
 }
-
 
 
 //Geração de dados para o gráfico de barras referente a plantação de soja não bt do Paraná
@@ -1057,6 +1053,90 @@ function gerarGraficoBarrasParanaSojaBt() {
 
 }
 
+// Gerar gráfico de Pizza da distribuição de percevejos em todos os periodos do MIP no Paraná (bt e não bt).
+function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoParana() {
+
+    var valor_nazera = 0;
+    var valor_piezodorus = 0;
+    var valor_euschistus = 0;
+    var valor_dichelops = 0;
+    var valor_outros = 0;
+
+    var num_nazera = 0;
+    var num_piezodorus = 0;
+    var num_euschistus = 0;
+    var num_dichelops = 0;
+    var num_outros = 0;
+
+    var soja_data =JSON.parse(localStorage.getItem("dados"));
+    var percevejos = buscarPercevejos(soja_data);
+    var cont = 0;
+
+    $.each(percevejos, function (percevejo, tipo) {
+        $.each(tipo, function (items, i) {
+            if (cont == 0) {
+                valor_nazera = valor_nazera + i.value;
+                num_nazera++;
+            } else if (cont == 1) {
+                valor_piezodorus = valor_piezodorus + i.value;
+                num_piezodorus++;
+            } else if (cont == 2) {
+                valor_euschistus = valor_euschistus + i.value;
+                num_euschistus++;
+            } else if (cont == 3){
+                valor_dichelops = valor_dichelops + i.value;
+                num_dichelops++;
+            } else {
+                valor_outros = valor_outros + i.value;
+                num_outros++;
+            }
+        });
+        cont++;
+    });
+
+    var total_percevejos = valor_nazera + valor_piezodorus + valor_euschistus + valor_dichelops + valor_outros;
+
+    var percentagem_nazera = parseFloat((valor_nazera * 100) / total_percevejos).toFixed(2);
+    var porcentagem_piezodorus = parseFloat((valor_piezodorus * 100) / total_percevejos).toFixed(2);
+    var porcentagem_euschistus = parseFloat((valor_euschistus * 100) / total_percevejos).toFixed(2);
+    var porcentagem_dichelops = parseFloat((valor_dichelops * 100) / total_percevejos).toFixed(2);
+    var porcentagem_outros = parseFloat((valor_outros * 100) / total_percevejos).toFixed(2);
+
+    // console.log(valor_nazera + " Num: " + num_nazera + " Porcentagem: " + percentagem_nazera);
+    // console.log(valor_piezodorus + " Num: " + num_piezodorus + " Porcentagem: " + porcentagem_piezodorus);
+    // console.log(valor_euschistus + " Num: " + num_euschistus + " Porcentagem: " + porcentagem_euschistus);
+    // console.log(valor_dichelops + " Num H: " + num_dichelops + " Porcentagem: " + porcentagem_dichelops);
+    // console.log(valor_outros + " Num O: " + num_outros + " Media: "  + porcentagem_outros);
+    // console.log("Total Percevejos: " + total_percevejos);
+
+
+    var ctx = document.getElementById("pizza-chart-soja-percevejos-total-pr").getContext('2d');
+    var myChart = new Chart(document.getElementById("pizza-chart-soja-percevejos-total-pr"), {
+        type: 'doughnut',
+        data: {
+            labels: ["Nazera viridula", "Piezodorus guildinii", "Euschistus heros", "Dichelops melacanthus", "Outros"],
+            datasets: [{
+                label: "Norte",
+                backgroundColor: ["#C10250", "#03BCBF", "#D3D945", "#FCB040", "#FF5850"],
+                data: [percentagem_nazera, porcentagem_piezodorus, porcentagem_euschistus, porcentagem_dichelops, porcentagem_outros]
+            }]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'Titulo',
+                fontSize: 15
+            },
+            legend: {
+                position: 'left',
+                labels: {
+                    fontSize: 14,
+                }
+            }
+        }
+    });
+
+}
 
 
 $(function(){
@@ -1068,6 +1148,9 @@ $(function(){
     gerarGraficoPizzaDistribuicaoPercentual("Paraná", true);
     gerarGraficoBarrasParanaSojaNBt();
     gerarGraficoBarrasParanaSojaBt();
+
+    //Percevejos
+    gerarGraficoPizzaDistribuicaoPercentualPercevejosNoParana();
 
     //Extras, contadores, arrumar um local correto para colocar as funções depois
     totalareacultivada();

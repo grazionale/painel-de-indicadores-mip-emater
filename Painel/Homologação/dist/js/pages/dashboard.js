@@ -219,33 +219,33 @@ $(function () {
 
   // });
 
-  var ctx = document.getElementById("bar-chart-soja-percevejos-total-pr").getContext('2d');
-  var myChart = new Chart(document.getElementById("bar-chart-soja-percevejos-total-pr"), {
-    type: 'pie',
-    data: {
-      labels: ["Nezara viridula", "Piezodorus guildinii", "Euschistus heros", "Dichelops melacanthus", "Outros"],
-      datasets: [{
-        label: "Population (millions)",
-        backgroundColor: ["#c00000", "#00b050", "#548235", "#5b9bd5", "#ffff00"],
-        data: [72.2, 12.4, 4.4, 7, 4]
-      }]
-    },
-    options: {  
-      title: {
-        display: true,
-        text: 'Titulo',
-        fontSize: 15
-      },
-      legend:{
-        position: 'left',
-        labels:{
-          fontSize: 14,
-          boxWidth: 40
-        }
-      }
-    }
+  // var ctx = document.getElementById("bar-chart-soja-percevejos-total-pr").getContext('2d');
+  // var myChart = new Chart(document.getElementById("bar-chart-soja-percevejos-total-pr"), {
+  //   type: 'pie',
+  //   data: {
+  //     labels: ["Nezara viridula", "Piezodorus guildinii", "Euschistus heros", "Dichelops melacanthus", "Outros"],
+  //     datasets: [{
+  //       label: "Population (millions)",
+  //       backgroundColor: ["#c00000", "#00b050", "#548235", "#5b9bd5", "#ffff00"],
+  //       data: [72.2, 12.4, 4.4, 7, 4]
+  //     }]
+  //   },
+  //   options: {  
+  //     title: {
+  //       display: true,
+  //       text: 'Titulo',
+  //       fontSize: 15
+  //     },
+  //     legend:{
+  //       position: 'left',
+  //       labels:{
+  //         fontSize: 14,
+  //         boxWidth: 40
+  //       }
+  //     }
+  //   }
 
-  });
+  // });
 });
 
  
