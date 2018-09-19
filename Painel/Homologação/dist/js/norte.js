@@ -454,7 +454,70 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana() {
 
 }
 
-
+function gerargraficoDeLinhasLagartasNorte(){
+    var valores = gerarDadosGraficoBarrasRegiaoNorte();
+    var myChart = new Chart(document.getElementById("grafico-teste"), {
+        type: 'line',
+        data: {
+            labels: ["0-30", "30-60", "60-90 dias"],
+            datasets: [
+                {
+                    label: "Anticarsia gemmatalis",
+                    backgroundColor: "transparent",
+                    borderColor: "#C10250",
+                    data: [valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor]
+                }, {
+                    label: "Chrysodeixis includens",
+                    backgroundColor: "transparent",
+                    borderColor: "#03BCBF",
+                    data: [valores[0].chrysodeixis.valor, valores[1].chrysodeixis.valor, valores[2].chrysodeixis.valor]
+                },
+                {
+                    label: "Spodoptera spp",
+                    backgroundColor: "transparent",
+                    borderColor: "#D3D945",
+                    data: [valores[0].spodoptera.valor, valores[1].spodoptera.valor, valores[2].spodoptera.valor]
+                }, {
+                    label: "Grupo Heliothinae",
+                    backgroundColor: "transparent",
+                    borderColor: "#FCB040",
+                    data: [valores[0].heliothinae.valor, valores[1].heliothinae.valor, valores[2].heliothinae.valor]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Título - Apenas um Teste'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: true,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Período'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Valor'
+                    }
+                }]
+            }
+        }
+    });
+}
 
 
 $(function(){
@@ -465,5 +528,7 @@ $(function(){
     gerarGraficoBarrasNorte();
     gerarGraficoPizzaDistribuicaoPercentualPercevejosNoNorteDoParana();
     //Testes
-    
+    gerargraficoDeLinhasLagartasNorte();
 });
+
+
