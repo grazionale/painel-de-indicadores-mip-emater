@@ -13,3 +13,7 @@
 .nav-tabs-custom>.nav-tabs>li.active{
     border-color: #00a65a;
 }
+
+.line-space{
+    height: 5px;
+}
