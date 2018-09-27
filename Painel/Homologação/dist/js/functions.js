@@ -4,8 +4,13 @@ Filtro por Ano
     a função deve receber o 2017 como parâmetro (inteiro) e no final, 
     irá retornar um Objeto com as análises da safra de 2017 à 2018.
 */
-function filterByAno(ano){
-    var data = JSON.parse(localStorage.getItem("dados"));
+function filterByAno(ano, dados){
+
+    if(dados == ""){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
     var cont = 0;
     var i = 0;
     var new_data = [];
@@ -36,5 +41,22 @@ function prepare_ano(valor){
     return valor.split('/')[0];
 }
 
+
+
+function filterByRegion(){
+
+    $.each(data, function(analises, analise){
+
+    });
+}
+
+
+
+
+
+
+
+
+
 // Testes
-//filterByAno(prepare_ano($( "#ano-da-safra" ).val())); //Está funcionando
+filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Está funcionando
