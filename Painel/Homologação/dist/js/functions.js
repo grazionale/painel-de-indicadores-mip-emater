@@ -146,6 +146,32 @@ function filterBySudoeste(dados){
     return sudoeste;
 }
 
+function filterByOeste(dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    //console.log(data);
+    var i = 0;
+    var oeste = [];
+
+    $.each(data, function(analises, analise) {
+        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("oeste").toUpperCase()){
+            oeste[i] = analise;
+            i++;
+        } 
+    });
+
+    if(i == 0){
+        alert("Região oeste não encontrada");
+    }
+
+    //console.log(oeste);
+    return oeste;
+}
+
 function filterByRegion(){
     var data = JSON.parse(localStorage.getItem("dados"));
     console.log(data);
@@ -206,3 +232,4 @@ filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Está funcionando
 //filterByNoroeste();
 //filterBySul();
 //filterBySudoeste();
+//filterByOeste();
