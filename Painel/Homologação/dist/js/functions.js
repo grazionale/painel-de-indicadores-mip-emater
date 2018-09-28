@@ -216,8 +216,60 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
     return regioes;
 
 }
+//Retorna um objeto apenas com análises de um municipio específico
+function filterByCounty(name_county, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
 
+    //console.log(data);
 
+    var i = 0;
+    var county = [];
+
+    $.each(data, function(analises, analise) {
+        if((analise.surveyField.field.city.name).toUpperCase() === name_county.toUpperCase()){
+            county[i] = analise;
+            i++;
+        } 
+    });
+
+    if(i == 0){
+        alert("O município " + name_county + " não foi encontrada");
+    }
+
+    //console.log(county);
+    return county;
+}
+//Retorna um objeto apenas com análises de um produtor específico
+function filterByProducer(name_producer, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    //console.log(data);
+
+    var i = 0;
+    var producer = [];
+
+    $.each(data, function(analises, analise) {
+        if((analise.surveyField.field.farmer.name).toUpperCase() === name_producer.toUpperCase()){
+            producer[i] = analise;
+            i++;
+        } 
+    });
+
+    if(i == 0){
+        alert("Dados do produtor " + name_producer + " não foram encontrados");
+    }
+
+    //console.log(producer);
+    return producer;
+}
 
 
 
@@ -237,7 +289,6 @@ function cleanArray(actual) {
 }
 
 
-
 // Testes
 //filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Ok
 //filterByNorte(); //Ok
@@ -247,4 +298,6 @@ function cleanArray(actual) {
 //filterByOeste(); //Ok
 
 
-filterByRegion(1, 0, 0, 1, 0, ""); //Verificar se vai ser necessário transformar o retorno (array) em objeto, as outras funções estão retornando objeto
+//filterByRegion(1, 0, 0, 1, 0, ""); //Verificar se vai ser necessário transformar o retorno (array) em objeto, as outras funções estão retornando objeto
+//filterByCounty("MARIÓPOLIS PR", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
+//filterByProducer("LUIZ ARCANGELO giordani", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
