@@ -394,7 +394,46 @@ function filterByRust(rest_bool, dados){
     //console.log(rest);
     return rest;
 }
+//Retorna um objeto apenas com análises de soja bt ou não
+function filterByBt(bt_bool, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
 
+    //console.log(data);
+
+    var i = 0;
+    var bt = [];
+
+    if(bt_bool){
+        $.each(data, function(analises, analise) {
+            if(analise.surveyField.questionData.bt){
+                bt[i] = analise;
+                i++;
+            } 
+        });
+    
+        if(i == 0){
+            alert("Dados de plantações com soja bt não foram encontrados");
+        }
+    } else {
+        $.each(data, function(analises, analise) {
+            if(!analise.surveyField.questionData.bt){
+                bt[i] = analise;
+                i++;
+            } 
+        });
+    
+        if(i == 0){
+            alert("Dados de plantações com soja não bt não foram encontrados");
+        }
+    }
+
+    //console.log(bt);
+    return bt;
+}
 
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
@@ -429,3 +468,4 @@ function cleanArray(actual) {
 //filterByUr("Carnieletto", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByCultivar("BMX RAIO Ipro", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByRust(1, "");
+//filterByBt(0, "");
