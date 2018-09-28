@@ -327,7 +327,33 @@ function filterByUr(name_ur, dados){
     //console.log(ur);
     return ur;
 }
+//Retorna um objeto apenas com análises de um U.R específica, através do seu valor de identificação.
+function filterByCultivar(cultivar_ur, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
 
+    //console.log(data);
+
+    var i = 0;
+    var cultivar = [];
+
+    $.each(data, function(analises, analise) {
+        if((analise.surveyField.harvest.name).toUpperCase() === cultivar_ur.toUpperCase()){
+            cultivar[i] = analise;
+            i++;
+        } 
+    });
+
+    if(i == 0){
+        alert("Dados com Cultivar " + cultivar_ur + " não foram encontrados");
+    }
+
+    //console.log(cultivar);
+    return cultivar;
+}
 
 
 
@@ -361,3 +387,4 @@ function cleanArray(actual) {
 //filterByProducer("LUIZ ARCANGELO giordani", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByTechnical("técnico De Agronomia", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByUr("Carnieletto", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
+filterByCultivar("BMX RAIO Ipro", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
