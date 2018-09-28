@@ -36,10 +36,6 @@ function filterByAno(ano, dados){
     return new_data;
 
 }
-//Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
-function prepare_ano(valor){
-    return valor.split('/')[0];
-}
 
 //Retorna um objeto apenas com análises da região Norte
 function filterByNorte(dados){
@@ -221,6 +217,15 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
 
 }
 
+
+
+
+
+//Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
+function prepare_ano(valor){
+    return valor.split('/')[0];
+}
+//Limpa os arrays vazios dentro do array principal
 function cleanArray(actual) {
     var newArray = new Array();
     for (var i = 0; i < actual.length; i++) {
@@ -229,7 +234,7 @@ function cleanArray(actual) {
       }
     }
     return newArray;
- }
+}
 
 
 
