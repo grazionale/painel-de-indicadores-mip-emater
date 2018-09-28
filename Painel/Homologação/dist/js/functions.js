@@ -61,11 +61,37 @@ function filterByNorte(dados){
     });
 
     if(i == 0){
-        alert("Região não encontrada");
+        alert("Região norte não encontrada");
     }
 
     //console.log(norte);
     return norte;
+}
+
+function filterByNoroeste(dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    //console.log(data);
+    var i = 0;
+    var noroeste = [];
+
+    $.each(data, function(analises, analise) {
+        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("noroeste").toUpperCase()){
+            noroeste[i] = analise;
+            i++;
+        } 
+    });
+
+    if(i == 0){
+        alert("Região noroeste não encontrada");
+    }
+
+    //console.log(noroeste);
+    return noroeste;
 }
 
 function filterByRegion(){
@@ -125,3 +151,4 @@ filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Está funcionando
 //filterByRegion();
 
 filterByNorte();
+filterByNoroeste();
