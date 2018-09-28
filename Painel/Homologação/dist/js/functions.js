@@ -354,6 +354,46 @@ function filterByCultivar(cultivar_ur, dados){
     //console.log(cultivar);
     return cultivar;
 }
+//Retorna um objeto apenas com análises de soja resistente ou não a ferrugem
+function filterByRust(rest_bool, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    //console.log(data);
+
+    var i = 0;
+    var rest = [];
+
+    if(rest_bool){
+        $.each(data, function(analises, analise) {
+            if(analise.surveyField.questionData.rustResistant){
+                rest[i] = analise;
+                i++;
+            } 
+        });
+    
+        if(i == 0){
+            alert("Dados de plantações resistêntes a ferrugem não foram encontrados");
+        }
+    } else {
+        $.each(data, function(analises, analise) {
+            if(!analise.surveyField.questionData.rustResistant){
+                rest[i] = analise;
+                i++;
+            } 
+        });
+    
+        if(i == 0){
+            alert("Dados de plantações não resistêntes a ferrugem não foram encontrados");
+        }
+    }
+
+    //console.log(rest);
+    return rest;
+}
 
 
 
@@ -387,4 +427,5 @@ function cleanArray(actual) {
 //filterByProducer("LUIZ ARCANGELO giordani", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByTechnical("técnico De Agronomia", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByUr("Carnieletto", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
-filterByCultivar("BMX RAIO Ipro", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
+//filterByCultivar("BMX RAIO Ipro", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
+//filterByRust(1, "");
