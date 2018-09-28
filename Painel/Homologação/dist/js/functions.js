@@ -270,7 +270,36 @@ function filterByProducer(name_producer, dados){
     //console.log(producer);
     return producer;
 }
+//Retorna um objeto apenas com análises de um responsável técnico específico
+function filterByTechnical(name_technical, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
 
+    //console.log(data);
+
+    var i = 0;
+    var technical = [];
+
+    $.each(data, function(analises, analise) {
+        $.each(analise.surveyField.field.supervisors, function(supervisors, supervisor){
+            if((supervisor.name).toUpperCase() === name_technical.toUpperCase()){
+                technical[i] = analise;
+                i++;
+            } 
+        });
+
+    });
+
+    if(i == 0){
+        alert("Dados do técnico " + name_technical + " não foram encontrados");
+    }
+
+    //console.log(technical);
+    return technical;
+}
 
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
@@ -301,3 +330,4 @@ function cleanArray(actual) {
 //filterByRegion(1, 0, 0, 1, 0, ""); //Verificar se vai ser necessário transformar o retorno (array) em objeto, as outras funções estão retornando objeto
 //filterByCounty("MARIÓPOLIS PR", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByProducer("LUIZ ARCANGELO giordani", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
+//filterByTechnical("técnico De Agronomia", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
