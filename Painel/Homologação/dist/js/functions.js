@@ -176,7 +176,7 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
         data = dados;
     }
 
-    console.log(data);
+    //console.log(data);
 
     var norte = []; var n = 0;
     var noroeste = []; var no = 0;
@@ -212,7 +212,7 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
     });
 
     regioes = cleanArray(regioes); //Elimina arrays vazios dentro do array principal
-    console.log(regioes);
+    //console.log(regioes);
     return regioes;
 
 }
@@ -491,3 +491,5 @@ console.log(filterByAno(2018,
         filterByRust(0, 
         filterByBt(1)))))))
         )));
+
+console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, ""))); // Não funciona, justamente porque o filterByRegion retorna um Array e não um Objeto. Corrigir isso.
