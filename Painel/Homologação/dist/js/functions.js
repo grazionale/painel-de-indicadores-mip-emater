@@ -41,7 +41,7 @@ function prepare_ano(valor){
     return valor.split('/')[0];
 }
 
-
+//Retorna um objeto apenas com análises da região Norte
 function filterByNorte(dados){
     if(dados == "" || dados == null){
         var data = JSON.parse(localStorage.getItem("dados"));
@@ -67,7 +67,7 @@ function filterByNorte(dados){
     //console.log(norte);
     return norte;
 }
-
+//Retorna um objeto apenas com análises da região Noroeste
 function filterByNoroeste(dados){
     if(dados == "" || dados == null){
         var data = JSON.parse(localStorage.getItem("dados"));
@@ -93,7 +93,7 @@ function filterByNoroeste(dados){
     //console.log(noroeste);
     return noroeste;
 }
-
+//Retorna um objeto apenas com análises da região Sul
 function filterBySul(dados){
     if(dados == "" || dados == null){
         var data = JSON.parse(localStorage.getItem("dados"));
@@ -119,7 +119,7 @@ function filterBySul(dados){
     //console.log(sul);
     return sul;
 }
-
+//Retorna um objeto apenas com análises da região Sudoeste
 function filterBySudoeste(dados){
     if(dados == "" || dados == null){
         var data = JSON.parse(localStorage.getItem("dados"));
@@ -145,7 +145,7 @@ function filterBySudoeste(dados){
     //console.log(sudoeste);
     return sudoeste;
 }
-
+//Retorna um objeto apenas com análises da região Oeste
 function filterByOeste(dados){
     if(dados == "" || dados == null){
         var data = JSON.parse(localStorage.getItem("dados"));
