@@ -469,3 +469,25 @@ function cleanArray(actual) {
 //filterByCultivar("BMX RAIO Ipro", ""); // Ok, mas Implementar uma função para remover espaços e caracteres especiais.
 //filterByRust(1, "");
 //filterByBt(0, "");
+
+console.log(filterByAno(2017, 
+    filterBySudoeste(
+        filterByCounty("MARIÓPOLIS PR", 
+        filterByProducer("LUIZ ARCANGELO GIORDANI", 
+        filterByTechnical("IVANDERSON BORELLI", 
+        filterByUr("MIP E MID", 
+        filterByCultivar("TMG -  7262", 
+        filterByRust(1, 
+        filterByBt(0)))))))
+        )));
+      
+console.log(filterByAno(2018, 
+    filterByNorte(
+        filterByCounty("CORNÉLIO PROCÓPIO", 
+        filterByProducer("Dono da Fazenda de Cornélio", 
+        filterByTechnical("Técnico De Agronomia", 
+        filterByUr("Carnieletto", 
+        filterByCultivar("BMX RAIO Ipro", 
+        filterByRust(0, 
+        filterByBt(1)))))))
+        )));
