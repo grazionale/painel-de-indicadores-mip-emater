@@ -171,10 +171,17 @@ function filterByOeste(dados){
     //console.log(oeste);
     return oeste;
 }
+/*Retorna um objeto com as regiões que o usuário escolheu, a ordem dos parâmetros da 
+função devem ser seguidas, e para selecionar uma região basta passar o valor 1 ou 0 para não selecionar*/
+function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oeste_bool, dados){
+    if(dados == "" || dados == null){
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
 
-function filterByRegion(){
-    var data = JSON.parse(localStorage.getItem("dados"));
     console.log(data);
+
     var norte = []; var n = 0;
     var noroeste = []; var no = 0;
     var sul = []; var s = 0;
@@ -183,21 +190,19 @@ function filterByRegion(){
     var regioes = [];
 
     $.each(data, function(i, item) {
-        //console.log(item.samplePestSet);
-
-        if(item.surveyField.field.city.region.macroRegion.name == "NORTE"){
+        if(item.surveyField.field.city.region.macroRegion.name == "NORTE" && norte_bool == 1){
             norte[n] = item;
             n++;
-        } else if (item.surveyField.field.city.region.macroRegion.name == "NOROESTE"){
+        } else if (item.surveyField.field.city.region.macroRegion.name == "NOROESTE" && noroeste_bool == 1){
             noroeste[no] = item;
             no++;
-        } else if (item.surveyField.field.city.region.macroRegion.name == "SUL"){
+        } else if (item.surveyField.field.city.region.macroRegion.name == "SUL" && sul_bool == 1){
             sul[s] = item;
             s++;
-        } else if (item.surveyField.field.city.region.macroRegion.name == "SUDOESTE"){
+        } else if (item.surveyField.field.city.region.macroRegion.name == "SUDOESTE" && sudoeste_bool == 1){
             sudoeste[se] = item;
             se++;
-        } else if (item.surveyField.field.city.region.macroRegion.name == "OESTE"){
+        } else if (item.surveyField.field.city.region.macroRegion.name == "OESTE" && oeste_bool == 1){
             oeste[oe] = item;
             oe++;
         } else {}
@@ -210,26 +215,31 @@ function filterByRegion(){
 
     });
 
+    regioes = cleanArray(regioes); //Elimina arrays vazios dentro do array principal
     console.log(regioes);
     return regioes;
 
 }
 
-
-
-
-
-
+function cleanArray(actual) {
+    var newArray = new Array();
+    for (var i = 0; i < actual.length; i++) {
+      if (actual[i].length != 0) {
+        newArray.push(actual[i]);
+      }
+    }
+    return newArray;
+ }
 
 
 
 // Testes
-filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Está funcionando
+//filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Ok
+//filterByNorte(); //Ok
+//filterByNoroeste(); //Ok
+//filterBySul(); //Ok
+//filterBySudoeste(); //Ok
+//filterByOeste(); //Ok
 
-//filterByRegion();
 
-//filterByNorte();
-//filterByNoroeste();
-//filterBySul();
-//filterBySudoeste();
-//filterByOeste();
+filterByRegion(1, 0, 0, 1, 0, ""); //Verificar se vai ser necessário transformar o retorno (array) em objeto, as outras funções estão retornando objeto
