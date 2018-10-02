@@ -4,8 +4,8 @@ Filtro por Ano
     a função deve receber o 2017 como parâmetro (inteiro) e no final, 
     irá retornar um Objeto com as análises da safra de 2017 à 2018.
 */
-function filterByAno(ano, dados){
-    if(dados == "" || dados == null){
+function filterByAno(ano, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -15,21 +15,21 @@ function filterByAno(ano, dados){
     var new_data = [];
     //console.log(data);
 
-    $.each(data, function(analises, analise){
+    $.each(data, function (analises, analise) {
 
         ano_a = analise.surveyField.dateData.sowedDate;
         ano_a = ano_a.split('/');
         ano_a = parseInt(ano_a[2]);
         ano_b = ano_a + 1;
 
-        if(ano == ano_a || ano == ano_b){
+        if (ano == ano_a || ano == ano_b) {
             new_data[i] = analise;
             cont++;
             i++;
-        } 
+        }
     });
 
-    if(cont == 0){
+    if (cont == 0) {
         alert("Safra não encontrada no ano selecionado");
     }
     //console.log(new_data);
@@ -38,8 +38,8 @@ function filterByAno(ano, dados){
 }
 
 //Retorna um objeto apenas com análises da região Norte
-function filterByNorte(dados){
-    if(dados == "" || dados == null){
+function filterByNorte(dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -49,14 +49,14 @@ function filterByNorte(dados){
     var i = 0;
     var norte = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("noRTe").toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("noRTe").toUpperCase()) {
             norte[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Região norte não encontrada");
     }
 
@@ -64,8 +64,8 @@ function filterByNorte(dados){
     return norte;
 }
 //Retorna um objeto apenas com análises da região Noroeste
-function filterByNoroeste(dados){
-    if(dados == "" || dados == null){
+function filterByNoroeste(dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -75,14 +75,14 @@ function filterByNoroeste(dados){
     var i = 0;
     var noroeste = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("noroeste").toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("noroeste").toUpperCase()) {
             noroeste[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Região noroeste não encontrada");
     }
 
@@ -90,8 +90,8 @@ function filterByNoroeste(dados){
     return noroeste;
 }
 //Retorna um objeto apenas com análises da região Sul
-function filterBySul(dados){
-    if(dados == "" || dados == null){
+function filterBySul(dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -101,14 +101,14 @@ function filterBySul(dados){
     var i = 0;
     var sul = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("sul").toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("sul").toUpperCase()) {
             sul[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Região sul não encontrada");
     }
 
@@ -116,8 +116,8 @@ function filterBySul(dados){
     return sul;
 }
 //Retorna um objeto apenas com análises da região Sudoeste
-function filterBySudoeste(dados){
-    if(dados == "" || dados == null){
+function filterBySudoeste(dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -127,14 +127,14 @@ function filterBySudoeste(dados){
     var i = 0;
     var sudoeste = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("sudoeste").toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("sudoeste").toUpperCase()) {
             sudoeste[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Região sudoeste não encontrada");
     }
 
@@ -142,8 +142,8 @@ function filterBySudoeste(dados){
     return sudoeste;
 }
 //Retorna um objeto apenas com análises da região Oeste
-function filterByOeste(dados){
-    if(dados == "" || dados == null){
+function filterByOeste(dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -153,14 +153,14 @@ function filterByOeste(dados){
     var i = 0;
     var oeste = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("oeste").toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() === ("oeste").toUpperCase()) {
             oeste[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Região oeste não encontrada");
     }
 
@@ -169,29 +169,29 @@ function filterByOeste(dados){
 }
 /*Retorna um objeto com as regiões que o usuário escolheu, a ordem dos parâmetros da 
 função devem ser seguidas, e para selecionar uma região basta passar o valor 1 ou 0 para não selecionar*/
-function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oeste_bool, dados){
-    if(dados == "" || dados == null){
+function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oeste_bool, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
     }
 
     //console.log(data);
-   
+
     var regioes = [];
 
-    $.each(data, function(analises, analise) {
-        if(analise.surveyField.field.city.region.macroRegion.name == "NORTE" && norte_bool == 1){
+    $.each(data, function (analises, analise) {
+        if (analise.surveyField.field.city.region.macroRegion.name == "NORTE" && norte_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "NOROESTE" && noroeste_bool == 1){            
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "NOROESTE" && noroeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUL" && sul_bool == 1){
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUL" && sul_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUDOESTE" && sudoeste_bool == 1){
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUDOESTE" && sudoeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "OESTE" && oeste_bool == 1){
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "OESTE" && oeste_bool == 1) {
             regioes.push(analise);
-        } else {}
+        } else { }
 
     });
 
@@ -201,8 +201,8 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
 
 }
 //Retorna um objeto apenas com análises de um municipio específico
-function filterByCounty(name_county, dados){
-    if(dados == "" || dados == null){
+function filterByCounty(name_county, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -213,14 +213,14 @@ function filterByCounty(name_county, dados){
     var i = 0;
     var county = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.city.name).toUpperCase() === name_county.toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.city.name).toUpperCase() === name_county.toUpperCase()) {
             county[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("O município " + name_county + " não foi encontrada");
     }
 
@@ -228,8 +228,8 @@ function filterByCounty(name_county, dados){
     return county;
 }
 //Retorna um objeto apenas com análises de um produtor específico
-function filterByProducer(name_producer, dados){
-    if(dados == "" || dados == null){
+function filterByProducer(name_producer, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -240,14 +240,14 @@ function filterByProducer(name_producer, dados){
     var i = 0;
     var producer = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.field.farmer.name).toUpperCase() === name_producer.toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.field.farmer.name).toUpperCase() === name_producer.toUpperCase()) {
             producer[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Dados do produtor " + name_producer + " não foram encontrados");
     }
 
@@ -255,8 +255,8 @@ function filterByProducer(name_producer, dados){
     return producer;
 }
 //Retorna um objeto apenas com análises de um responsável técnico específico
-function filterByTechnical(name_technical, dados){
-    if(dados == "" || dados == null){
+function filterByTechnical(name_technical, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -267,17 +267,17 @@ function filterByTechnical(name_technical, dados){
     var i = 0;
     var technical = [];
 
-    $.each(data, function(analises, analise) {
-        $.each(analise.surveyField.field.supervisors, function(supervisors, supervisor){
-            if((supervisor.name).toUpperCase() === name_technical.toUpperCase()){
+    $.each(data, function (analises, analise) {
+        $.each(analise.surveyField.field.supervisors, function (supervisors, supervisor) {
+            if ((supervisor.name).toUpperCase() === name_technical.toUpperCase()) {
                 technical[i] = analise;
                 i++;
-            } 
+            }
         });
 
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Dados do técnico " + name_technical + " não foram encontrados");
     }
 
@@ -285,8 +285,8 @@ function filterByTechnical(name_technical, dados){
     return technical;
 }
 //Retorna um objeto apenas com análises de um U.R específica, através do seu valor de identificação.
-function filterByUr(name_ur, dados){
-    if(dados == "" || dados == null){
+function filterByUr(name_ur, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -297,14 +297,14 @@ function filterByUr(name_ur, dados){
     var i = 0;
     var ur = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.name).toUpperCase() === name_ur.toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.name).toUpperCase() === name_ur.toUpperCase()) {
             ur[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Dados da U.R. " + name_ur + " não foram encontrados");
     }
 
@@ -312,8 +312,8 @@ function filterByUr(name_ur, dados){
     return ur;
 }
 //Retorna um objeto apenas com análises de um U.R específica, através do seu valor de identificação.
-function filterByCultivar(cultivar_ur, dados){
-    if(dados == "" || dados == null){
+function filterByCultivar(cultivar_ur, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -324,14 +324,14 @@ function filterByCultivar(cultivar_ur, dados){
     var i = 0;
     var cultivar = [];
 
-    $.each(data, function(analises, analise) {
-        if((analise.surveyField.harvest.name).toUpperCase() === cultivar_ur.toUpperCase()){
+    $.each(data, function (analises, analise) {
+        if ((analise.surveyField.harvest.name).toUpperCase() === cultivar_ur.toUpperCase()) {
             cultivar[i] = analise;
             i++;
-        } 
+        }
     });
 
-    if(i == 0){
+    if (i == 0) {
         alert("Dados com Cultivar " + cultivar_ur + " não foram encontrados");
     }
 
@@ -339,8 +339,8 @@ function filterByCultivar(cultivar_ur, dados){
     return cultivar;
 }
 //Retorna um objeto apenas com análises de soja resistente ou não a ferrugem
-function filterByRust(rest_bool, dados){
-    if(dados == "" || dados == null){
+function filterByRust(rest_bool, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -351,26 +351,26 @@ function filterByRust(rest_bool, dados){
     var i = 0;
     var rest = [];
 
-    if(rest_bool){
-        $.each(data, function(analises, analise) {
-            if(analise.surveyField.questionData.rustResistant){
+    if (rest_bool) {
+        $.each(data, function (analises, analise) {
+            if (analise.surveyField.questionData.rustResistant) {
                 rest[i] = analise;
                 i++;
-            } 
+            }
         });
-    
-        if(i == 0){
+
+        if (i == 0) {
             alert("Dados de plantações resistêntes a ferrugem não foram encontrados");
         }
     } else {
-        $.each(data, function(analises, analise) {
-            if(!analise.surveyField.questionData.rustResistant){
+        $.each(data, function (analises, analise) {
+            if (!analise.surveyField.questionData.rustResistant) {
                 rest[i] = analise;
                 i++;
-            } 
+            }
         });
-    
-        if(i == 0){
+
+        if (i == 0) {
             alert("Dados de plantações não resistêntes a ferrugem não foram encontrados");
         }
     }
@@ -379,8 +379,8 @@ function filterByRust(rest_bool, dados){
     return rest;
 }
 //Retorna um objeto apenas com análises de soja bt ou não
-function filterByBt(bt_bool, dados){
-    if(dados == "" || dados == null){
+function filterByBt(bt_bool, dados) {
+    if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
         data = dados;
@@ -391,26 +391,26 @@ function filterByBt(bt_bool, dados){
     var i = 0;
     var bt = [];
 
-    if(bt_bool){
-        $.each(data, function(analises, analise) {
-            if(analise.surveyField.questionData.bt){
+    if (bt_bool) {
+        $.each(data, function (analises, analise) {
+            if (analise.surveyField.questionData.bt) {
                 bt[i] = analise;
                 i++;
-            } 
+            }
         });
-    
-        if(i == 0){
+
+        if (i == 0) {
             alert("Dados de plantações com soja bt não foram encontrados");
         }
     } else {
-        $.each(data, function(analises, analise) {
-            if(!analise.surveyField.questionData.bt){
+        $.each(data, function (analises, analise) {
+            if (!analise.surveyField.questionData.bt) {
                 bt[i] = analise;
                 i++;
-            } 
+            }
         });
-    
-        if(i == 0){
+
+        if (i == 0) {
             alert("Dados de plantações com soja não bt não foram encontrados");
         }
     }
@@ -419,18 +419,43 @@ function filterByBt(bt_bool, dados){
     return bt;
 }
 
+//Retorna um objeto apenas com análises de lagarta Anticarsia
+function filterByAnticarsia(dados) {
+    if (dados == "" || dados == null) {
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+    var i = 0;
+    var j = 0;
+    var lagartas = [];
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            if (samplePest.pest.scientificName != "Anticarsia gemmatalis") {
+                return true;
+            }
+            choiceArray.push(samplePest);
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    return data;
+}
+
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
-function prepare_ano(valor){
+function prepare_ano(valor) {
     return valor.split('/')[0];
 }
 //Limpa os objetos vazios dentro do objeto principal
 function cleanObject(actual) {
     var newArray = new Array();
     for (var i = 0; i < actual.length; i++) {
-      if (Object.keys(actual[i]).length !== 0) {
-        newArray.push(actual[i]);
-      }
+        if (Object.keys(actual[i]).length !== 0) {
+            newArray.push(actual[i]);
+        }
     }
     return newArray;
 }
@@ -454,30 +479,30 @@ function cleanObject(actual) {
 //filterByRust(1, "");
 //filterByBt(0, "");
 
-console.log(filterByAno(2017, 
-    filterBySudoeste(
-        filterByCounty("MARIÓPOLIS PR", 
-        filterByProducer("LUIZ ARCANGELO GIORDANI", 
-        filterByTechnical("IVANDERSON BORELLI", 
-        filterByUr("MIP E MID", 
-        filterByCultivar("TMG -  7262", 
-        filterByRust(1, 
-        filterByBt(0)))))))
-        )));
-      
-console.log(filterByAno(2018, 
-    filterByNorte(
-        filterByCounty("CORNÉLIO PROCÓPIO", 
-        filterByProducer("Dono da Fazenda de Cornélio", 
-        filterByTechnical("Técnico De Agronomia", 
-        filterByUr("Carnieletto", 
-        filterByCultivar("BMX RAIO Ipro", 
-        filterByRust(0, 
-        filterByBt(1)))))))
-        )));
+// console.log(filterByAno(2017, 
+//     filterBySudoeste(
+//         filterByCounty("MARIÓPOLIS PR", 
+//         filterByProducer("LUIZ ARCANGELO GIORDANI", 
+//         filterByTechnical("IVANDERSON BORELLI", 
+//         filterByUr("MIP E MID", 
+//         filterByCultivar("TMG -  7262", 
+//         filterByRust(1, 
+//         filterByBt(0)))))))
+//         )));
 
-    
-console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, ""))); // Não funciona, justamente porque o filterByRegion retorna um Array e não um Objeto. Corrigir isso.
+// console.log(filterByAno(2018, 
+//     filterByNorte(
+//         filterByCounty("CORNÉLIO PROCÓPIO", 
+//         filterByProducer("Dono da Fazenda de Cornélio", 
+//         filterByTechnical("Técnico De Agronomia", 
+//         filterByUr("Carnieletto", 
+//         filterByCultivar("BMX RAIO Ipro", 
+//         filterByRust(0, 
+//         filterByBt(1)))))))
+//         )));
+
+
+//console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, ""))); // Não funciona, justamente porque o filterByRegion retorna um Array e não um Objeto. Corrigir isso.
 
 // console.log("Ano");
 // console.log(filterByAno(2017, ""));
@@ -490,4 +515,7 @@ console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, ""))); // Não funci
 // console.log(filterByRegion(1, 0, 0, 1, 0, ""));
 
 //console.log("REgião Norte e Sudoeste e 2017");
-//console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, "")));
+console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, filterByAnticarsia(""))));
+
+
+//console.log(filterByAnticarsia(""));
