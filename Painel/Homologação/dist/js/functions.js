@@ -494,6 +494,81 @@ function filterBySpodoptera(dados) {
     return data;
 }
 
+//Retorna um objeto apenas com análises de lagarta Heliothinae
+function filterByHeliothinae(dados) {
+    if (dados == "" || dados == null) { 
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+    var i = 0;
+    var j = 0;
+    var lagartas = [];
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            if (samplePest.pest.scientificName != "Grupo Heliothinae") {
+                return true;
+            }
+            choiceArray.push(samplePest);
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    return data;
+}
+
+//Retorna um objeto apenas com análises de percevejos Nazera viridula
+function filterByNazera(dados) {
+    if (dados == "" || dados == null) { 
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+    var i = 0;
+    var j = 0;
+    var lagartas = [];
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            if (samplePest.pest.scientificName != "Nazera viridula") {
+                return true;
+            }
+            choiceArray.push(samplePest);
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    return data;
+}
+
+//Retorna um objeto apenas com análises de percevejos Piezodorus guildinii
+function filterByPiezodorus(dados) {
+    if (dados == "" || dados == null) { 
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+    var i = 0;
+    var j = 0;
+    var lagartas = [];
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            if (samplePest.pest.scientificName != "Piezodorus guildinii") {
+                return true;
+            }
+            choiceArray.push(samplePest);
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    return data;
+}
+
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
 function prepare_ano(valor) {
@@ -565,7 +640,7 @@ function cleanObject(actual) {
 // console.log(filterByRegion(1, 0, 0, 1, 0, ""));
 
 //console.log("REgião Norte e Sudoeste e 2017");
-console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, filterBySpodoptera(""))));
+console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, filterByNazera(""))));
 
 
 //console.log(filterByAnticarsia(""));
