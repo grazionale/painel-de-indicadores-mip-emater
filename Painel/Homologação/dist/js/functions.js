@@ -644,6 +644,46 @@ function filterByOutros(dados) {
     return data;
 }
 
+//Retorna um objeto apenas com análises dentro de um período de coletas
+function filterByPeriod(data_inicial, data_final, dados) {
+    if (dados == "" || dados == null) { 
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    data_aux = data_inicial;
+    data_aux = data_aux.split("-");
+    data_inicial = new Date(data_aux[0] + "-" + data_aux[1] + "-" + data_aux[2] + " 00:00:00");
+
+    data_aux = data_final;
+    data_aux = data_aux.split("-");
+    data_final = new Date(data_aux[0] + "-" + data_aux[1] + "-" + data_aux[2] + " 00:00:00");
+
+    var data_atual = new Date();
+
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            data_aux = samplePest.sampleDate;
+            data_aux = data_aux.split("/");
+            data_atual = new Date(data_aux[1] + "-" + data_aux[0] + "-" + data_aux[2] + " 00:00:00");
+            //console.log("Atual" + data_atual);
+            if (data_atual >= data_inicial && data_atual <= data_final) {
+                console.log("entrou");
+                choiceArray.push(samplePest);
+            } else {
+                return true;
+            }
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    return data;
+}
+
+
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
 function prepare_ano(valor) {
@@ -715,7 +755,14 @@ function cleanObject(actual) {
 // console.log(filterByRegion(1, 0, 0, 1, 0, ""));
 
 //console.log("REgião Norte e Sudoeste e 2017");
-console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, filterByOutros(""))));
+//console.log(filterByAno(2017, filterByRegion(1, 0, 0, 1, 0, filterByOutros(""))));
 
 
 //console.log(filterByAnticarsia(""));
+$("#data-inicial-amostra, #data-final-amostra").change(function(e){
+    var a = $("#data-inicial-amostra").val();
+    var b = $("#data-final-amostra").val();
+    if(a != "" && b != ""){
+        console.log(filterByPeriod( $("#data-inicial-amostra").val() , $("#data-final-amostra").val(), ""));
+    } 
+})
