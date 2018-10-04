@@ -31,6 +31,7 @@ function filterByAno(ano, dados) {
 
     if (cont == 0) {
         alert("Safra não encontrada no ano selecionado");
+        return [{}];
     }
     //console.log(new_data);
     return new_data;
@@ -58,6 +59,7 @@ function filterByNorte(dados) {
 
     if (i == 0) {
         alert("Região norte não encontrada");
+        return [{}];
     }
 
     //console.log(norte);
@@ -84,6 +86,7 @@ function filterByNoroeste(dados) {
 
     if (i == 0) {
         alert("Região noroeste não encontrada");
+        return [{}];
     }
 
     //console.log(noroeste);
@@ -110,6 +113,7 @@ function filterBySul(dados) {
 
     if (i == 0) {
         alert("Região sul não encontrada");
+        return [{}];
     }
 
     //console.log(sul);
@@ -136,6 +140,7 @@ function filterBySudoeste(dados) {
 
     if (i == 0) {
         alert("Região sudoeste não encontrada");
+        return [{}];
     }
 
     //console.log(sudoeste);
@@ -162,6 +167,7 @@ function filterByOeste(dados) {
 
     if (i == 0) {
         alert("Região oeste não encontrada");
+        return [{}];
     }
 
     //console.log(oeste);
@@ -222,6 +228,7 @@ function filterByCounty(name_county, dados) {
 
     if (i == 0) {
         alert("O município " + name_county + " não foi encontrada");
+        return [{}];
     }
 
     //console.log(county);
@@ -249,6 +256,7 @@ function filterByProducer(name_producer, dados) {
 
     if (i == 0) {
         alert("Dados do produtor " + name_producer + " não foram encontrados");
+        return [{}];
     }
 
     //console.log(producer);
@@ -279,6 +287,7 @@ function filterByTechnical(name_technical, dados) {
 
     if (i == 0) {
         alert("Dados do técnico " + name_technical + " não foram encontrados");
+        return [{}];
     }
 
     //console.log(technical);
@@ -306,6 +315,7 @@ function filterByUr(name_ur, dados) {
 
     if (i == 0) {
         alert("Dados da U.R. " + name_ur + " não foram encontrados");
+        return [{}];
     }
 
     //console.log(ur);
@@ -333,6 +343,7 @@ function filterByCultivar(cultivar_ur, dados) {
 
     if (i == 0) {
         alert("Dados com Cultivar " + cultivar_ur + " não foram encontrados");
+        return [{}];
     }
 
     //console.log(cultivar);
@@ -361,6 +372,7 @@ function filterByRust(rest_bool, dados) {
 
         if (i == 0) {
             alert("Dados de plantações resistêntes a ferrugem não foram encontrados");
+            return [{}];
         }
     } else {
         $.each(data, function (analises, analise) {
@@ -372,6 +384,7 @@ function filterByRust(rest_bool, dados) {
 
         if (i == 0) {
             alert("Dados de plantações não resistêntes a ferrugem não foram encontrados");
+            return [{}];
         }
     }
 
@@ -401,6 +414,7 @@ function filterByBt(bt_bool, dados) {
 
         if (i == 0) {
             alert("Dados de plantações com soja bt não foram encontrados");
+            return [{}];
         }
     } else {
         $.each(data, function (analises, analise) {
@@ -412,6 +426,7 @@ function filterByBt(bt_bool, dados) {
 
         if (i == 0) {
             alert("Dados de plantações com soja não bt não foram encontrados");
+            return [{}];
         }
     }
 
@@ -759,10 +774,13 @@ function cleanObject(actual) {
 
 
 //console.log(filterByAnticarsia(""));
-$("#data-inicial-amostra, #data-final-amostra").change(function(e){
-    var a = $("#data-inicial-amostra").val();
-    var b = $("#data-final-amostra").val();
-    if(a != "" && b != ""){
-        console.log(filterByPeriod( $("#data-inicial-amostra").val() , $("#data-final-amostra").val(), ""));
-    } 
-})
+
+// $("#data-inicial-amostra, #data-final-amostra").change(function(e){
+//     var a = $("#data-inicial-amostra").val();
+//     var b = $("#data-final-amostra").val();
+//     if(a != "" && b != ""){
+//         console.log(filterByPeriod( $("#data-inicial-amostra").val() , $("#data-final-amostra").val(), ""));
+//     } 
+// })
+
+gerarCanvasGraficoPizza(filterByAno(2018, filterByBt(false, filterBySudoeste(""))));

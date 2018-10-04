@@ -1137,7 +1137,6 @@ function gerarGraficoPizzaDistribuicaoPercentualPercevejosNoParana() {
 
 }
 
-
 $(function(){
 
     //Paraná
@@ -1157,3 +1156,6 @@ $(function(){
     numero_de_analises_realizadas();
 
 });
+
+
+
