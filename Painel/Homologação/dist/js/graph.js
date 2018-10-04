@@ -89,3 +89,27 @@ function gerarCanvasGraficoPizza(dados) {
 
 
 }
+
+function filtrar(){
+    var ano_safra = $("#ano-da-safra").val();
+    var regiao = $("#regiao-safra").val();
+    var municio = $("#municiopio-regiao").val();
+    var produto = $("#produtor-safra").val();
+    var tecnico = $("#tecnico-safra").val();
+    var id_ur = $("#id-ur").val();
+    var cultivar = $("#cultivar-safra").val();
+    var ferrugem = $("input[name=ferrugem]:checked").val();
+    var data_inicial = $("#data-inicial-amostra").val();
+    var data_final = $("#data-final-amostra").val();
+
+    console.log(ano_safra);
+    console.log(regiao);
+    console.log(municio);
+    console.log(produto);
+    console.log(ferrugem);
+    console.log(tecnico);
+    console.log(id_ur);
+    console.log(cultivar);
+    console.log(data_inicial);
+    console.log(data_final);
+}

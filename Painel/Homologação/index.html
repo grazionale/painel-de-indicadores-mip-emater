@@ -273,13 +273,13 @@
 
                         <div class="regiao-ur">
                           <label>Região</label>
-                          <select>
-                            <option value="volvo">Paraná</option>
-                            <option value="volvo">Norte</option>
-                            <option value="volvo">Noroeste</option>
-                            <option value="volvo">Sul</option>
-                            <option value="volvo">Sudoeste</option>
-                            <option value="volvo">Oeste</option>
+                          <select id="regiao-safra">
+                            <option value="Todas">Todas</option>
+                            <option value="Norte">Norte</option>
+                            <option value="Noroeste">Noroeste</option>
+                            <option value="Sul">Sul</option>
+                            <option value="Sudoeste">Sudoeste</option>
+                            <option value="Oeste">Oeste</option>
                           </select>
                         </div>
 
@@ -287,8 +287,8 @@
 
                         <div class="municipio-ur">
                           <label>Município</label>
-                          <select>
-                            <option value="volvo">Volvo</option>
+                          <select id="municiopio-regiao">
+                            <option value="Todos">Todos</option>
                           </select>
                         </div>
 
@@ -296,14 +296,14 @@
 
                         <div class="produtor-ur">
                           <label>Produtor</label>
-                          <input type="text">
+                          <input type="text" id="produtor-safra">
                         </div>
 
                         <div class="line-space"></div>
 
                         <div class="tecnico-ur">
                           <label>Responsável Técnico</label>
-                          <select>
+                          <select id="tecnico-safra">
                               <option value="volvo">Técnico 1</option>
                             </select>
                         </div>
@@ -312,21 +312,21 @@
 
                         <div class="id-ur">
                           <label>Identificação da UR</label>
-                          <input type="text">
+                          <input type="text" id="id-ur">
                         </div>
 
                         <div class="line-space"></div>
 
                         <div class="cultivar">
                           <label>Cultivar</label>
-                          <select>
+                          <select id="cultivar-safra">
                             <option value="volvo">Volvo</option>
                           </select>
                         </div>
 
                         <div class="line-space"></div>
 
-                        <div class="ferrugem-soja">
+                        <div class="ferrugem-soja" id="ferrugem-safra">
                           <label>Resitênte a Ferrugem?</label>
                           <div>
                             <input type="radio" name="ferrugem" value="ferrugem-ambos" checked />
@@ -369,6 +369,10 @@
                             <label for="data-amostra">Período da Amostra</label>
                             <button id="button-limpar-data">Limpar</button>
                           </div>
+                        </div>
+
+                        <div class="div-filtrar-buscar">
+                            <button id="filtrar-buscar" onclick="filtrar()">Filtrar</button>
                         </div>
 
 
