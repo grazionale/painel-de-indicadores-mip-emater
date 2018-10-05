@@ -786,4 +786,4 @@ function cleanObject(actual) {
 //     } 
 // })
 
-gerarCanvasGraficoPizza(filterByAno(2018, filterByBt(false, filterBySudoeste(""))));
+//gerarCanvasGraficoPizza(filterByAno(2018, filterByBt(false, filterBySudoeste(""))));
