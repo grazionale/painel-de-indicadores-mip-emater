@@ -60,8 +60,8 @@ function gerarCanvasGraficoPizza(dados) {
     // console.log("Porcentagem total: " + porcentagem_total);
 
     
-    var ctx = document.getElementById("canvas-generator-graph-bar").getContext('2d');
-    var myChart = new Chart(document.getElementById("canvas-generator-graph-bar"), {
+    var ctx = document.getElementById("canvas-generator-graph-pizza").getContext('2d');
+    var myChart = new Chart(document.getElementById("canvas-generator-graph-pizza"), {
         type: 'doughnut',
         data: {
             labels: ["Anticarsia gemmatalis", "Chrysodexis includens", "Spodoptera spp", "Grupo Heliothinae"],
@@ -90,6 +90,10 @@ function gerarCanvasGraficoPizza(dados) {
 
 }
 
+function gerarCanvasGraficoBarras() {
+
+}
+
 function checarTodasRegioes(){
     if($('#regiao-todas-safra').is(':checked')){ 
         $( "#regiao-norte-safra" ).prop( "checked", true );
@@ -105,6 +109,7 @@ function checarTodasRegioes(){
         $( "#regiao-oeste-safra" ).prop( "checked", false );
     }
 }
+
 //Retorna dados filtrados a partir do filtro (front-end) que o usuário escolher.
 function filtrar(){
     var ano_safra = $("#ano-da-safra").val();
@@ -188,35 +193,18 @@ function filtrar(){
     if(data_inicial == "" || data_final == ""){
         //console.log("Filtrou por todos os períodos");
     } else {
+        dados = filterByPeriod(data_inicial, data_final, dados);
         //console.log("Filtrou por desde: " + data_inicial + " até: " + data_final);
     }
 
-    //console.log(dados);
+    console.log(dados);
     
     $.each(Chart.instances, function(i, obj){
-        if(obj.chart.canvas.id == "canvas-generator-graph-bar"){
+        if(obj.chart.canvas.id == "canvas-generator-graph-pizza"){
             obj.destroy();
         }
     });
     
 
     gerarCanvasGraficoPizza(dados);
-}
-
-
-
-function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    chart.update();
-}
-
-function removeData(chart) {
-    chart.data.labels.pop();
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.pop();
-    });
-    chart.update();
 }

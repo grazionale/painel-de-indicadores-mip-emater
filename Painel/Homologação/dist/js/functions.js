@@ -701,6 +701,67 @@ function filterByPeriod(data_inicial, data_final, dados) {
     return data;
 }
 
+//Retorna um objeto apenas com análises de uma determinada fase
+function filterByFase(fase, dados){
+    if (dados == "" || dados == null) { 
+        var data = JSON.parse(localStorage.getItem("dados"));
+    } else {
+        data = dados;
+    }
+
+    var dados_primeira_fase = []; d1 = 0;
+    var dados_segunda_fase = []; d2 = 0;
+    var dados_terceira_fase = []; d3 = 0;
+
+    var aux_data = dados[0].samplePestSet[0].sampleDate;
+    aux_data = aux_data.split("/");
+    var data_inicial = new Date(aux_data[1] + "-" + aux_data[0] + "-" + aux_data[2]);
+    var data_final_primeira_fase = new Date();
+    var data_final_segunda_fase = new Date();
+
+    data_final_primeira_fase = addDays(data_inicial, 30);
+    data_final_segunda_fase = addDays(data_final_primeira_fase, 30);
+
+
+    $.each(data, function (i, analise) {
+        var choiceArray = [];
+
+        $.each(analise.samplePestSet, function (samplePestSet, samplePest) {
+            data_aux = samplePest.sampleDate;
+            data_aux = data_aux.split("/");
+            data_atual = new Date(data_aux[1] + "-" + data_aux[0] + "-" + data_aux[2] + " 00:00:00");
+            //console.log("Atual" + data_atual);
+            if (data_atual >= data_inicial && data_atual <= data_final) {
+                console.log("entrou");
+                choiceArray.push(samplePest);
+            } else {
+                return true;
+            }
+
+                var aux = samplePest.sampleDate;
+
+                aux = aux.split("/");
+                var data = new Date(aux[1] + "-" + aux[0] + "-" + aux[2]);
+
+                if (data < data_final_primeira_fase) {
+                    //console.log(data + " - 1 Fase");
+                    dados_primeira_fase[d1] = samplePest;
+                    d1++;
+                } else if (data > data_final_primeira_fase && data <= data_final_segunda_fase) {
+                    //console.log(data + " - 2 Fase");
+                    dados_segunda_fase[d2] = samplePest;
+                    d2++;
+                } else {
+                    //console.log(data + " - 3 Fase");
+                    dados_terceira_fase[d3] = samplePest;
+                    d3++;
+                }
+        });
+
+        analise.samplePestSet = choiceArray;
+    });
+    
+}
 
 
 //Retorna o primeiro ano de uma Safra, exemplo: Safra de 2017 à 2018, a função irá retornar um inteiro com valor de 2017
