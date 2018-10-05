@@ -94,7 +94,7 @@ function filtrar(){
     var ano_safra = $("#ano-da-safra").val();
     var regiao = $("#regiao-safra").val();
     var municio = $("#municiopio-regiao").val();
-    var produto = $("#produtor-safra").val();
+    var produtor = $("#produtor-safra").val();
     var tecnico = $("#tecnico-safra").val();
     var id_ur = $("#id-ur").val();
     var cultivar = $("#cultivar-safra").val();
@@ -112,4 +112,65 @@ function filtrar(){
     console.log(cultivar);
     console.log(data_inicial);
     console.log(data_final);
+
+    dados = filterByAno(ano_safra, "");
+    console.log("Filtrou por ano");
+    if(regiao == "Todas"){
+        console.log("Filtrou por todas as regiões");
+        //dados = filterByRegion(1,1,1,1,1,1,dados);
+    } else {
+        console.log("Filtrou pela regiao " + regiao);
+        dados = filterByRegion(regiao,dados);
+    }
+
+    if(municio == "Todos"){
+        console.log("Filtrou por todos os municipios");
+    } else {
+        console.log("Filtrou pelo municipio " + municio);
+        dados = filterByRegion(municio,dados);
+    }
+
+    if(produtor == null){
+        console.log("Filtrou por todos os produtores");
+    } else {
+        console.log("Filtrou pelo produtor " + produtor);
+        dados = filterByProducer(produtor,dados);
+    }
+
+    if(ferrugem == "ferrugem-sim"){
+        console.log("Filtrou por cultivos com ferrugem");
+        dados = filterByRust(1,dados);
+    } else if (ferrugem == "ferrugem-nao") {
+        console.log("Filtrou por cultivos sem ferrugem");
+        dados = filterByRust(0,dados);
+    } else {
+        console.log("Filtrou por cultivos com ferrugem e sem ferrugem");
+    }
+
+    if(tecnico == "Todos"){
+        console.log("Filtrou por todos os tecnicos");
+    } else {
+        console.log("Filtrou pelo tecnico " + tecnico);
+        dados = filterByTechnical(tecnico,dados);
+    }
+
+
+    if(id_ur == null){
+        console.log("Filtrou por todos as UR's");
+    } else {
+        console.log("Filtrou pela UR com o ID " + id_ur);
+        dados = filterByUr(id_ur,dados);
+    }
+
+    if(cultivar == "tipo-soja-sim"){
+        console.log("Filtrou por cultivos com soja Bt");
+        dados = filterByBt(1, dados);
+    } else if (cultivar == "tipo-soja-nao") {
+        console.log("Filtrou por cultivos com soja não Bt");
+        dados = filterByBt(0,dados);
+    } else {
+        console.log("Filtrou por cultivos com soja Bt e Não Bt");
+    }
+
+    
 }

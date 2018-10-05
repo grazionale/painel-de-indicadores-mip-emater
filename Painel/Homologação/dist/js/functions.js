@@ -187,15 +187,15 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
     var regioes = [];
 
     $.each(data, function (analises, analise) {
-        if (analise.surveyField.field.city.region.macroRegion.name == "NORTE" && norte_bool == 1) {
+        if (analise.surveyField.field.city.region.macroRegion.name == "Norte" && norte_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "NOROESTE" && noroeste_bool == 1) {
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "Noroeste" && noroeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUL" && sul_bool == 1) {
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "Sul" && sul_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "SUDOESTE" && sudoeste_bool == 1) {
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "Sudoeste" && sudoeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "OESTE" && oeste_bool == 1) {
+        } else if (analise.surveyField.field.city.region.macroRegion.name == "Oeste" && oeste_bool == 1) {
             regioes.push(analise);
         } else { }
 
