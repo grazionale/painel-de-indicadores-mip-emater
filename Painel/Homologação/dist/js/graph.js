@@ -90,87 +90,106 @@ function gerarCanvasGraficoPizza(dados) {
 
 }
 
+function checarTodasRegioes(){
+    if($('#regiao-todas-safra').is(':checked')){ 
+        $( "#regiao-norte-safra" ).prop( "checked", true );
+        $( "#regiao-noroeste-safra" ).prop( "checked", true );
+        $( "#regiao-sul-safra" ).prop( "checked", true );
+        $( "#regiao-sudoeste-safra" ).prop( "checked", true );
+        $( "#regiao-oeste-safra" ).prop( "checked", true );
+    } else {
+        $( "#regiao-norte-safra" ).prop( "checked", false );
+        $( "#regiao-noroeste-safra" ).prop( "checked", false );
+        $( "#regiao-sul-safra" ).prop( "checked", false );
+        $( "#regiao-sudoeste-safra" ).prop( "checked", false );
+        $( "#regiao-oeste-safra" ).prop( "checked", false );
+    }
+}
+//Retorna dados filtrados a partir do filtro (front-end) que o usuário escolher.
 function filtrar(){
     var ano_safra = $("#ano-da-safra").val();
-    var regiao = $("#regiao-safra").val();
+
+    if($('#regiao-norte-safra').is(':checked')){ var norte = 1;} else{ var norte = 0;}
+    if($('#regiao-noroeste-safra').is(':checked')){ var noroeste = 1;} else{ var noroeste = 0;}
+    if($('#regiao-sul-safra').is(':checked')){ var sul = 1;} else{ var sul = 0;}
+    if($('#regiao-sudoeste-safra').is(':checked')){ var sudoeste = 1;} else{ var sudoeste = 0;}
+    if($('#regiao-oeste-safra').is(':checked')){ var oeste = 1;} else{ var oeste = 0;}
+
     var municio = $("#municiopio-regiao").val();
     var produtor = $("#produtor-safra").val();
     var tecnico = $("#tecnico-safra").val();
     var id_ur = $("#id-ur").val();
     var cultivar = $("#cultivar-safra").val();
     var ferrugem = $("input[name=ferrugem]:checked").val();
+    var tipo_soja = $("input[name=tipo-soja]:checked").val();
     var data_inicial = $("#data-inicial-amostra").val();
     var data_final = $("#data-final-amostra").val();
 
-    console.log(ano_safra);
-    console.log(regiao);
-    console.log(municio);
-    console.log(produto);
-    console.log(ferrugem);
-    console.log(tecnico);
-    console.log(id_ur);
-    console.log(cultivar);
-    console.log(data_inicial);
-    console.log(data_final);
-
-    dados = filterByAno(ano_safra, "");
-    console.log("Filtrou por ano");
-    if(regiao == "Todas"){
-        console.log("Filtrou por todas as regiões");
-        //dados = filterByRegion(1,1,1,1,1,1,dados);
-    } else {
-        console.log("Filtrou pela regiao " + regiao);
-        dados = filterByRegion(regiao,dados);
-    }
+    dados = filterByAno(prepare_ano(ano_safra), "");
+    //console.log("Filtrou por ano " + ano_safra); 
+    dados = filterByRegion(norte, noroeste, sul, sudoeste, oeste, dados);
 
     if(municio == "Todos"){
-        console.log("Filtrou por todos os municipios");
+        //console.log("Filtrou por todos os municipios");
     } else {
-        console.log("Filtrou pelo municipio " + municio);
-        dados = filterByRegion(municio,dados);
+        //console.log("Filtrou pelo municipio " + municio);
+        dados = filterByCounty(municio,dados);
     }
 
-    if(produtor == null){
-        console.log("Filtrou por todos os produtores");
+    if(produtor == ""){
+        //console.log("Filtrou por todos os produtores");
     } else {
-        console.log("Filtrou pelo produtor " + produtor);
+        //console.log("Filtrou pelo produtor " + produtor);
         dados = filterByProducer(produtor,dados);
     }
 
-    if(ferrugem == "ferrugem-sim"){
-        console.log("Filtrou por cultivos com ferrugem");
-        dados = filterByRust(1,dados);
-    } else if (ferrugem == "ferrugem-nao") {
-        console.log("Filtrou por cultivos sem ferrugem");
-        dados = filterByRust(0,dados);
-    } else {
-        console.log("Filtrou por cultivos com ferrugem e sem ferrugem");
-    }
-
     if(tecnico == "Todos"){
-        console.log("Filtrou por todos os tecnicos");
+        //console.log("Filtrou por todos os tecnicos");
     } else {
-        console.log("Filtrou pelo tecnico " + tecnico);
+        //console.log("Filtrou pelo tecnico " + tecnico);
         dados = filterByTechnical(tecnico,dados);
     }
 
-
-    if(id_ur == null){
-        console.log("Filtrou por todos as UR's");
+    if(id_ur == ""){
+        //console.log("Filtrou por todos as UR's");
     } else {
-        console.log("Filtrou pela UR com o ID " + id_ur);
+        //console.log("Filtrou pela UR com o ID " + id_ur);
         dados = filterByUr(id_ur,dados);
     }
 
-    if(cultivar == "tipo-soja-sim"){
-        console.log("Filtrou por cultivos com soja Bt");
-        dados = filterByBt(1, dados);
-    } else if (cultivar == "tipo-soja-nao") {
-        console.log("Filtrou por cultivos com soja não Bt");
-        dados = filterByBt(0,dados);
+    if(cultivar == "Todos"){
+        //console.log("Filtrou por todos os cultivar");
     } else {
-        console.log("Filtrou por cultivos com soja Bt e Não Bt");
+        //console.log("Filtrou pelo cultivar " + cultivar);
+        dados = filterByCultivar(cultivar,dados);
     }
 
-    
+    if(ferrugem == "ferrugem-sim"){
+        //console.log("Filtrou por cultivos com ferrugem");
+        dados = filterByRust(1,dados);
+    } else if (ferrugem == "ferrugem-nao") {
+        //console.log("Filtrou por cultivos sem ferrugem");
+        dados = filterByRust(0,dados);
+    } else {
+        //console.log("Filtrou por cultivos com ferrugem e sem ferrugem");
+    }
+
+    if(tipo_soja == "tipo-soja-sim"){
+        //console.log("Filtrou por cultivos com soja Bt");
+        dados = filterByBt(1,dados);
+    } else if (tipo_soja == "tipo-soja-nao") {
+        //console.log("Filtrou por cultivos sem soja Bt");
+        dados = filterByBt(0,dados);
+    } else {
+        //console.log("Filtrou por cultivos com soja Bt e não Bt");
+    }
+
+
+    if(data_inicial == "" || data_final == ""){
+        //console.log("Filtrou por todos os períodos");
+    } else {
+        //console.log("Filtrou por desde: " + data_inicial + " até: " + data_final);
+    }
+
+    console.log(dados);
 }

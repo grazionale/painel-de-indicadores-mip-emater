@@ -187,15 +187,15 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
     var regioes = [];
 
     $.each(data, function (analises, analise) {
-        if (analise.surveyField.field.city.region.macroRegion.name == "Norte" && norte_bool == 1) {
+        if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() == "NORTE" && norte_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "Noroeste" && noroeste_bool == 1) {
+        } else if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() == "NOROESTE" && noroeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "Sul" && sul_bool == 1) {
+        } else if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() == "SUL" && sul_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "Sudoeste" && sudoeste_bool == 1) {
+        } else if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() == "SUDOESTE" && sudoeste_bool == 1) {
             regioes.push(analise);
-        } else if (analise.surveyField.field.city.region.macroRegion.name == "Oeste" && oeste_bool == 1) {
+        } else if ((analise.surveyField.field.city.region.macroRegion.name).toUpperCase() == "OESTE" && oeste_bool == 1) {
             regioes.push(analise);
         } else { }
 
@@ -203,6 +203,9 @@ function filterByRegion(norte_bool, noroeste_bool, sul_bool, sudoeste_bool, oest
 
     regioes = cleanObject(regioes); //Elimina arrays vazios dentro do array principal
     //console.log(regioes);
+    if(regioes == ""){
+        alert("Não foram encontras análises nas regiões selecionadas");
+    }
     return regioes;
 
 }
@@ -291,7 +294,7 @@ function filterByTechnical(name_technical, dados) {
     }
 
     //console.log(technical);
-    return technical;
+    return technical;   
 }
 //Retorna um objeto apenas com análises de um U.R específica, através do seu valor de identificação.
 function filterByUr(name_ur, dados) {
@@ -715,7 +718,7 @@ function cleanObject(actual) {
     return newArray;
 }
 
-
+    
 // Testes
 //filterByAno(prepare_ano($( "#ano-da-safra" ).val()), ""); //Ok
 //filterByNorte(); //Ok

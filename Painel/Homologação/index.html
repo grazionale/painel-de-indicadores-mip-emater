@@ -273,14 +273,12 @@
 
                         <div class="regiao-ur">
                           <label>Região</label>
-                          <select id="regiao-safra">
-                            <option value="Todas">Todas</option>
-                            <option value="Norte">Norte</option>
-                            <option value="Noroeste">Noroeste</option>
-                            <option value="Sul">Sul</option>
-                            <option value="Sudoeste">Sudoeste</option>
-                            <option value="Oeste">Oeste</option>
-                          </select>
+                          <input type="checkbox" name="todas" value="Todas" id="regiao-todas-safra" checked onclick="checarTodasRegioes()">Todas
+                          <input type="checkbox" name="norte" value="Norte" id="regiao-norte-safra" checked>Norte
+                          <input type="checkbox" name="noroeste" value="Noroeste" id="regiao-noroeste-safra" checked>Noroeste
+                          <input type="checkbox" name="sul" value="Sul" id="regiao-sul-safra" checked>Sul
+                          <input type="checkbox" name="sudoeste" value="Sudoeste" id="regiao-sudoeste-safra" checked>Sudoeste
+                          <input type="checkbox" name="oeste" value="Oeste" id="regiao-oeste-safra" checked>Oeste
                         </div>
 
                         <div class="line-space"></div>
@@ -289,6 +287,8 @@
                           <label>Município</label>
                           <select id="municiopio-regiao">
                             <option value="Todos">Todos</option>
+                            <option value="CORNÉLIO PROCÓPIO">CORNÉLIO PROCÓPIO</option>
+                            <option value="MARIÓPOLIS PR">MARIÓPOLIS PR</option>
                           </select>
                         </div>
 
@@ -305,6 +305,8 @@
                           <label>Responsável Técnico</label>
                           <select id="tecnico-safra">
                               <option value="Todos">Todos</option>
+                              <option value="Técnico De Agronomia">Técnico De Agronomia</option>
+                              <option value="IVANDERSON BORELLI">IVANDERSON BORELLI</option>
                             </select>
                         </div>
 
@@ -320,7 +322,9 @@
                         <div class="cultivar">
                           <label>Cultivar</label>
                           <select id="cultivar-safra">
-                            <option value="volvo">Volvo</option>
+                            <option value="Todos">Todos</option>                            
+                            <option value="TMG -  7262">TMG -  7262</option>
+                            <option value="BMX RAIO Ipro">BMX RAIO Ipro</option>
                           </select>
                         </div>
 
