@@ -59,6 +59,7 @@ function gerarCanvasGraficoPizza(dados) {
     // console.log("Media total: " + total_media);
     // console.log("Porcentagem total: " + porcentagem_total);
 
+    
     var ctx = document.getElementById("canvas-generator-graph-bar").getContext('2d');
     var myChart = new Chart(document.getElementById("canvas-generator-graph-bar"), {
         type: 'doughnut',
@@ -190,8 +191,15 @@ function filtrar(){
         //console.log("Filtrou por desde: " + data_inicial + " até: " + data_final);
     }
 
-    console.log(dados);
+    //console.log(dados);
     
+    $.each(Chart.instances, function(i, obj){
+        if(obj.chart.canvas.id == "canvas-generator-graph-bar"){
+            obj.destroy();
+        }
+    });
+    
+
     gerarCanvasGraficoPizza(dados);
 }
 
