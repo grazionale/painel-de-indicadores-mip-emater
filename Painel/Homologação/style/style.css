@@ -17,3 +17,9 @@
 .line-space{
     height: 5px;
 }
+
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
