@@ -1,28 +1,15 @@
 //Dividir o Json em Datas 0-30 dias 31-60 dias 61-150 dias
 //Parâmetros: "primeira", "segunda", ou "terceira", além de passar ou não o objeto dados
 function generateDataFase(fase, dados) {
-    if (dados == "" || dados == null) {
-        var data = JSON.parse(localStorage.getItem("dados"));
-    } else {
-        data = dados;
-    }
 
+    data = dados;
+    
     var dados_primeira_fase = []; d1 = 0;
     var dados_segunda_fase = []; d2 = 0;
     var dados_terceira_fase = []; d3 = 0;
 
-    //var aux_data = data[0].samplePestSet[0].sampleDate;
-    //aux_data = aux_data.split("/");
-    //var data_inicial = new Date(aux_data[1] + "-" + aux_data[0] + "-" + aux_data[2]);
     var data_final_primeira_fase = new Date();
     var data_final_segunda_fase = new Date();
-
-    //data_final_primeira_fase = addDays(data_inicial, 30);
-    //data_final_segunda_fase = addDays(data_final_primeira_fase, 30);
-
-    // console.log("Date Inicio: " + data_inicial);
-    // console.log("Date final 1: " + data_final_primeira_fase);
-    // console.log("Date final 2: " + data_final_segunda_fase);
 
     $.each(data, function (analises, analise) {
         //console.log(analise);
@@ -70,3 +57,223 @@ function generateDataFase(fase, dados) {
     } else { }
 
 }
+
+function generateDataForGraphBar(dados) {
+    var primeira_fase = generateDataFase("primeira", dados);
+    var segunda_fase = generateDataFase("segunda", dados);
+    var terceira_fase = generateDataFase("terceira", dados);
+    var total_anticarsia_primeira_fase = 0; var num_anticaria_primeira_fase = 0;
+    var total_chrysodeixis_primeira_fase = 0; var num_chrysodeixis_primeira_fase = 0;
+    var total_spodoptera_primeira_fase = 0; var num_spodoptera_primeira_fase = 0;
+    var total_heliothinae_primeira_fase = 0; var num_heliothinae_primeira_fase = 0;
+
+    //Calculos referentes a primeira fase
+    $.each(primeira_fase, function (samplePestSet, samplePest) {
+        //console.log(samplePest);
+        if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
+
+            total_anticarsia_primeira_fase = total_anticarsia_primeira_fase + samplePest.value;
+            num_anticaria_primeira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Chrysodeixis includens") {
+
+            total_chrysodeixis_primeira_fase = total_chrysodeixis_primeira_fase + samplePest.value;
+            num_chrysodeixis_primeira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Spodoptera spp") {
+
+            total_spodoptera_primeira_fase = total_spodoptera_primeira_fase + samplePest.value;
+            num_spodoptera_primeira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Grupo Heliothinae") {
+
+            total_heliothinae_primeira_fase = total_heliothinae_primeira_fase + samplePest.value;
+            num_heliothinae_primeira_fase++;
+
+        } else {
+
+        }
+    });
+
+    //Calculos referentes a segunda fase
+    var total_anticarsia_segunda_fase = 0; var num_anticaria_segunda_fase = 0;
+    var total_chrysodeixis_segunda_fase = 0; var num_chrysodeixis_segunda_fase = 0;
+    var total_spodoptera_segunda_fase = 0; var num_spodoptera_segunda_fase = 0;
+    var total_heliothinae_segunda_fase = 0; var num_heliothinae_segunda_fase = 0;
+
+    $.each(segunda_fase, function (samplePestSet, samplePest) {
+        //console.log(samplePest);
+        if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
+
+            total_anticarsia_segunda_fase = total_anticarsia_segunda_fase + samplePest.value;
+            num_anticaria_segunda_fase++;
+
+        } else if (samplePest.pest.scientificName == "Chrysodeixis includens") {
+
+            total_chrysodeixis_segunda_fase = total_chrysodeixis_segunda_fase + samplePest.value;
+            num_chrysodeixis_segunda_fase++;
+
+        } else if (samplePest.pest.scientificName == "Spodoptera spp") {
+
+            total_spodoptera_segunda_fase = total_spodoptera_segunda_fase + samplePest.value;
+            num_spodoptera_segunda_fase++;
+
+        } else if (samplePest.pest.scientificName == "Grupo Heliothinae") {
+
+            total_heliothinae_segunda_fase = total_heliothinae_segunda_fase + samplePest.value;
+            num_heliothinae_segunda_fase++;
+
+        } else {
+
+        }
+    });
+
+
+
+    //Calculos referentes a terceira fase
+    var total_anticarsia_terceira_fase = 0; var num_anticaria_terceira_fase = 0;
+    var total_chrysodeixis_terceira_fase = 0; var num_chrysodeixis_terceira_fase = 0;
+    var total_spodoptera_terceira_fase = 0; var num_spodoptera_terceira_fase = 0;
+    var total_heliothinae_terceira_fase = 0; var num_heliothinae_terceira_fase = 0;
+
+    $.each(terceira_fase, function (samplePestSet, samplePest) {
+        //console.log(samplePest);
+        if (samplePest.pest.scientificName == "Anticarsia gemmatalis") {
+
+            total_anticarsia_terceira_fase = total_anticarsia_terceira_fase + samplePest.value;
+            num_anticaria_terceira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Chrysodeixis includens") {
+
+            total_chrysodeixis_terceira_fase = total_chrysodeixis_terceira_fase + samplePest.value;
+            num_chrysodeixis_terceira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Spodoptera spp") {
+
+            total_spodoptera_terceira_fase = total_spodoptera_terceira_fase + samplePest.value;
+            num_spodoptera_terceira_fase++;
+
+        } else if (samplePest.pest.scientificName == "Grupo Heliothinae") {
+
+            total_heliothinae_terceira_fase = total_heliothinae_terceira_fase + samplePest.value;
+            num_heliothinae_terceira_fase++;
+
+        } else {
+
+        }
+    });
+
+    // console.log("Primeira Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_primeira_fase + " | Num: " + num_anticaria_primeira_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_primeira_fase + " |  Num: " + num_chrysodeixis_primeira_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_primeira_fase + " | Num: " + num_spodoptera_primeira_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_primeira_fase + " | Num: " + num_heliothinae_primeira_fase);
+
+    // console.log("Segunda Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_segunda_fase + " | Num: " + num_anticaria_segunda_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_segunda_fase + " | Num: " + num_chrysodeixis_segunda_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_segunda_fase + " | Num: " + num_spodoptera_segunda_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_segunda_fase + " | Num: " + num_heliothinae_segunda_fase);
+
+    // console.log("Terceira Fase");
+    // console.log("Total Anticaris: " + total_anticarsia_terceira_fase + " | Num: " + num_anticaria_terceira_fase);
+    // console.log("Total Chrysodeixis: " + total_chrysodeixis_terceira_fase + " | Num: " + num_chrysodeixis_terceira_fase);
+    // console.log("Total Spodoptera: " + total_spodoptera_terceira_fase + " | Num: " + num_spodoptera_terceira_fase);
+    // console.log("Total Heliothinae: " + total_heliothinae_terceira_fase + " | Num: " + num_heliothinae_terceira_fase);
+
+
+    //Calcular os valores em porcentagem
+    //Primeira Fase
+    var total_valores_primeira_fase = total_anticarsia_primeira_fase + total_chrysodeixis_primeira_fase + total_spodoptera_primeira_fase + total_heliothinae_primeira_fase;
+    var porcentagem_anticarsia_primeira_fase = parseFloat((total_anticarsia_primeira_fase * 100) / total_valores_primeira_fase).toFixed(2);
+    var porcentagem_chrysodeixis_primeira_fase = parseFloat((total_chrysodeixis_primeira_fase * 100) / total_valores_primeira_fase).toFixed(2);
+    var porcentagem_spodoptera_primeira_fase = parseFloat((total_spodoptera_primeira_fase * 100) / total_valores_primeira_fase).toFixed(2);
+    var porcentagem_heliothinae_primeira_fase = parseFloat((total_heliothinae_primeira_fase * 100) / total_valores_primeira_fase).toFixed(2);
+
+    //Segunda Fase
+    var total_valores_segunda_fase = total_anticarsia_segunda_fase + total_chrysodeixis_segunda_fase + total_spodoptera_segunda_fase + total_heliothinae_segunda_fase;
+    var porcentagem_anticarsia_segunda_fase = parseFloat((total_anticarsia_segunda_fase * 100) / total_valores_segunda_fase).toFixed(2);
+    var porcentagem_chrysodeixis_segunda_fase = parseFloat((total_chrysodeixis_segunda_fase * 100) / total_valores_segunda_fase).toFixed(2);
+    var porcentagem_spodoptera_segunda_fase = parseFloat((total_spodoptera_segunda_fase * 100) / total_valores_segunda_fase).toFixed(2);
+    var porcentagem_heliothinae_segunda_fase = parseFloat((total_heliothinae_segunda_fase * 100) / total_valores_segunda_fase).toFixed(2);
+
+
+    //Terceira Fase
+    var total_valores_terceira_fase = total_anticarsia_terceira_fase + total_chrysodeixis_terceira_fase + total_spodoptera_terceira_fase + total_heliothinae_terceira_fase;
+    var porcentagem_anticarsia_terceira_fase = parseFloat((total_anticarsia_terceira_fase * 100) / total_valores_terceira_fase).toFixed(2);
+    var porcentagem_chrysodeixis_terceira_fase = parseFloat((total_chrysodeixis_terceira_fase * 100) / total_valores_terceira_fase).toFixed(2);
+    var porcentagem_spodoptera_terceira_fase = parseFloat((total_spodoptera_terceira_fase * 100) / total_valores_terceira_fase).toFixed(2);
+    var porcentagem_heliothinae_terceira_fase = parseFloat((total_heliothinae_terceira_fase * 100) / total_valores_terceira_fase).toFixed(2);
+
+    // console.log("porcentagem primeira fase");
+    // console.log(porcentagem_anticarsia_primeira_fase);
+    // console.log(porcentagem_chrysodeixis_primeira_fase);
+    // console.log(porcentagem_spodoptera_primeira_fase);
+    // console.log(porcentagem_heliothinae_primeira_fase);
+    // console.log("porcentagem segunda fase");
+    // console.log(porcentagem_anticarsia_segunda_fase);
+    // console.log(porcentagem_chrysodeixis_segunda_fase);
+    // console.log(porcentagem_spodoptera_segunda_fase);
+    // console.log(porcentagem_heliothinae_segunda_fase);
+    // console.log("porcentagem terceira fase");
+    // console.log(porcentagem_anticarsia_terceira_fase);
+    // console.log(porcentagem_chrysodeixis_terceira_fase);
+    // console.log(porcentagem_spodoptera_terceira_fase);
+    // console.log(porcentagem_heliothinae_terceira_fase);
+
+
+    //Gerar Gráfico de Barras Referente AO Paraná Soja Bt e Não Bt
+
+    var objeto = [
+        {
+            "fase": "Primeira",
+            "anticarsia": {
+                "valor": porcentagem_anticarsia_primeira_fase
+            },
+            "chrysodeixis": {
+                "valor": porcentagem_chrysodeixis_primeira_fase
+            },
+            "spodoptera": {
+                "valor": porcentagem_spodoptera_primeira_fase
+            },
+            "heliothinae": {
+                "valor": porcentagem_heliothinae_primeira_fase
+            }
+        },
+        {
+            "fase": "Segunda",
+            "anticarsia": {
+                "valor": porcentagem_anticarsia_segunda_fase
+            },
+            "chrysodeixis": {
+                "valor": porcentagem_chrysodeixis_segunda_fase
+            },
+            "spodoptera": {
+                "valor": porcentagem_spodoptera_segunda_fase
+            },
+            "heliothinae": {
+                "valor": porcentagem_heliothinae_segunda_fase
+            }
+        },
+        {
+            "fase": "Terceira",
+            "anticarsia": {
+                "valor": porcentagem_anticarsia_terceira_fase
+            },
+            "chrysodeixis": {
+                "valor": porcentagem_chrysodeixis_terceira_fase
+            },
+            "spodoptera": {
+                "valor": porcentagem_spodoptera_terceira_fase
+            },
+            "heliothinae": {
+                "valor": porcentagem_heliothinae_terceira_fase
+            }
+        }
+    ];
+
+    //console.log(objeto);
+    return objeto;
+
+}
+

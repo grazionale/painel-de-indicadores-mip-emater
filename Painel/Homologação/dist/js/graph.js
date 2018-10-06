@@ -90,24 +90,64 @@ function gerarCanvasGraficoPizza(dados) {
 
 }
 
-function gerarCanvasGraficoBarras() {
+function gerarCanvasGraficoBarras(dados) {
+    var valores = generateDataForGraphBar(dados);
+    //console.log(valores);
+    var ctx = document.getElementById("canvas-generator-graph-bar").getContext('2d');
+    var myChart = new Chart(document.getElementById("canvas-generator-graph-bar"), {
+        type: 'bar',
+        data: {
+            labels: ["0-30", "30-60", "60-90 dias"],
+            datasets: [
+                {
+                    label: "Anticarsia gemmatalis",
+                    backgroundColor: "#C10250",
+                    data: [valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor]
+                }, {
+                    label: "Chrysodeixis includens",
+                    backgroundColor: "#03BCBF",
+                    data: [valores[0].chrysodeixis.valor, valores[1].chrysodeixis.valor, valores[2].chrysodeixis.valor]
+                },
+                {
+                    label: "Spodoptera spp",
+                    backgroundColor: "#D3D945",
+                    data: [valores[0].spodoptera.valor, valores[1].spodoptera.valor, valores[2].spodoptera.valor]
+                }, {
+                    label: "Grupo Heliothinae",
+                    backgroundColor: "#FCB040",
+                    data: [valores[0].heliothinae.valor, valores[1].heliothinae.valor, valores[2].heliothinae.valor]
+                }
+            ]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'Título',
+                fontSize: 15
+            },
+            legend: {
+                position: 'bottom',
+                labels: {
+                    fontSize: 14,
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
 
-}
+                        min: 0,
+                        max: 100,
+                        callback: function (value) { return value + "%" }
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Percentage"
+                    }
+                }]
+            }
+        }
+    });
 
-function checarTodasRegioes(){
-    if($('#regiao-todas-safra').is(':checked')){ 
-        $( "#regiao-norte-safra" ).prop( "checked", true );
-        $( "#regiao-noroeste-safra" ).prop( "checked", true );
-        $( "#regiao-sul-safra" ).prop( "checked", true );
-        $( "#regiao-sudoeste-safra" ).prop( "checked", true );
-        $( "#regiao-oeste-safra" ).prop( "checked", true );
-    } else {
-        $( "#regiao-norte-safra" ).prop( "checked", false );
-        $( "#regiao-noroeste-safra" ).prop( "checked", false );
-        $( "#regiao-sul-safra" ).prop( "checked", false );
-        $( "#regiao-sudoeste-safra" ).prop( "checked", false );
-        $( "#regiao-oeste-safra" ).prop( "checked", false );
-    }
 }
 
 //Retorna dados filtrados a partir do filtro (front-end) que o usuário escolher.
@@ -197,14 +237,25 @@ function filtrar(){
         //console.log("Filtrou por desde: " + data_inicial + " até: " + data_final);
     }
 
-    console.log(dados);
+    //console.log(dados);
     
     $.each(Chart.instances, function(i, obj){
+        //console.log(obj.chart.canvas.id);
         if(obj.chart.canvas.id == "canvas-generator-graph-pizza"){
             obj.destroy();
         }
+        else if(obj.chart.canvas.id == "canvas-generator-graph-bar"){
+            obj.destroy();
+        } else {
+
+        }
     });
     
-
+    if(jQuery.isEmptyObject(dados[0])){
+        alert("Não foi possível realizar uma filtragem com os itens especificados");
+        return;
+    }
+    
     gerarCanvasGraficoPizza(dados);
+    gerarCanvasGraficoBarras(dados);
 }
