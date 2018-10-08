@@ -143,7 +143,7 @@
       <section class="content-header">
         <h1>
           Manejo Integrado de Pragas - Principais Resultados
-          <small>Safra 2019/2020</small>
+          <small>Safra 2017/2018</small>
         </h1>
         <!-- <ol class="breadcrumb">
           <li>
@@ -181,8 +181,7 @@
                     <div class="bg-green-gradient">
                       <div class="box-body border-radius-none">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor, quam nec ultricies
-                          elementum. In tempor, quam nec ultricies
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor, quam nec ultricies elementum. In tempor, quam nec ultricies
                           elementum. In tempor, quam nec ultricies elementum
                         </p>
                       </div>
@@ -242,7 +241,7 @@
           </section>
         </div>
         <div class="row">
-          <section class="col-lg-12">
+          <section class="col-lg-6">
             <div class="box box-default">
               <div class="box-header with-border">
                 <h3 class="box-title">Filtros</h3>
@@ -260,7 +259,7 @@
                   <div class="col-lg-12 col-sm-12">
                     <div class="filtros">
                       <div class="box-body border-radius-none">
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
                           <div class="row ano-safra">
                             <div class="col-xs-3 ">
                               <label>Selecionar ano da Safra</label>
@@ -281,11 +280,9 @@
                             <div class="col-xs-9 ">
                               <input type="checkbox" name="todas" value="Todas" id="regiao-todas-safra" checked onclick="checarTodasRegioes()">Todas
                               <input type="checkbox" name="norte" value="Norte" id="regiao-norte-safra" checked>Norte
-                              <input type="checkbox" name="noroeste" value="Noroeste" id="regiao-noroeste-safra"
-                                checked>Noroeste
+                              <input type="checkbox" name="noroeste" value="Noroeste" id="regiao-noroeste-safra" checked>Noroeste
                               <input type="checkbox" name="sul" value="Sul" id="regiao-sul-safra" checked>Sul
-                              <input type="checkbox" name="sudoeste" value="Sudoeste" id="regiao-sudoeste-safra"
-                                checked>Sudoeste
+                              <input type="checkbox" name="sudoeste" value="Sudoeste" id="regiao-sudoeste-safra" checked>Sudoeste
                               <input type="checkbox" name="oeste" value="Oeste" id="regiao-oeste-safra" checked>Oeste
                             </div>
                           </div>
@@ -311,34 +308,37 @@
                           <div class="line-space"></div>
 
                           <div class="row produtor-ur">
-                            <div class="col-xs-3 "><label>Produtor</label></div>
-                            <div class="col-xs-9 "><input type="text" id="produtor-safra" class="form-control"
-                                placeholder="Produtor"></div>
+                            <div class="col-xs-3 ">
+                              <label>Produtor</label>
+                            </div>
+                            <div class="col-xs-9 ">
+                              <input type="text" id="produtor-safra" class="form-control" placeholder="Produtor">
+                            </div>
 
                           </div>
 
                           <div class="line-space"></div>
-                          <div class="line-space"></div>  
+                          <div class="line-space"></div>
 
                           <div class="row data-amostra">
-                              <div class="col-xs-3 ">
-                                <label for="data-amostra">Período da Amostra</label>
-                              </div>
-                              <div class="col-xs-6 ">
-                                <input id="data-inicial-amostra" type="date" value="" class="form-control">
-                                <input id="data-final-amostra" type="date" value="" class="form-control">
-                              </div>
-  
+                            <div class="col-xs-3 ">
+                              <label for="data-amostra">Período da Amostra</label>
                             </div>
-                            <div class="line-space"></div>
-                            <div class="line-space"></div>
+                            <div class="col-xs-6 ">
+                              <input id="data-inicial-amostra" type="date" value="" class="form-control">
+                              <input id="data-final-amostra" type="date" value="" class="form-control">
+                            </div>
+
+                          </div>
+                          <div class="line-space"></div>
+                          <div class="line-space"></div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
                           <div class="row tecnico-ur">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                               <label>Responsável Técnico</label>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
                               <select id="tecnico-safra" class="form-control">
                                 <option value="Todos">Todos</option>
                                 <option value="Técnico De Agronomia">Técnico De Agronomia</option>
@@ -350,19 +350,19 @@
                           <div class="line-space"></div>
 
                           <div class="id-ur row">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                               <label>Identificação da UR</label>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
                               <input type="text" id="id-ur" class="form-control">
                             </div>
                           </div>
 
                           <div class="cultivar row">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                               <label>Cultivar</label>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
                               <select id="cultivar-safra" class="form-control">
                                 <option value="Todos">Todos</option>
                                 <option value="TMG -  7262">TMG - 7262</option>
@@ -375,10 +375,10 @@
                           <div class="line-space"></div>
 
                           <div class="tipo-de-soja row">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                               <label>Soja Bt?</label>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
                               <div>
                                 <input type="radio" name="tipo-soja" value="tipo-soja-ambos" checked />
                                 <label for="tipo-soja-ambos">Ambos</label>
@@ -398,10 +398,10 @@
                           <div class="line-space"></div>
 
                           <div class="ferrugem-soja row" id="ferrugem-safra">
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                               <label>Resitênte a Ferrugem?</label>
                             </div>
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
                               <div>
                                 <input type="radio" name="ferrugem" value="ferrugem-ambos" checked />
                                 <label for="ferrugem-ambos">Ambos</label>
@@ -418,28 +418,96 @@
                           </div>
 
                         </div>
-                        <div class="col-lg-3">
-
-                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="filtros">
                       <div class="box-body border-radius-none">
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
                           <div class="row data-amostra">
                             <div class="col-xs-12 ">
-                              <button id="button-limpar-data" class="btn btn-success"><i class="fa fa-calendar-times-o"></i>
+                              <button id="button-limpar-data" class="btn btn-success">
+                                <i class="fa fa-calendar-times-o"></i>
                                 Limpar</button>
-                              <button id="filtrar-buscar" onclick="filtrar()" class="btn btn-success"><i class="fa fa-search"></i>
-                                Filtrar</button>
+                              <button id="filtrar-buscar" onclick="filtrar()" class="btn btn-success">
+                                <i class="fa fa-search"></i>
+                                Gerar</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="col-lg-6">
+            <div class="box box-default">
+              <div class="box-header with-border">
+                <h3 class="box-title">Tabelas</h3>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12">
+                    <div class="tabelas">
+                      <div class="box-body border-radius-none">
+                        <div class="col-lg-12">
+                          <!--Table-->
+                          <table id="dinamic-table" class="table table-striped table-hover table-sm">
+                            <!--Table head-->
+                            <thead>
+                              <tr>
+                                <th>Lagartas</th>
+                                <th>0-30 dias</th>
+                                <th>31-60 dias</th>
+                                <th>61-150 dias</th>
+                              </tr>
+                            </thead>
+                            <!--Table head-->
+                            <!--Table body-->
+                            <tbody>
+                              <tr>
+                                <th>Anticarsia gemmatalis</th>
+                                <td id="anticaria-0-30"></td>
+                                <td id="anticaria-31-60"></td>
+                                <td id="anticaria-61-150"></td>
+                              </tr>
+                              <tr>
+                                <th>Chrysodeixis includens</th>
+                                <td id="chrys-0-30"></td>
+                                <td id="chrys-31-60"></td>
+                                <td id="chrys-61-150"></td>
+                              </tr>
+                              <tr>
+                                <th>Spodoptera spp</th>
+                                <td id="spo-0-30"></td>
+                                <td id="spo-31-60"></td>
+                                <td id="spo-61-150"></td>
+                              </tr>
+                              <tr>
+                                <th>Grupo Heliothinae</th>
+                                <td id="helio-0-30"></td>
+                                <td id="helio-31-60"></td>
+                                <td id="helio-61-150"></td>
+                              </tr>
+                            </tbody>
+                            <!--Table body-->
+                          </table>
+                          <!--Table-->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -482,7 +550,7 @@
             </div>
           </section>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <section class="col-lg-12">
             <div class="box box-default">
               <div class="box-header with-border">
@@ -502,7 +570,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-6">
                     <div class="box-body border-radius-none">
-                      <h3>Tabela</h3>
+
 
                     </div>
                   </div>
@@ -510,11 +578,11 @@
               </div>
             </div>
           </section>
-        </div>
+        </div> -->
         <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
-          <section class="col-lg-7 connectedSortable">
+        <!-- <div class="row"> -->
+        <!-- Left col -->
+        <!-- <section class="col-lg-7 connectedSortable">
             <h3>O cenário de lagartas e percevejos em soja no Paranásafra 2016/17</h3>
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
@@ -627,14 +695,14 @@
                 </div>
               </div>
             </div>
-          </section>
-          <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          </section> -->
+        <!-- /.Left col -->
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
 
-          <!-- Sessão 2 - Coluna Direita -->
+        <!-- Sessão 2 - Coluna Direita -->
 
 
-          <section class="col-lg-5 connectedSortable">
+        <!-- <section class="col-lg-5 connectedSortable">
             <h3>O cenário de lagartas e percevejos em soja Bt(RR2) e não Bt(RR1)</h3>
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
@@ -647,8 +715,8 @@
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="tabSojaBt">
-                  <!-- <h3>Análises com Soja Bt (RR2)</h3> -->
-                  <div class="box box-default">
+                  <h3>Análises com Soja Bt (RR2)</h3> -->
+        <!-- <div class="box box-default">
                     <div class="box-header with-border">
                       <h3 class="box-title">Ocorrência percentual média por grupo de lagartas em três períodos do ciclo
                         da soja Bt (RR2) nas URs
@@ -678,8 +746,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="box box-default">
+                  </div> -->
+        <!-- <div class="box box-default">
                     <div class="box-header with-border">
                       <h3 class="box-title">Distribuição percentual da participação das espécies no complexo de
                         lagartas pragas da soja Bt (RR2)
@@ -711,10 +779,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane" id="tabSojaNBt">
+                <div class="tab-pane" id="tabSojaNBt"> -->
 
-                  <!-- <h3>Análises com Soja não Bt (RR1)</h3> -->
-                  <div class="box box-default">
+        <!-- <h3>Análises com Soja não Bt (RR1)</h3> -->
+        <!-- <div class="box box-default">
                     <div class="box-header with-border">
                       <h3 class="box-title">Ocorrência percentual média por grupo de lagartas em três períodos do ciclo
                         da soja não Bt (RR1) nas URs
@@ -744,9 +812,9 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="box box-default">
+        <!-- <div class="box box-default">
                     <div class="box-header with-border">
                       <h3 class="box-title">Distribuição percentual da participação das espécies no complexo de
                         lagartas pragas da soja não Bt (RR1)
@@ -780,9 +848,9 @@
                 </div>
               </div>
             </div>
-          </section>
-          <!-- right col -->
-        </div>
+          </section> -->
+        <!-- right col -->
+        <!-- </div> -->
         <!-- /.row (main row) -->
       </section>
       <!-- /.content -->

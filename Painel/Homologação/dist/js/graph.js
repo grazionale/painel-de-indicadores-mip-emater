@@ -150,6 +150,23 @@ function gerarCanvasGraficoBarras(dados) {
 
 }
 
+function gerarTabelaDados(dados){
+    var valores = generateDataForGraphBar(dados);
+    //valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor
+    $('#anticaria-0-30').html(valores[0].anticarsia.valor + "%");
+    $('#anticaria-31-60').html(valores[1].anticarsia.valor + "%");
+    $('#anticaria-61-150').html(valores[2].anticarsia.valor + "%");
+    $('#chrys-0-30').html(valores[0].spodoptera.valor + "%");
+    $('#chrys-31-60').html(valores[1].spodoptera.valor + "%");
+    $('#chrys-61-150').html(valores[2].spodoptera.valor + "%");
+    $('#spo-0-30').html(valores[0].spodoptera.valor + "%");
+    $('#spo-31-60').html(valores[1].spodoptera.valor + "%");
+    $('#spo-61-150').html(valores[2].spodoptera.valor + "%");
+    $('#helio-0-30').html(valores[0].heliothinae.valor + "%");
+    $('#helio-31-60').html(valores[1].heliothinae.valor + "%");
+    $('#helio-61-150').html(valores[2].heliothinae.valor + "%");
+}
+
 //Retorna dados filtrados a partir do filtro (front-end) que o usuário escolher.
 function filtrar(){
     var ano_safra = $("#ano-da-safra").val();
@@ -258,4 +275,5 @@ function filtrar(){
     
     gerarCanvasGraficoPizza(dados);
     gerarCanvasGraficoBarras(dados);
+    gerarTabelaDados(dados);
 }
