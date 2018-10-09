@@ -181,7 +181,8 @@
                     <div class="bg-green-gradient">
                       <div class="box-body border-radius-none">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor, quam nec ultricies elementum. In tempor, quam nec ultricies
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor, quam nec ultricies
+                          elementum. In tempor, quam nec ultricies
                           elementum. In tempor, quam nec ultricies elementum
                         </p>
                       </div>
@@ -280,9 +281,11 @@
                             <div class="col-xs-9 ">
                               <input type="checkbox" name="todas" value="Todas" id="regiao-todas-safra" checked onclick="checarTodasRegioes()">Todas
                               <input type="checkbox" name="norte" value="Norte" id="regiao-norte-safra" checked>Norte
-                              <input type="checkbox" name="noroeste" value="Noroeste" id="regiao-noroeste-safra" checked>Noroeste
+                              <input type="checkbox" name="noroeste" value="Noroeste" id="regiao-noroeste-safra"
+                                checked>Noroeste
                               <input type="checkbox" name="sul" value="Sul" id="regiao-sul-safra" checked>Sul
-                              <input type="checkbox" name="sudoeste" value="Sudoeste" id="regiao-sudoeste-safra" checked>Sudoeste
+                              <input type="checkbox" name="sudoeste" value="Sudoeste" id="regiao-sudoeste-safra"
+                                checked>Sudoeste
                               <input type="checkbox" name="oeste" value="Oeste" id="regiao-oeste-safra" checked>Oeste
                             </div>
                           </div>
@@ -445,67 +448,115 @@
             </div>
           </section>
           <section class="col-lg-6">
-            <div class="box box-default">
-              <div class="box-header with-border">
-                <h3 class="box-title">Tabelas</h3>
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                    <i class="fa fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-box-tool" data-widget="remove">
-                    <i class="fa fa-times"></i>
-                  </button>
+            <div class="nav-tabs-custom" style="cursor: move;">
+              <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                <li class="pull-left header"><i class="fa fa-inbox"></i> Tabelas</li>
+                <li class="active"><a href="#tabLagartasTabela" data-toggle="tab" aria-expanded="false">Lagartas</a></li>
+                <li><a href="#tabPercevejosTabela" data-toggle="tab" aria-expanded="true">Percevejos</a></li>
+              </ul>
+              <div class="tab-content no-padding">
+                <div class="tab-pane active" id="tabLagartasTabela">
+                  <div class="tabelas">
+                    <div class="box-body border-radius-none">
+                      <div class="col-lg-12">
+                        <!--Table-->
+                        <table id="dinamic-table" class="table table-striped table-hover table-sm">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Lagartas</th>
+                              <th>0-30 dias</th>
+                              <th>31-60 dias</th>
+                              <th>61-150 dias</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <th>Anticarsia gemmatalis</th>
+                              <td id="anticaria-0-30"></td>
+                              <td id="anticaria-31-60"></td>
+                              <td id="anticaria-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Chrysodeixis includens</th>
+                              <td id="chrys-0-30"></td>
+                              <td id="chrys-31-60"></td>
+                              <td id="chrys-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Spodoptera spp</th>
+                              <td id="spo-0-30"></td>
+                              <td id="spo-31-60"></td>
+                              <td id="spo-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Grupo Heliothinae</th>
+                              <td id="helio-0-30"></td>
+                              <td id="helio-31-60"></td>
+                              <td id="helio-61-150"></td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-lg-12 col-sm-12">
-                    <div class="tabelas">
-                      <div class="box-body border-radius-none">
-                        <div class="col-lg-12">
-                          <!--Table-->
-                          <table id="dinamic-table" class="table table-striped table-hover table-sm">
-                            <!--Table head-->
-                            <thead>
-                              <tr>
-                                <th>Lagartas</th>
-                                <th>0-30 dias</th>
-                                <th>31-60 dias</th>
-                                <th>61-150 dias</th>
+                <div class="tab-pane" id="tabPercevejosTabela">
+                  <div class="tabelas">
+                    <div class="box-body border-radius-none">
+                      <div class="col-lg-12">
+                        <!--Table-->
+                        <table id="dinamic-table" class="table table-striped table-hover table-sm">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Percevejos</th>
+                              <th>0-30 dias</th>
+                              <th>31-60 dias</th>
+                              <th>61-150 dias</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <th>Nazera viridula</th>
+                              <td id="nazera-0-30"></td>
+                              <td id="nazera-31-60"></td>
+                              <td id="nazera-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Piezodorus guildinii</th>
+                              <td id="piezodorus-0-30"></td>
+                              <td id="piezodorus-31-60"></td>
+                              <td id="piezodorus-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Euschistus heros</th>
+                              <td id="eusch-0-30"></td>
+                              <td id="eusch-31-60"></td>
+                              <td id="eusch-61-150"></td>
+                            </tr>
+                            <tr>
+                              <th>Dichelops melacanthus</th>
+                              <td id="dichelops-0-30"></td>
+                              <td id="dichelops-31-60"></td>
+                              <td id="dichelops-61-150"></td>
+                            </tr>
+                            <tr>
+                                <th>Outros</th>
+                                <td id="otrs-0-30"></td>
+                                <td id="otrs-31-60"></td>
+                                <td id="otrs-61-150"></td>
                               </tr>
-                            </thead>
-                            <!--Table head-->
-                            <!--Table body-->
-                            <tbody>
-                              <tr>
-                                <th>Anticarsia gemmatalis</th>
-                                <td id="anticaria-0-30"></td>
-                                <td id="anticaria-31-60"></td>
-                                <td id="anticaria-61-150"></td>
-                              </tr>
-                              <tr>
-                                <th>Chrysodeixis includens</th>
-                                <td id="chrys-0-30"></td>
-                                <td id="chrys-31-60"></td>
-                                <td id="chrys-61-150"></td>
-                              </tr>
-                              <tr>
-                                <th>Spodoptera spp</th>
-                                <td id="spo-0-30"></td>
-                                <td id="spo-31-60"></td>
-                                <td id="spo-61-150"></td>
-                              </tr>
-                              <tr>
-                                <th>Grupo Heliothinae</th>
-                                <td id="helio-0-30"></td>
-                                <td id="helio-31-60"></td>
-                                <td id="helio-61-150"></td>
-                              </tr>
-                            </tbody>
-                            <!--Table body-->
-                          </table>
-                          <!--Table-->
-                        </div>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
                       </div>
                     </div>
                   </div>
