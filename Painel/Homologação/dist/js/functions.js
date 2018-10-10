@@ -482,3 +482,24 @@ function generateDataForGraphBarPercevejos(dados) {
     return objeto;
 
 }
+
+function limpar(){
+    $('#ano-da-safra').val('2017/2018');
+
+    $('#regiao-todas-safra').prop('checked', true);
+    $('#regiao-norte-safra').prop('checked', true);
+    $('#regiao-noroeste-safra').prop('checked', true);
+    $('#regiao-sul-safra').prop('checked', true);
+    $('#regiao-sudoeste-safra').prop('checked', true);
+    $('#regiao-oeste-safra').prop('checked', true);
+
+    $('#municiopio-regiao').val('Todos');
+    $('#produtor-safra').val('');
+    $('#data-inicial-amostra').val('');
+    $('#data-final-amostra').val('');
+    $('#tecnico-safra').val('Todos');
+    $('#id-ur').val('');
+    $('#cultivar-safra').val('Todos');
+    $('#tipo-soja').val('Todos');
+    $('#ferrugem-soja').val('Todos');
+}

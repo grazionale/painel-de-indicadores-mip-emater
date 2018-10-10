@@ -383,7 +383,13 @@
                                 <label>Soja Bt?</label>
                               </div>
                               <div class="col-xs-8">
-                                <div>
+                                <select id="tipo-soja" class="form-control">
+                                    <option value="Todos">Todos</option>
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+
+                                <!-- <div>
                                   <input type="radio" name="tipo-soja" value="tipo-soja-ambos" checked />
                                   <label for="tipo-soja-ambos">Ambos</label>
                                 </div>
@@ -394,7 +400,7 @@
                                 <div>
                                   <input type="radio" name="tipo-soja" value="tipo-soja-nao" />
                                   <label for="tipo-soja-nao">Não</label>
-                                </div>
+                                </div> -->
                               </div>
                             </div>
 
@@ -406,7 +412,12 @@
                                 <label>Resitênte a Ferrugem?</label>
                               </div>
                               <div class="col-xs-8">
-                                <div>
+                                <select id="ferrugem-soja" class="form-control">
+                                    <option value="Todos">Todos</option>
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                                <!-- <div>
                                   <input type="radio" name="ferrugem" value="ferrugem-ambos" checked />
                                   <label for="ferrugem-ambos">Ambos</label>
                                 </div>
@@ -417,7 +428,7 @@
                                 <div>
                                   <input type="radio" name="ferrugem" value="ferrugem-nao" />
                                   <label for="ferrugem-nao">Não</label>
-                                </div>
+                                </div> -->
                               </div>
                             </div>
 
@@ -429,7 +440,7 @@
                           <div class="col-lg-6">
                             <div class="row data-amostra">
                               <div class="col-xs-12 ">
-                                <button id="button-limpar-data" class="btn btn-success">
+                                <button id="button-limpar-data" class="btn btn-success" onclick="limpar()">
                                   <i class="fa fa-calendar-times-o"></i>
                                   Limpar</button>
                                 <button id="filtrar-buscar" onclick="filtrar()" class="btn btn-success">

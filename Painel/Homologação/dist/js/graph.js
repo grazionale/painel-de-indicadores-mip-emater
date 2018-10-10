@@ -508,7 +508,7 @@ function HCgerarCanvasGraficoPizzaLagartas(dados){
 
     var porcentagem_total = porcentagem_anticarsia + porcentagem_chrysodeixis + porcentagem_spodoptera + porcentagem_heliothinae;
 
-    Highcharts.chart('canvas-generator-graph-pizza', {
+    var graph_pizza_lagartas = Highcharts.chart('canvas-generator-graph-pizza', {
         chart: {
             type: 'pie'
         },
@@ -673,8 +673,8 @@ function filtrar(){
     var tecnico = $("#tecnico-safra").val();
     var id_ur = $("#id-ur").val();
     var cultivar = $("#cultivar-safra").val();
-    var ferrugem = $("input[name=ferrugem]:checked").val();
-    var tipo_soja = $("input[name=tipo-soja]:checked").val();
+    var ferrugem = $("#ferrugem-soja").val();
+    var tipo_soja = $("#tipo-soja").val();
     var data_inicial = $("#data-inicial-amostra").val();
     var data_final = $("#data-final-amostra").val();
 
@@ -717,20 +717,20 @@ function filtrar(){
         dados = filterByCultivar(cultivar,dados);
     }
 
-    if(ferrugem == "ferrugem-sim"){
+    if(ferrugem == "sim"){
         //console.log("Filtrou por cultivos com ferrugem");
         dados = filterByRust(1,dados);
-    } else if (ferrugem == "ferrugem-nao") {
+    } else if (ferrugem == "nao") {
         //console.log("Filtrou por cultivos sem ferrugem");
         dados = filterByRust(0,dados);
     } else {
         //console.log("Filtrou por cultivos com ferrugem e sem ferrugem");
     }
 
-    if(tipo_soja == "tipo-soja-sim"){
+    if(tipo_soja == "sim"){
         //console.log("Filtrou por cultivos com soja Bt");
         dados = filterByBt(1,dados);
-    } else if (tipo_soja == "tipo-soja-nao") {
+    } else if (tipo_soja == "nao") {
         //console.log("Filtrou por cultivos sem soja Bt");
         dados = filterByBt(0,dados);
     } else {
@@ -778,3 +778,6 @@ function filtrar(){
     HCgerarCanvasGraficoPizzaLagartas(dados);
     HCgerarCanvasGraficoPizzaPercevejos(dados);
 }
+
+
+
