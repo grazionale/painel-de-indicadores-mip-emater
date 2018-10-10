@@ -747,19 +747,19 @@ function filtrar(){
 
     //console.log(dados);
     
-    $.each(Chart.instances, function(i, obj){
-        //console.log(obj.chart.canvas.id);
-        if(obj.chart.canvas.id == "canvas-generator-graph-pizza"){
-            obj.destroy();
-        }
-        else if(obj.chart.canvas.id == "canvas-generator-graph-bar"){
-            obj.destroy();
-        } else if (obj.chart.canvas.id == "canvas-generator-graph-pizza-percevejos"){
-            obj.destroy();
-        } else {
+    // $.each(Chart.instances, function(i, obj){
+    //     //console.log(obj.chart.canvas.id);
+    //     if(obj.chart.canvas.id == "canvas-generator-graph-pizza"){
+    //         obj.destroy();
+    //     }
+    //     else if(obj.chart.canvas.id == "canvas-generator-graph-bar"){
+    //         obj.destroy();
+    //     } else if (obj.chart.canvas.id == "canvas-generator-graph-pizza-percevejos"){
+    //         obj.destroy();
+    //     } else {
 
-        }
-    });
+    //     }
+    // });
     
     if(jQuery.isEmptyObject(dados[0])){
         //alert("Não foi possível realizar uma filtragem com os itens especificados");
