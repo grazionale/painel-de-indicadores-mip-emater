@@ -167,6 +167,26 @@ function gerarTabelaDados(dados){
     $('#helio-61-150').html(valores[2].heliothinae.valor + "%");
 }
 
+function gerarTabelaDadosPercevejos(dados){
+    var valores = generateDataForGraphBarPercevejos(dados);
+    //valores[0].anticarsia.valor, valores[1].anticarsia.valor, valores[2].anticarsia.valor
+    $('#nazera-0-30').html(valores[0].nazera.valor + "%");
+    $('#nazera-31-60').html(valores[1].nazera.valor + "%");
+    $('#nazera-61-150').html(valores[2].nazera.valor + "%");
+    $('#piezodorus-0-30').html(valores[0].piezoduros.valor + "%");
+    $('#piezodorus-31-60').html(valores[1].piezoduros.valor + "%");
+    $('#piezodorus-61-150').html(valores[2].piezoduros.valor + "%");
+    $('#eusch-0-30').html(valores[0].euschistus.valor + "%");
+    $('#eusch-31-60').html(valores[1].euschistus.valor + "%");
+    $('#eusch-61-150').html(valores[2].euschistus.valor + "%");
+    $('#dichelops-0-30').html(valores[0].dichelops.valor + "%");
+    $('#dichelops-31-60').html(valores[1].dichelops.valor + "%");
+    $('#dichelops-61-150').html(valores[2].dichelops.valor + "%");
+    $('#otrs-0-30').html(valores[0].outros.valor + "%");
+    $('#otrs-31-60').html(valores[1].outros.valor + "%");
+    $('#otrs-61-150').html(valores[2].outros.valor + "%");
+}
+
 function gerarCanvasGraficoPizzaPercevejos(dados){
     //console.log(dados);
     var valor_nazera = 0;
@@ -749,7 +769,7 @@ function filtrar(){
     //gerarCanvasGraficoPizza(dados);
     //gerarCanvasGraficoBarras(dados);
     gerarTabelaDados(dados);
-
+    gerarTabelaDadosPercevejos(dados);
     //gerarCanvasGraficoPizzaPercevejos(dados);
     //gerarCanvasGraficoBarrasPercevejos(dados);
 
