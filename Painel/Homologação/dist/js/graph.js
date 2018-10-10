@@ -762,7 +762,7 @@ function filtrar(){
     });
     
     if(jQuery.isEmptyObject(dados[0])){
-        alert("Não foi possível realizar uma filtragem com os itens especificados");
+        //alert("Não foi possível realizar uma filtragem com os itens especificados");
         return;
     }
     
