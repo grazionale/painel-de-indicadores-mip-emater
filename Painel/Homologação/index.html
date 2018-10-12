@@ -17,24 +17,23 @@
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="dist/css/skins/all-skins.min.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <!-- Chart.Js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <!-- Chart.Js
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
   <!-- Style.css -->
   <link rel="stylesheet" href="style/style.css">
 
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="dist/css/skins/all-skins.min.css">
   <!-- Sweet Alert-->
   <script src="dist/js/sweetalert/sweetalert2.all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
   <link rel="stylesheet" href="dist/js/sweetalert/sweetalert2.min.css">
 
- <!-- testando highcharts -->
-  <script src="https://code.highcharts.com/highcharts.js"></script>  
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <!-- testando highcharts -->
+  <script src="dist/js/highcharts/highcharts.js"></script>
+  <script src="dist/js/highcharts/exporting.js"></script>
+  <script src="dist/js/highcharts/export-data.js"></script>
 </head>
 
 <body class="hold-transition skin-green-light sidebar-mini">
@@ -64,7 +63,7 @@
       <!-- sidebar: style can be found in sidebar.less -->
       <section class="sidebar">
         <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
+        <!-- <form action="#" method="get" class="sidebar-form">
           <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Buscar...">
             <span class="input-group-btn">
@@ -73,21 +72,38 @@
               </button>
             </span>
           </div>
-        </form>
+        </form> -->
         <!-- /.search form -->
         <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">Navegação</li>
-
+          <li class="header"></li>
+          <li>
           <li>
             <a href="index.html">
               <i class="fa fa-th"></i>
-              <span>Visão Geral Paraná</span>
+              <span>Início</span>
               <span class="pull-right-container">
               </span>
             </a>
           </li>
+          <li>
+            <a href="index.html">
+              <i class="fa fa-bug"></i>
+              <span>O que é MIP?</span> 
+              <span class="pull-right-container">
+              </span>
+            </a>  
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa fa-user-secret"></i>
+              <span>Autor</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
 
-          <li class="treeview">
+          </li>
+
+          <!-- <li class="treeview">
             <a href="#">
               <i class="fa fa-dashboard"></i>
               <span>Análise por Região</span>
@@ -117,8 +133,8 @@
                   <i class="fa fa-bug"></i> Oeste</a>
               </li>
             </ul>
-          </li>
-          <li class="treeview">
+          </li> -->
+          <!-- <li class="treeview">
             <a href="#">
               <i class="fa fa-th"></i>
               <span>Conceitos</span>
@@ -132,27 +148,25 @@
                   <i class="fa fa-bug"></i> Estágios Vegetativos</a>
               </li>
             </ul>
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a href="#">
               <i class="fa fa-th"></i>
               <span>Regiões</span>
               <span class="pull-right-container">
               </span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </section>
       <!-- /.sidebar -->
     </aside>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
           Manejo Integrado de Pragas - Principais Resultados
-          <small>Safra 2017/2018</small>
         </h1>
         <!-- <ol class="breadcrumb">
           <li>
@@ -165,11 +179,12 @@
 
       <!-- Main content -->
       <section class="content">
-        <div class="row">
+        <div class="row icons-topo">
           <section class="col-lg-12">
-            <div class="box box-default">
-              <div class="box-header with-border">
-                <!-- <h3 class="box-title">Números Estatísticos</h3> -->
+            <!-- <div class="box box-default"> -->
+            <div class="">
+              <!-- <div class="box-header with-border">
+                <h3 class="box-title">Números Estatísticos</h3>
                 <div class="box-tools pull-right">
                   <button type="button" class="btn btn-box-tool" data-widget="collapse">
                     <i class="fa fa-minus"></i>
@@ -178,7 +193,7 @@
                     <i class="fa fa-times"></i>
                   </button>
                 </div>
-              </div>
+              </div> -->
               <div class="box-body">
                 <div class="row">
                   <div class="col-lg-4 col-sm-12">
@@ -200,7 +215,7 @@
                       </span>
                       <div class="info-box-content">
                         <span class="info-box-text">Nº Análises</span>
-                        <span>Realizadas</span>
+                        <span class="info-box-text">Realizadas: </span>
                         <span class="info-box-number" id="num_analises"></span>
                       </div>
                     </div>
@@ -212,7 +227,7 @@
                       </span>
                       <div class="info-box-content">
                         <span class="info-box-text">Nº de Unidades</span>
-                        <span class="info-box-text">De Referência</span>
+                        <span class="info-box-text">De Referência: </span>
                         <span class="info-box-number" id="num_un_ref"></span>
                       </div>
                     </div>
@@ -224,7 +239,7 @@
                       </span>
                       <div class="info-box-content">
                         <span class="info-box-text">Total de Área</span>
-                        <span class="info-box-text">Cultivada</span>
+                        <span class="info-box-text">Cultivada: </span>
                         <span class="info-box-number" id="total_area_cultivada"></span>
                       </div>
                     </div>
@@ -235,9 +250,9 @@
                         <i class="fa fa-bug"></i>
                       </span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Lagartas</span>
+                        <span class="info-box-text">Quantidade de </span>
+                        <span class="info-box-text">Lagartas: </span>
                         <span class="info-box-number">41,410</span>
-                        <span>Algum texto</span>
                       </div>
                     </div>
                   </div>
@@ -258,7 +273,7 @@
                     <div class="col-lg-12">
                       <div class="filtros">
                         <div class="box-body border-radius-none">
-                          <div class="col-lg-6 no-padding gg-inner-title">
+                          <div class="col-lg-6 no-padding">
                             <div class="row ano-safra">
                               <div class="col-xs-4">
                                 <label>Ano da Safra</label>
@@ -278,12 +293,12 @@
                               </div>
                               <div class="col-xs-8">
                                 <select multiple id="regio-filtro" class="form-control select-basic-multiple">
-                                    <option value="Todas" selected="selected">Todas</option>
-                                    <option value="Norte">Norte</option>
-                                    <option value="Noroeste">Noroeste</option>
-                                    <option value="Sul">Sul</option>
-                                    <option value="Sudoeste">Sudoeste</option>
-                                    <option value="Oeste">Oeste</option>
+                                  <option value="Todas" selected="selected">Todas</option>
+                                  <option value="Norte">Norte</option>
+                                  <option value="Noroeste">Noroeste</option>
+                                  <option value="Sul">Sul</option>
+                                  <option value="Sudoeste">Sudoeste</option>
+                                  <option value="Oeste">Oeste</option>
                                 </select>
 
                                 <!-- <input type="checkbox" name="todas" value="Todas" id="regiao-todas-safra" checked
@@ -391,9 +406,9 @@
                               </div>
                               <div class="col-xs-8">
                                 <select id="tipo-soja" class="form-control select-basic-single">
-                                    <option value="Todos">Todos</option>
-                                    <option value="sim">Sim</option>
-                                    <option value="nao">Não</option>
+                                  <option value="Todos">Todos</option>
+                                  <option value="sim">Sim</option>
+                                  <option value="nao">Não</option>
                                 </select>
 
                                 <!-- <div>
@@ -420,9 +435,9 @@
                               </div>
                               <div class="col-xs-8">
                                 <select id="ferrugem-soja" class="form-control select-basic-single">
-                                    <option value="Todos">Todos</option>
-                                    <option value="sim">Sim</option>
-                                    <option value="nao">Não</option>
+                                  <option value="Todos">Todos</option>
+                                  <option value="sim">Sim</option>
+                                  <option value="nao">Não</option>
                                 </select>
                                 <!-- <div>
                                   <input type="radio" name="ferrugem" value="ferrugem-ambos" checked />
@@ -444,16 +459,14 @@
                       </div>
                       <div class="filtros">
                         <div class="box-body border-radius-none">
-                          <div class="col-lg-6">
-                            <div class="row data-amostra">
-                              <div class="col-xs-12 ">
+                          <div class="col-lg-12 data-amostra">
+                            <div>
                                 <button id="button-limpar-data" class="btn btn-success" onclick="limpar()">
                                   <i class="fa fa-calendar-times-o"></i>
                                   Limpar</button>
                                 <button id="filtrar-buscar" onclick="filtrar()" class="btn btn-success">
                                   <i class="fa fa-search"></i>
                                   Gerar</button>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -464,7 +477,7 @@
               </div>
             </div>
             <div class="nav-tabs-custom">
-              <ul class="nav nav-tabs pull-left ui-sortable-handle">
+              <ul class="nav nav-tabs pull-right ui-sortable-handle">
                 <li class="pull-left header"><i class="fa fa-inbox"></i> Barras</li>
                 <li class="active"><a href="#tabLagartasBarras" data-toggle="tab" aria-expanded="false">Lagartas</a></li>
                 <li><a href="#tabPercevejosBarras" data-toggle="tab" aria-expanded="true">Percevejos</a></li>
@@ -532,7 +545,7 @@
 
           <section class="col-lg-6">
             <div class="nav-tabs-custom">
-              <ul class="nav nav-tabs pull-left ui-sortable-handle">
+              <ul class="nav nav-tabs pull-right ui-sortable-handle">
                 <li class="pull-left header"><i class="fa fa-inbox"></i> Tabelas</li>
                 <li class="active"><a href="#tabLagartasTabela" data-toggle="tab" aria-expanded="false">Lagartas</a></li>
                 <li><a href="#tabPercevejosTabela" data-toggle="tab" aria-expanded="true">Percevejos</a></li>
@@ -651,7 +664,7 @@
               </div>
             </div>
             <div class="nav-tabs-custom">
-              <ul class="nav nav-tabs pull-left ui-sortable-handle">
+              <ul class="nav nav-tabs pull-right ui-sortable-handle">
                 <li class="pull-left header"><i class="fa fa-inbox"></i> Pizza</li>
                 <li class="active"><a href="#tabLagartasPizza" data-toggle="tab" aria-expanded="false">Lagartas</a></li>
                 <li><a href="#tabPercevejosPizza" data-toggle="tab" aria-expanded="true">Percevejos</a></li>
@@ -1000,10 +1013,10 @@
     <!-- /.content-wrapper -->
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0.0
+        <b>Versão</b> 1.0.0
       </div>
       <strong>Copyright &copy; 2018-2018
-        <a href="https://github.com/grazionale" target="_blank">Grazionale</a>.</strong> Todos os direitos reservados.
+        <a href="https://br.linkedin.com/in/gabriel-grazionale-gomes-fernandes-08b331144" target="_blank">Grazionale</a>.</strong> Todos os direitos reservados.
     </footer>
   </div>
   <!-- ./wrapper -->

@@ -21,3 +21,5 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.select-basic-multiple').select2();
 });
+
+// $('[data-toggle="push-menu"]').pushMenu('toggle');  
