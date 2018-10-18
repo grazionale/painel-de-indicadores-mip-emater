@@ -6,23 +6,33 @@ Neste capítulo, é apresentado quais tecnologias, ferramentas e recursos foram ut
 
 \section{Tecnologias e Ferramentas}
 
-No desenvolvimento do painel de indicadores, foi utilizado a linguagem de marcação HTML em todas as páginas da aplicação. Ela serviu para especificar o conteúdo das páginas, estruturar o \textit{layout} e informar ao navegador o que é cada informação presente nas \textit{tags}. Além do HTML, o CSS foi utilizado para estilizar a apresentação das páginas, organizando a forma como os elementos são dispostos, suas cores, tamanhos e formatos. O \textit{framework} Bootstrap foi utilizado para adicionar responsividade à aplicação. Por fim, foi utilizada a linguagem de programação Javascript em conjunto com a biblioteca JQuery e D3.js. O JQuery foi usado para realizar chamadas Ajax à \sigla{API}{\textit{Application Programming Interface}} \sigla{REST}{\textit{Representation State Transfer}} que contém os dados para a elaboração dos gráficos que foram construídos utilizando a biblioteca D3.js. Os gráficos foram utilizados nas análises que estão presentes no painel de indicadores. 
+No desenvolvimento do painel de indicadores, foi utilizado a linguagem de marcação HTML em todas as páginas da aplicação. Ela serviu para especificar o conteúdo das páginas, estruturar o \textit{layout} e informar ao navegador o que é cada informação presente nas \textit{tags}. Além do HTML, o CSS foi utilizado para estilizar a apresentação das páginas, organizando a forma como os elementos são dispostos, suas cores, tamanhos e formatos. O \textit{framework} Bootstrap foi utilizado para adicionar responsividade à aplicação. Por fim, foi utilizada a linguagem de programação Javascript em conjunto com a biblioteca JQuery e Highcharts. O JQuery foi usado para realizar chamadas Ajax à \sigla{API}{\textit{Application Programming Interface}} \sigla{REST}{\textit{Representation State Transfer}} que contém os dados para a elaboração dos gráficos que foram construídos utilizando a biblioteca Highcharts. Os gráficos foram utilizados nas análises que estão presentes no painel de indicadores. 
 
 O código fonte será hospedado no GitHub, um repositório online e gratuito. O GitHub utiliza o Git para realizar o gerenciamento de versões.  
 
 
 \section{Método}
-Pelo fato do projeto ser solo, foi utilizado o desenvolvimento ágil para garantir versões frequentes do sistema, com redução de \textit{overhead} e produção de códigos de alta qualidade.
+Pelo fato do projeto ser solo, foi utilizado o desenvolvimento ágil. Com ele é possível garantir versões frequentes do sistema, com redução de \textit{overhead} e produção de códigos de alta qualidade.
 
-No desenvolvimento desta proposta foram escolhidas algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.  A técnica de priorização de \textit{backlogs} foi empregada em conjunto com o a técnica de quadro Kanban e \textit{Short interations}. Wireframes foram utilizados para a validação e levantamento de requisitos. 
+Durante o desenvolvimento desta proposta foram escolhidas algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.  A técnica de priorização de \textit{backlogs} foi empregada em conjunto com o a técnica de quadro Kanban e \textit{Short interations} como é apresentado na Figura \ref{fig:kanbangithub}. Wireframes foram utilizados para a validação e levantamento de requisitos, na seção \ref{sec:caprequisitos} a técnica é apresentada com mais detalhes e como foi utilizada. 
 
-Nas subseções seguintes são detalhados com mais detalhes as técnicas ágeis utilizadas no desenvolvimento da aplicação.
+\begin{figure}[H]
+	\caption{Kanban e Priorização do Backlog com Github}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/kanbangithub.jpg} 
+	\label{fig:kanbangithub}
+	\fonte{Autoria Própria}
+\end{figure}
+
+Na Figura \ref{fig:kanbangithub} é possível observar três colunas principais nas quais possuem atividades organizadas por prioridade (\textit{Backlog}). As colunas principais representam três fases do quadro Kanban, \textit{To Do}, \textit{In progress} e \textit{Done}, que representem "Para fazer", "Fazendo"\ e "Feito"\ respectivamente. Por fim, existe uma quarta coluna, que foi criada apenas para marcar e organizar atividades que não serão possíveis de implementar nesta versão da aplicação, pois o cliente não forneceu os dados que eram necessários.
+
+Nas subseções seguintes são descritas com mais detalhes as técnicas ágeis utilizadas no desenvolvimento da aplicação.
 
 \subsection{Prorizar {\textit{Backlogs}}}
-Priorizar \textit{backlogs} trata-se de uma técnica que tem como objetivo priorizar os itens do \textit{backlog}. O \textit{backlog} é como uma "lista de pedidos", no caso desta proposta, será uma "lista de atividades" \cite{auday}. A priorização do \textit{backlog} será realizada através de outra técnica chamada Kanban, que será utilizada para gerenciar o fluxo das atividades entre estados de acordo com o tempo e a necessidade da implementação \cite{massari2014gerenciamento}.
+Priorizar \textit{backlogs} trata-se de uma técnica que tem como objetivo priorizar os itens do \textit{backlog}. O \textit{backlog} é como uma "lista de pedidos", no caso desta proposta, será uma "lista de atividades"\ \cite{auday}. A priorização do \textit{backlog} será realizada através de outra técnica chamada Kanban, que será utilizada para gerenciar o fluxo das atividades entre estados de acordo com o tempo e a necessidade da implementação \cite{massari2014gerenciamento}.
 	
 \subsection{Kanban} 
-Kanban: Kanban significa "tabuleta", "cartão"\ ou "sinalização"\ e sua origem é japonesa, ele foi adotado como metodologia de desenvolvimento inspirado no sistema de fábrica da Toyota. Kanban é formado por um grande quadro, dividido por estágios e preenchido com tarefas escritas com \textit{post-its}, o movimento dessas tarefas passam pelos estágios da esquerda para a direita. Sua finalidade é gerenciar o fluxo de trabalho, buscando melhorar o desempenho e reduzir o desperdício, eliminando atividades que não agregam valor a equipe \cite{massari2014gerenciamento}.
+Kanban significa "tabuleta",\ "cartão"\ ou "sinalização"\ e sua origem é japonesa, ele foi adotado como metodologia de desenvolvimento inspirado no sistema de fábrica da Toyota. Kanban é formado por um grande quadro, dividido por estágios e preenchido com tarefas escritas com \textit{post-its}, o movimento dessas tarefas passam pelos estágios da esquerda para a direita. Sua finalidade é gerenciar o fluxo de trabalho, buscando melhorar o desempenho e reduzir o desperdício, eliminando atividades que não agregam valor a equipe \cite{massari2014gerenciamento}.
 
 \subsection{\textit{Short interations}}
 \textit{Short interations}: realizar curtos \textit{sprints}, geralmente de 2 semanas. Um \textit{sprint} é um planejamento do trabalho que será realizado, os recursos para o desenvolvimento são selecionados e novas funcionalidade e incrementos podem ser implementados \cite{sommerville2011engenharia}.
@@ -48,18 +58,34 @@ Para representar a descrição arquitetural da aplicação, será utilizado diagrama 
 	\fonte{Autoria Própria}
 	\label{fig:deploy}
 \end{figure}
-Na Figura \ref{fig:deploy} é possível observar que a aplicação estará hospedada em um servidor web, essa aplicação receberá acesso de usuários através de seus navegadores pelo protocolo HTTP. Além disso, as requisições dos dados serão feitas através de uma API localizada em outro servidor que realizará requisições TCP/IP a uma base de dados. 
+Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em um servidor web, um repositório do Github. Essa aplicação receberá acesso de usuários por meio de seus navegadores pelo protocolo HTTPS. Além disso, as coletas dos dados serão feitas por uma "\textit{fake} API"\ localizada no mesmo diretório. Entende-se "\textit{fake} API"\ como um arquivo JSON que representa todos os dados necessários para o desenvolvimento da aplicação.
 
 \subsection{Diagrama de Classes}
 \begin{figure}[H]
-	\caption{Diagrama de Classes}	
+	\caption{Diagrama de Classes A}	
 	\centering
-	\includegraphics[width=\textwidth]{figuras/classdiagram.png} 
+	\includegraphics[width=\textwidth]{figuras/classdiagrama.png} 
 	\fonte{Autoria Própria}
-	\label{fig:classes}
+	\label{fig:classesA}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Diagrama de Classes B}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/classdiagramb.png} 
+	\fonte{Autoria Própria}
+	\label{fig:classesB}
 \end{figure}	
 
-Na Figura \ref{fig:classes} é possível visualizar as classes que participarão da aplicação e suas relações. Um Gráfico dependerá de dados que estarão em uma classe de Ocorrência, que por sua vez, depende de diversas outras classes, sendo elas: Região, Praga, Cultivar e Safra, que depende de UR. 
+\begin{figure}[H]
+	\caption{Diagrama de Classes C}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/classdiagramc.png} 
+	\fonte{Autoria Própria}
+	\label{fig:classesC}
+\end{figure}		
+
+Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possível visualizar as classes que participarão da \linebreak aplicação e suas relações. Neste versão da aplicação o diagrama de classes foi utilizado como um guia para a criação do formato da estrutura do arquivo "dados.json"\ localizado em \linebreak \url{https://grazionale.github.io/dados.json}. 
 
 \subsection{Diagrama de Comunicação}
 \begin{figure}[H]
@@ -70,9 +96,10 @@ Na Figura \ref{fig:classes} é possível visualizar as classes que participarão da
 	\label{fig:comunicacao}
 \end{figure}
 
-Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participarão da geração de gráficos, a partir de um filtro escolhido pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, como safra, região, praga e cultivar, após as escolhas das opções, uma requisição para API será realizada, a requisição retornará os dados em JSON e um gráfico será apresentado na tela do usuário. 
+Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participarão da geração de gráficos, a partir de filtros escolhidos pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para "\textit{fake} API"\ será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
 
 \section{Requisitos}
+\label{sec:caprequisitos}
 Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.  
 
 \subsection{Requisitos Funcionais}
