@@ -100,10 +100,43 @@ Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência 
 
 \section{Requisitos}
 \label{sec:caprequisitos}
-Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.  
+Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.
+
+O levantamento de requisitos para o desenvolvimento da aplicação foi realizado de três maneiras, primeiro foi analisado um livreto que contém informações sobre as análises que a EMATER realiza com o programa MIP (Figura \ref{fig:livreto}) e uma planilha utilizadas pelos técnicos da EMATER para a coleta dos dados nas unidades de referência (Figura \ref{fig:planilha}). Depois, houve a elaboração de \textit{wireframes} que foram apresentados ao orientador do projeto para a validação e levantamento de novos requisitos caso necessário (Figura XXX e XYZ). Por fim, reuniões com o orientador do projeto ocorreram durante todo o período de desenvolvimento da aplicação.
+
+\begin{figure}[H]
+	\caption{Resultados do manejo integrado de pragas da soja	na safra 2016/17 no Paraná}	
+	\centering
+	\includegraphics[width=5cm]{figuras/livreto.jpg} 
+	\fonte{EMATER}
+	\label{fig:livreto}
+\end{figure}
+
+A Figura \ref{fig:livreto} mostra o livreto disponibilizado pela EMATER para os sojicultores do Paraná, nele contém análises e informações sobre o programa MIP realizado na safra de 2016 e 2017.
+
+
+\begin{figure}[H]
+	\caption{Planilha utilizada para coleta de dados do programa MIP}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/planilha.jpg} 
+	\fonte{EMATER}
+	\label{fig:planilha}
+\end{figure}
+
+A Figura \ref{fig:planilha} mostra uma planilha utilizada pelos técnicos da EMATER nas unidades de referência do programa MIP. Nela é preenchido informações referentes a propriedade, ao produtor, ao técnico e sobre as coletas realizadas na cultura da soja durante o programa.
+
+\begin{figure}[H]
+	\caption{Tela Inicial - Expansão Menu Lateral}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/home1_menu.png} 
+	\label{fig:home1_menu}
+	\fonte{Autoria própria}
+\end{figure}
+
+A Figura \ref{fig:home1_menu} mostra um \textit{wireframe} utilizado para a coleta e validação dos requisitos. Este \textit{wireframe} é um protótipo da tela inicial da aplicação.
 
 \subsection{Requisitos Funcionais}
-Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}. Os requisitos funcionais da Tabela \ref{tab:tabelareqfuncionais} foram definidos com base nos documentos e planilhas disponibilizados pela EMATER.
+Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}. Os requisitos funcionais da Tabela \ref{tab:tabelareqfuncionais} foram definidos com base nos documentos e planilhas disponibilizados pela EMATER, além de reuniões com o orientador e apresentação de \textit{wireframes}.
 
 
 
@@ -125,25 +158,9 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 	RF 03 & Criar um gráfico de composição em setores para os grupos de percevejos (\textit{Nezara viridula}, \textit{Piezodorus guildinii}, \textit{Euschistus heros},\textit{Dichelops melacanthus	} e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
 	RF 04 & Criar gráficos de composição em setores para os grupos de percevejos de acordo com as respectivas regiões, representando sua ocorrência durante o desenvolvimento da soja nas URs participantes. & Essencial  \\ \hline
 	RF 05 & Criar um gráfico de composição em setores representando a praga ou o grupo de pragas que desencadeou a necessidade do uso da primeira aplicação de inseticida, considerando todas as URs participantes do MIP. & Essencial  \\ \hline
-	RF 06 & Criar uma tabela representando as regiões participantes do MIP e o número médio de aplicações de inseticidas, além do tempo médio da primeira aplicação. Independe de a plantação ter o cultivo da soja Bt ou não Bt. & Essencial  \\ \hline
-	RF 07 & Criar uma tabela representando informações relevantes sobre área de soja, produtividade e práticas fitossanitárias em lavouras de soja que não houveram a participação do programa MIP. & Importante \\ \hline
-	RF 08 & Criar uma tabela representando o número médio de aplicações de inseticidas e o tempo decorrido até a primeira aplicação da pulverização em lavouras que não participaram do programa MIP. & Importante  \\ \hline
-	RF 09 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de lagartas em lavouras que não participaram do programa MIP.  & Importante  \\ \hline
-	RF 10 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de lagartas em lavouras que não participaram do programa MIP. & Importante  \\ \hline
-	RF 11 & Criar um gráfico de composição em setores representando a distribuição percentual das lagartas no primeiro controle realizado sem o programa MIP.  & Importante  \\ \hline
-	RF 12 & Criar um gráfico de composição em setores representando a distribuição percentual das lagartas no segundo controle realizado sem o programa MIP.  & Importante \\ \hline
-	RF 13 & Criar gráficos em barras representando a distribuição gaussiana das aplicações de inseticidas no controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
-	RF 14 & Criar gráficos em barras representando o tempo médio até a primeira aplicação dos inseticidas para o controle de percevejos em lavouras que não participaram do programa MIP. & Importante  \\ \hline
-	RF 15 & Criar um gráfico de composição em setores representando a distribuição percentual de percevejos que desencadeou o controle em lavouras do Paraná não participantes do programa MIP. & Importante  \\ \hline
-	RF 16 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais possuíam URs que participaram do programa MIP. & Essencial  \\ \hline
-	RF 17 & Criar uma tabela representando o custo de controle de pragas separado por regiões nas quais não participaram do programa MIP. & Importante  \\ \hline
-	RF 18 & Permitir uma filtragem das análises por regiões, pragas, cidades e ano. & Essencial  \\ \hline
-	RF 19 & Permitir que o usuário possa filtrar suas buscas através da concatenação de itens, como diferentes regiões e pragas. & Essencial  \\ \hline
-	RF 20 & Permitir que o usuário localize análises dos anos anteriores, desde que sejam a partir de 2019. & Essencial  \\ \hline
-	RF 21 & Criar uma seção de assuntos teóricos sobre informações relevantes ao MIP. & Importante  \\ \hline
-	RF 21.1 & Criar uma tabela com uma descrição sumária dos estádios reprodutivos e vegetativos da soja. & Importante  \\ \hline
-	RF 21.2 & Criar uma tabela baseada no programa manejo integrado da soja com os níveis de ação de controle para lagartas e percevejos. & Importante  \\ \hline
-	RF 21.3 & Criar uma tabela com um histórico sobre a distribuição das unidades referências que participaram dos projetos do MIP. & Importante  \\ \hline  
+	RF 06 & Permitir uma filtragem das análises por regiões, pragas, cidades e ano. & Essencial  \\ \hline
+	RF 07 & Permitir que o usuário possa filtrar suas buscas através da concatenação de itens, como diferentes regiões e pragas. & Essencial  \\ \hline
+	RF 08 & Permitir que o usuário localize análises dos anos anteriores. & Essencial  \\ \hline
 \end{longtable}
 
 
@@ -228,32 +245,33 @@ Requisitos não funcionais são restrições as funcionalidades que o sistema fornec
 		RFN 02 & A aplicação deverá realizar a interação com os usuários por meio de navegadores web.  & Essencial \\ \hline
 		RFN 03 & A aplicação deverá estar hospedada em um servidor online. & Desejável  \\ \hline
 		RFN 04 & A aplicação deverá ser responsiva permitindo o acesso por meio de dispositivos móveis ou desktops/notebooks. & Essencial  \\ \hline
-		RFN 05 & A aplicação deverá armazenar um histórico das análises realizadas em todos os anos. & Importante  \\ \hline
-		RFN 06 & Dados das UR's que participam do MIP e de seus proprietários, não poderam ser acessados por usuários sem permissões. & Essencial \\ \hline	
+		RFN 05 & Dados das UR's que participam do MIP e de seus proprietários, não poderam ser acessados por usuários sem permissões. & Essencial \\ \hline
+		RFN 06 & A aplicação deverá funcionar \textit{offline} caso o usuário opte em instalar em seu dispositivo. & Desejável \\ \hline	
 	\end{tabular}
 \end{table}
 
 \subsection{Diagramas de Caso de uso}
 
-Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da aplicação proposta. O usuário poderá consultar dados referentes ao programa MIP, que é uma das técnicas utilizadas no Projeto Grãos. Além disso, o usuário conseguirá acessar análises dos anos anteriores e utilizar filtros nas análises atuais. 
+Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da aplicação proposta. O usuário poderá consultar dados referentes ao programa MIP. Além disso, o usuário conseguirá acessar análises dos anos anteriores e utilizar filtros nas análises para um melhor aproveitamento das informações.
+
 
 \begin{figure}[H]
 	\caption{Diagrama de Caso de Uso - Visão Geral}	
 	\centering
-	\includegraphics[width=\textwidth]{figuras/CasoDeUso.jpg} 
+	\includegraphics[width=10cm]{figuras/CasoDeUso.png} 
 	\label{fig:casoDeUso}
 	\fonte{Autoria própria}
 \end{figure}
 
 %\subsection{Diagrama de Classes}
-\subsection{Protótipos de Tela}
-A prototipação sugere um projeto-piloto que tem como objetivo ajudar a identificar os requisitos para o projeto principal, além disso, ela pode ajudar a identificação das tecnologias que podem ser usadas durante o desenvolvimento. Com a prototipação, o cliente consegue ter uma visão mais ampla de como o sistema irá ficar e suas respectivas funcionalidades, tornando mais fácil para o interessado falar a respeito dos seus desejos em relação ao sistema e facilitando o levantamento de novos requisitos e funcionalidades ainda não estabelecidas ou incompletas \cite{filho}.
+\subsection{Telas da Aplicação}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nibh sed felis condimentum vulputate. Vivamus eget massa nulla. Ut vestibulum lobortis turpis ut ornare. Donec condimentum, risus at tincidunt hendrerit, sem risus condimentum ex, ut gravida nisi justo eget ligula. Cras nec lacus laoreet, lobortis sem aliquet, hendrerit ante. Donec non urna enim. Quisque commodo mauris at massa elementum pellentesque. Nullam imperdiet felis ut erat auctor, malesuada rutrum purus molestie. Proin molestie velit a iaculis facilisis. Integer ultrices lorem ut nibh dapibus porta eget a libero. Donec nec ligula id libero rutrum dapibus ac quis neque. Sed fermentum rhoncus faucibus.
 
-Para realizar a construção dos protótipos desta aplicação, será útilizado Wireframes, que são uma espécie de rascunho de protótipo, são rápidos, simples e serão gerados pelo software Balsamiq \cite{massari2014gerenciamento}.
 
 \subsubsection{Tela Inicial}
 
-Na Figura \ref{fig:home1} é possível visualizar a tela inicial da aplicação, com gráficos sobre as análises atuais de lagartas e percevejos, com um mapa que servirá de filtros para a escolha de regiões, quadros que mostrarão dados referentes a última análise, como tamanho do território que houve a implantação do MIP e número de aplicações de inseticidas nas culturas da soja, por exemplo. Além das análises, também existirá um menu lateral, que irá se expandir ao clique do ícone de menu, nesse menu lateral, conterão diversas seções como, teóricas, filtros de busca, acesso a análises dos anos anteriores, seções institucionais, entre outras. Por fim, existirá uma barra superior com um campo de busca. A barra de busca poderá ser utilizada pelo usuário para buscar análises que já foram realizadas em safras passadas ou buscar informações sobre a análise atual. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nibh sed felis condimentum vulputate. Vivamus eget massa nulla. Ut vestibulum lobortis turpis ut ornare. Donec condimentum, risus at tincidunt hendrerit, sem risus condimentum ex, ut gravida nisi justo eget ligula. Cras nec lacus laoreet, lobortis sem aliquet, hendrerit ante. Donec non urna enim. Quisque commodo mauris at massa elementum pellentesque. Nullam imperdiet felis ut erat auctor, malesuada rutrum purus molestie. Proin molestie velit a iaculis facilisis. Integer ultrices lorem ut nibh dapibus porta eget a libero. Donec nec ligula id libero rutrum dapibus ac quis neque. Sed fermentum rhoncus faucibus.
+
 
 \begin{figure}[H]
 	\caption{Tela Inicial}
@@ -276,3 +294,20 @@ Na Figura \ref{fig:home1_menu} mostra como será a expansão do menu lateral.
 	\label{fig:home1_menu}
 	\fonte{Autoria própria}
 \end{figure}
+
+\begin{figure}[H]
+	\caption{Tela Inicial - Modo \textit{Mobile}}
+	\centering
+	\includegraphics[width=14cm]{figuras/home1_celular_1.png} 
+	\label{fig:home1_mobile}
+	\fonte{Autoria própria}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Tela Inicial - Modo \textit{Mobile} com expansão do menu lateral}
+	\centering
+	\includegraphics[width=6cm]{figuras/home1_mobile_menu.png} 
+	\label{fig:home1_mobile_menu}
+	\fonte{Autoria própria}
+\end{figure}
+
