@@ -14,7 +14,7 @@ O código fonte será hospedado no GitHub, um repositório online e gratuito. O Git
 \section{Método}
 Pelo fato do projeto ser solo, foi utilizado o desenvolvimento ágil. Com ele é possível garantir versões frequentes do sistema, com redução de \textit{overhead} e produção de códigos de alta qualidade.
 
-Durante o desenvolvimento desta proposta foram escolhidas algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.  A técnica de priorização de \textit{backlogs} foi empregada em conjunto com o a técnica de quadro Kanban e \textit{Short interations} como é apresentado na Figura \ref{fig:kanbangithub}. Wireframes foram utilizados para a validação e levantamento de requisitos, na seção \ref{sec:caprequisitos} a técnica é apresentada com mais detalhes e como foi utilizada. 
+Durante o desenvolvimento desta proposta foram escolhidas algumas técnicas ágeis mais empregadas em 2016 \cite{stateofagile}.  A técnica de priorização de \textit{backlogs} foi empregada em conjunto com o a técnica de quadro Kanban e \textit{Short interations} como é apresentado na Figura \ref{fig:kanbangithub}. Wireframes foram utilizados para a validação e levantamento de requisitos. Na seção \ref{sec:caprequisitos} a técnica é apresentada com mais detalhes e como foi utilizada. 
 
 \begin{figure}[H]
 	\caption{Kanban e Priorização do Backlog com Github}
@@ -96,7 +96,7 @@ Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possíve
 	\label{fig:comunicacao}
 \end{figure}
 
-Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participarão da geração de gráficos, a partir de filtros escolhidos pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para "\textit{fake} API"\ será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
+Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participam da geração de gráficos, a partir de filtros escolhidos pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para API REST será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
 
 \section{Requisitos}
 \label{sec:caprequisitos}
@@ -126,14 +126,14 @@ A Figura \ref{fig:livreto} mostra o livreto disponibilizado pela EMATER para os 
 A Figura \ref{fig:planilha} mostra uma planilha utilizada pelos técnicos da EMATER nas unidades de referência do programa MIP. Nela é preenchido informações referentes a propriedade, ao produtor, ao técnico e sobre as coletas realizadas na cultura da soja durante o programa.
 
 \begin{figure}[H]
-	\caption{Tela Inicial - Expansão Menu Lateral}
+	\caption{Protótipo tela inicial com expansão do menu lateral}
 	\centering
-	\includegraphics[width=\textwidth]{figuras/home1_menu.png} 
-	\label{fig:home1_menu}
+	\includegraphics[width=\textwidth]{figuras/prot_home1_menu.png} 
+	\label{fig:prot_home1_menu}
 	\fonte{Autoria própria}
 \end{figure}
 
-A Figura \ref{fig:home1_menu} mostra um \textit{wireframe} utilizado para a coleta e validação dos requisitos. Este \textit{wireframe} é um protótipo da tela inicial da aplicação.
+A Figura \ref{fig:prot_home1_menu} mostra um \textit{wireframe} utilizado para a coleta e validação dos requisitos. Este \textit{wireframe} é um protótipo da tela inicial da aplicação.
 
 \subsection{Requisitos Funcionais}
 Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele irá reagir em certas entradas e como ele irá se comportar em determinadas situações \cite{sommerville2011engenharia}. Os requisitos funcionais da Tabela \ref{tab:tabelareqfuncionais} foram definidos com base nos documentos e planilhas disponibilizados pela EMATER, além de reuniões com o orientador e apresentação de \textit{wireframes}.
@@ -233,7 +233,7 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 
 \subsection{Requisitos Não Funcionais}
 
-Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}. Os requisitos não funcionais da Tabela \ref{tab:tabelareqnaofuncionais} foram definidos com base nos documentos e planilhas disponibilizadas pela EMATER.
+Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}. Os requisitos não funcionais da Tabela \ref{tab:tabelareqnaofuncionais} foram definidos com base nas reuniões realizadas com o cliente.
 
 \begin{table}[H]
 	\caption[Tabela Requisitos Não Funcionais]{Requisitos Não Funcionais.}
@@ -265,49 +265,114 @@ Na Figura \ref{fig:casoDeUso} é apresentado o diagrama de caso de uso geral da a
 
 %\subsection{Diagrama de Classes}
 \subsection{Telas da Aplicação}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nibh sed felis condimentum vulputate. Vivamus eget massa nulla. Ut vestibulum lobortis turpis ut ornare. Donec condimentum, risus at tincidunt hendrerit, sem risus condimentum ex, ut gravida nisi justo eget ligula. Cras nec lacus laoreet, lobortis sem aliquet, hendrerit ante. Donec non urna enim. Quisque commodo mauris at massa elementum pellentesque. Nullam imperdiet felis ut erat auctor, malesuada rutrum purus molestie. Proin molestie velit a iaculis facilisis. Integer ultrices lorem ut nibh dapibus porta eget a libero. Donec nec ligula id libero rutrum dapibus ac quis neque. Sed fermentum rhoncus faucibus.
+Nas próximas subseções serão apresentados as telas da aplicação e suas funcionalidades. Além da versão \textit{desktop} também será apresentado a versão \textit{mobile}. Por fim, será mostrado como ela poderá ser acessada de maneira \textit{offline} com a instalação da aplicação no dispositivo móvel por meio da metodologia do \sigla{PWA}{\textit{Progressive Web App}}.
 
 
 \subsubsection{Tela Inicial}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nibh sed felis condimentum vulputate. Vivamus eget massa nulla. Ut vestibulum lobortis turpis ut ornare. Donec condimentum, risus at tincidunt hendrerit, sem risus condimentum ex, ut gravida nisi justo eget ligula. Cras nec lacus laoreet, lobortis sem aliquet, hendrerit ante. Donec non urna enim. Quisque commodo mauris at massa elementum pellentesque. Nullam imperdiet felis ut erat auctor, malesuada rutrum purus molestie. Proin molestie velit a iaculis facilisis. Integer ultrices lorem ut nibh dapibus porta eget a libero. Donec nec ligula id libero rutrum dapibus ac quis neque. Sed fermentum rhoncus faucibus.
-
-
 \begin{figure}[H]
 	\caption{Tela Inicial}
 	\centering
-	\includegraphics[width=\textwidth]{figuras/home1.png} 
-	\label{fig:home1}
+	\includegraphics[width=\textwidth]{figuras/home1_no_graph.png} 
+	\label{fig:home1_no_graph}
 	\fonte{Autoria própria}
 \end{figure}
 
+Na Figura \ref{fig:home1_no_graph} é possível visualizar a tela inicial da aplicação. Nesta tela o usuário terá acesso a um menu lateral expansível. Também terá acesso a contadores que mostram resultados sobre todas as análises realizadas com o MIP durante todos os anos que a técnica foi utilizada. E por fim, é possível visualizar os filtros que poderão ser combinados de inúmeras formas para a geração dos gráficos.
 
-\subsubsection{OUTRAS TELAS}
 
-
-Na Figura \ref{fig:home1_menu} mostra como será a expansão do menu lateral. 
+\subsubsection{Menu Lateral Expansível}
 
 \begin{figure}[H]
-	\caption{Tela Inicial - Expansão Menu Lateral}
+	\caption{Expansão Menu Lateral}
 	\centering
-	\includegraphics[width=\textwidth]{figuras/home1_menu.png} 
-	\label{fig:home1_menu}
+	\includegraphics[width=\textwidth]{figuras/menu-acao.png} 
+	\label{fig:menu-acao}
 	\fonte{Autoria própria}
 \end{figure}
+
+Na Figura \ref{fig:menu-acao} é demonstrado como é feito a expansão do menu lateral. O usuário clica no ícone do menu e ele será expandido horizontalmente mostrando um texto sobre cada item. 
+
+\subsection{Contadores}
 
 \begin{figure}[H]
-	\caption{Tela Inicial - Modo \textit{Mobile}}
+	\caption{Contadores}
 	\centering
-	\includegraphics[width=14cm]{figuras/home1_celular_1.png} 
-	\label{fig:home1_mobile}
+	\includegraphics[width=\textwidth]{figuras/contadores.png} 
+	\label{fig:contadores}
 	\fonte{Autoria própria}
 \end{figure}
+
+Na Figura \ref{fig:contadores} é possível visualizar dados referentes a todas as análises de plantações de soja que participaram do programa MIP, durante todos os anos de implantação da técnica no Projeto Grãos.
+
+\subsection{Filtros}
 
 \begin{figure}[H]
-	\caption{Tela Inicial - Modo \textit{Mobile} com expansão do menu lateral}
+	\caption{Filtros}
 	\centering
-	\includegraphics[width=6cm]{figuras/home1_mobile_menu.png} 
-	\label{fig:home1_mobile_menu}
+	\includegraphics[width=\textwidth]{figuras/filtros.png} 
+	\label{fig:filtros}
 	\fonte{Autoria própria}
 \end{figure}
 
+Na Figura \ref{fig:filtros} é possível visualizar as opções que poderão ser utilizadas pelo usuário para um melhor aproveitamento de sua análise. O usuário pode combinar os filtros de diferentes formas, sendo que apenas o "Ano da Safra"\ é obrigatório. Depois de selecionar os filtros desejados, ele poderá clicar em "Gerar"\ para a geração da análise ou "Limpar"\ para apagar o que foi preenchido.
+
+\subsection{Abas para escolha de pragas}
+\begin{figure}[H]
+	\caption{Abas para escolha de pragas}
+	\centering
+	\includegraphics[width=7cm]{figuras/abas.png} 
+	\label{fig:abas}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:abas} é possível visualizar duas opções de pragas para escolha do usuário. Ele poderá optar em visualizar os gráficos e tabelas de percevejos ou de lagartas.
+
+\subsection{Tabela de Pragas - Lagartas}
+
+\begin{figure}[H]
+	\caption{Tabela com análise de pragas}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/tabela-lagartas.png} 
+	\label{fig:tabela-lagartas}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:tabela-lagartas} é possível visualizar uma tabela com dados das análises do MIP com base nos filtros selecionados pelo usuário, onde é representado o percentual médio por grupo de praga em três períodos do ciclo da soja. Esta tabela é dividida em 4 colunas, sendo a primeira representando o nome da praga, a segunda o primeiro período, a terceira o segundo período e a última representando o último período do ciclo da soja.
+
+\subsection{Gráfico de Barras - Lagartas}
+
+\begin{figure}[H]
+	\caption{Gráfico de Pragas - Lagartas}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/grafico_barras_lagartas.png} 
+	\label{fig:grafico_barras_lagartas}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:grafico_barras_lagartas} é possível visualizar um gráfico de barras que representa a ocorrência percentual média por grupo de pragas em três períodos do ciclo da soja. Neste caso, foi representado a análise referente as lagartas. 
+
+\subsection{Gráfico de Composição em Setores - Percevejos}
+
+\begin{figure}[H]
+	\caption{Gráfico de Composição em Setores - Percevejos}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/grafico_pizza_percevejos.png} 
+	\label{fig:grafico_pizza_percevejos}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:grafico_pizza_percevejos} é possível visualizar um gráfico de composição em setores que representa a participação percentual média de grupos de pragas. Neste caso, foi representado a análise referente aos percevejos. 
+
+
+\subsection{Versão \textit{mobile} da aplicação}
+
+\begin{figure}[H]
+	\caption{Verão \textit{mobile} da aplicação}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/home1_celular_1.png} 
+	\label{fig:home1_celular_1}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:home1_celular_1} é possível visualizar a versão mobile da aplicação.

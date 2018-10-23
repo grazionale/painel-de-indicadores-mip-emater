@@ -43,11 +43,18 @@
 \contentsline {subsection}{\numberline {3.4.3}Diagramas de Caso de uso}{28}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Telas da Aplica\c c\~ao}{29}{subsection.3.4.4}
 \contentsline {subsubsection}{\numberline {3.4.4.1}Tela Inicial}{30}{subsubsection.3.4.4.1}
-\contentsline {subsubsection}{\numberline {3.4.4.2}OUTRAS TELAS}{30}{subsubsection.3.4.4.2}
+\contentsline {subsubsection}{\numberline {3.4.4.2}Menu Lateral Expans\IeC {\'\i }vel}{31}{subsubsection.3.4.4.2}
+\contentsline {subsection}{\numberline {3.4.5}Contadores}{31}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Filtros}{32}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Abas para escolha de pragas}{32}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Tabela de Pragas - Lagartas}{33}{subsection.3.4.8}
+\contentsline {subsection}{\numberline {3.4.9}Gr\'afico de Barras - Lagartas}{34}{subsection.3.4.9}
+\contentsline {subsection}{\numberline {3.4.10}Gr\'afico de Composi\c c\~ao em Setores - Percevejos}{35}{subsection.3.4.10}
+\contentsline {subsection}{\numberline {3.4.11}Vers\~ao \textit {mobile} da aplica\c c\~ao}{36}{subsection.3.4.11}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CRONOGRAMA PREVISTO}}{33}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CRONOGRAMA PREVISTO}}{37}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{34}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{38}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.34}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{39}{section*.39}
