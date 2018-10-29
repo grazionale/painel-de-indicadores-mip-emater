@@ -48,7 +48,7 @@ O \textit{Wireframe} pode ser usado no início do projeto para representar o ente
 Segundo \cite{pressman2009engenharia}, "Arquitetura é um conjunto de artefatos que refletem diferentes visões do sistema". Na descrição arquitetural da aplicação, será utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si \cite{guedesuml} e diagrama de deploy para representar como a aplicação está distribuída. Cada um desses diagramas representam um tipo de visão do sistema, onde cada uma das visões é necessária segundo a perspectiva do interessado \cite{pressman2009engenharia}.
 \end{comment}
 
-Para representar a descrição arquitetural da aplicação, será utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si e diagrama de \textit{deploy} para representar como a aplicação está distribuída.
+Para representar a descrição arquitetural da aplicação, foi utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si e diagrama de \textit{deploy} para representar como a aplicação está distribuída.
 
 \subsection{Diagrama de Deploy}
 \begin{figure}[H]
@@ -58,7 +58,7 @@ Para representar a descrição arquitetural da aplicação, será utilizado diagrama 
 	\fonte{Autoria Própria}
 	\label{fig:deploy}
 \end{figure}
-Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em um servidor web, um repositório do Github. Essa aplicação receberá acesso de usuários por meio de seus navegadores pelo protocolo HTTPS. Além disso, as coletas dos dados serão feitas por uma "\textit{fake} API"\ localizada no mesmo diretório. Entende-se "\textit{fake} API"\ como um arquivo JSON que representa todos os dados necessários para o desenvolvimento da aplicação.
+Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em um servidor web, um repositório do Github. Essa aplicação receberá acesso de usuários por meio de seus navegadores pelo protocolo HTTPS. Além disso, as coletas dos dados serão feitas por uma API REST. 
 
 \subsection{Diagrama de Classes}
 \begin{figure}[H]
@@ -85,7 +85,7 @@ Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em
 	\label{fig:classesC}
 \end{figure}		
 
-Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possível visualizar as classes que participarão da \linebreak aplicação e suas relações. Neste versão da aplicação o diagrama de classes foi utilizado como um guia para a criação do formato da estrutura do arquivo "dados.json"\ localizado em \linebreak \url{https://grazionale.github.io/dados.json}. 
+Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possível visualizar as classes que participarão da \linebreak aplicação e suas relações. Neste versão da aplicação o diagrama de classes foi utilizado como um guia para a criação do formato da estrutura do arquivo "dados.json"\ localizado em \linebreak \url{https://grazionale.github.io/dados.json} que serviu como API. 
 
 \subsection{Diagrama de Comunicação}
 \begin{figure}[H]
@@ -96,13 +96,15 @@ Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possíve
 	\label{fig:comunicacao}
 \end{figure}
 
-Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participam da geração de gráficos, a partir de filtros escolhidos pelo usuário. A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para API REST será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
+Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participam da geração de gráficos, a partir de filtros escolhidos pelo usuário. 
+
+A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para API REST será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
 
 \section{Requisitos}
 \label{sec:caprequisitos}
 Requisitos são aspectos do que um sistema deve fazer, serviços que irá oferecer e suas limitações de funcionamento. Os requisitos representam as necessidades dos clientes \cite{sommerville2011engenharia}.
 
-O levantamento de requisitos para o desenvolvimento da aplicação foi realizado de três maneiras, primeiro foi analisado um livreto que contém informações sobre as análises que a EMATER realiza com o programa MIP (Figura \ref{fig:livreto}) e uma planilha utilizadas pelos técnicos da EMATER para a coleta dos dados nas unidades de referência (Figura \ref{fig:planilha}). Depois, houve a elaboração de \textit{wireframes} que foram apresentados ao orientador do projeto para a validação e levantamento de novos requisitos caso necessário (Figura XXX e XYZ). Por fim, reuniões com o orientador do projeto ocorreram durante todo o período de desenvolvimento da aplicação.
+O levantamento de requisitos para o desenvolvimento da aplicação foi realizado de três maneiras, primeiro foi analisado um livreto que contém informações sobre as análises que a EMATER realiza com o programa MIP (Figura \ref{fig:livreto}) e uma planilha utilizadas pelos técnicos da EMATER para a coleta dos dados nas unidades de referência (Figura \ref{fig:planilha}). Depois, houve a elaboração de \textit{wireframes} que foram apresentados ao orientador do projeto para a validação e levantamento de novos requisitos caso necessário (Figura \ref{fig:prot_home1_menu}). Por fim, reuniões com o orientador do projeto ocorreram durante todo o período de desenvolvimento da aplicação.
 
 \begin{figure}[H]
 	\caption{Resultados do manejo integrado de pragas da soja	na safra 2016/17 no Paraná}	
@@ -233,7 +235,7 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 
 \subsection{Requisitos Não Funcionais}
 
-Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}. Os requisitos não funcionais da Tabela \ref{tab:tabelareqnaofuncionais} foram definidos com base nas reuniões realizadas com o cliente.
+Requisitos não funcionais são restrições as funcionalidades que o sistema fornece. Os requisitos não funcionais geralmente são usados no sistema como um todo \cite{sommerville2011engenharia}. Os requisitos não funcionais da Tabela \ref{tab:tabelareqnaofuncionais} foram definidos com base nas reuniões realizadas com o orientador do projeto.
 
 \begin{table}[H]
 	\caption[Tabela Requisitos Não Funcionais]{Requisitos Não Funcionais.}
@@ -376,4 +378,16 @@ Na Figura \ref{fig:grafico_pizza_percevejos} é possível visualizar um gráfico de
 \end{figure}
 
 Na Figura \ref{fig:home1_celular_1} é possível visualizar a versão mobile da aplicação.
+
+\subsection{Demonstração da instalação da aplicação (PWA)}
+
+\begin{figure}[H]
+	\caption{Demonstração da instalação da aplicação}
+	\centering
+	\includegraphics[width=\textwidth]{figuras/pwa.jpg} 
+	\label{fig:pwa}
+	\fonte{Autoria própria}
+\end{figure}
+
+Na Figura \ref{fig:pwa} é possível visualizar uma demonstração de como ocorre a instalação da versão PWA da aplicação e seu ícone na tela do dispositivo móvel.
 

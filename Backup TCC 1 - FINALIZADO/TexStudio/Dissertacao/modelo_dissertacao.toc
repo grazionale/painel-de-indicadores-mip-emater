@@ -7,54 +7,56 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c c\~ao}}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}OBJETIVOS}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Objetivo Geral}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Objetivos Espec\IeC {\'\i }ficos}{10}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}ORGANIZA\c C\~AO DO TEXTO}{10}{section.1.2}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\c c\~ao}}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}OBJETIVOS}{10}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivo Geral}{10}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Espec\IeC {\'\i }ficos}{11}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}ORGANIZA\c C\~AO DO TEXTO}{11}{section.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {FUNDAMENTA\c C\~AO TE\'ORICA}}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}PROJETO GR\~AOS}{11}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}EMBRAPA}{11}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}EMATER}{11}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Manejo Integrado de Pragas}{12}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Informa\c c\~ao para Tomada de Decis\~oes}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}An\'alise de Informa\c c\~oes}{14}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Gr\'afico em Barras}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Gr\'afico de Composi\c c\~ao em Setores ("Pizza")}{15}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Trabalhos Relacionados}{16}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Google \textit {Analytics}}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Painel de Transporte \'Aereo - GRU Airport}{17}{subsection.2.4.2}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {FUNDAMENTA\c C\~AO TE\'ORICA}}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}PROJETO GR\~AOS}{12}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}EMBRAPA}{12}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}EMATER}{12}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Manejo Integrado de Pragas}{13}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Informa\c c\~ao para Tomada de Decis\~oes}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}An\'alise de Informa\c c\~oes}{15}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Gr\'afico em Barras}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Gr\'afico de Composi\c c\~ao em Setores ("Pizza")}{16}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Trabalhos Relacionados}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Google \textit {Analytics}}{17}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Painel de Transporte \'Aereo - GRU Airport}{18}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Progressive Web App}{18}{section.2.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Desenvolvimento do projeto}}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}Tecnologias e Ferramentas}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}M\'etodo}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Prorizar {\textit {Backlogs}}}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Kanban}{20}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}\textit {Short interations}}{20}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}\textit {Wireframes}}{20}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Arquitetura do Aplicativo}{20}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Diagrama de Deploy}{21}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Diagrama de Classes}{22}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Diagrama de Comunica\c c\~ao}{24}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Requisitos}{25}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Requisitos Funcionais}{27}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Requisitos N\~ao Funcionais}{28}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Diagramas de Caso de uso}{28}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Telas da Aplica\c c\~ao}{29}{subsection.3.4.4}
-\contentsline {subsubsection}{\numberline {3.4.4.1}Tela Inicial}{30}{subsubsection.3.4.4.1}
-\contentsline {subsubsection}{\numberline {3.4.4.2}Menu Lateral Expans\IeC {\'\i }vel}{31}{subsubsection.3.4.4.2}
-\contentsline {subsection}{\numberline {3.4.5}Contadores}{31}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Filtros}{32}{subsection.3.4.6}
-\contentsline {subsection}{\numberline {3.4.7}Abas para escolha de pragas}{32}{subsection.3.4.7}
-\contentsline {subsection}{\numberline {3.4.8}Tabela de Pragas - Lagartas}{33}{subsection.3.4.8}
-\contentsline {subsection}{\numberline {3.4.9}Gr\'afico de Barras - Lagartas}{34}{subsection.3.4.9}
-\contentsline {subsection}{\numberline {3.4.10}Gr\'afico de Composi\c c\~ao em Setores - Percevejos}{35}{subsection.3.4.10}
-\contentsline {subsection}{\numberline {3.4.11}Vers\~ao \textit {mobile} da aplica\c c\~ao}{36}{subsection.3.4.11}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Desenvolvimento do projeto}}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Tecnologias e Ferramentas}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}M\'etodo}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Prorizar {\textit {Backlogs}}}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Kanban}{21}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\textit {Short interations}}{21}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}\textit {Wireframes}}{21}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Arquitetura do Aplicativo}{21}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Diagrama de Deploy}{22}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Diagrama de Classes}{23}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Diagrama de Comunica\c c\~ao}{25}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Requisitos}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Requisitos Funcionais}{28}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Requisitos N\~ao Funcionais}{29}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Diagramas de Caso de uso}{29}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Telas da Aplica\c c\~ao}{30}{subsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.1}Tela Inicial}{31}{subsubsection.3.4.4.1}
+\contentsline {subsubsection}{\numberline {3.4.4.2}Menu Lateral Expans\IeC {\'\i }vel}{32}{subsubsection.3.4.4.2}
+\contentsline {subsection}{\numberline {3.4.5}Contadores}{32}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Filtros}{33}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Abas para escolha de pragas}{33}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Tabela de Pragas - Lagartas}{34}{subsection.3.4.8}
+\contentsline {subsection}{\numberline {3.4.9}Gr\'afico de Barras - Lagartas}{35}{subsection.3.4.9}
+\contentsline {subsection}{\numberline {3.4.10}Gr\'afico de Composi\c c\~ao em Setores - Percevejos}{36}{subsection.3.4.10}
+\contentsline {subsection}{\numberline {3.4.11}Vers\~ao \textit {mobile} da aplica\c c\~ao}{37}{subsection.3.4.11}
+\contentsline {subsection}{\numberline {3.4.12}Demonstra\c c\~ao da instala\c c\~ao da aplica\c c\~ao (PWA)}{38}{subsection.3.4.12}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CRONOGRAMA PREVISTO}}{37}{chapter.4}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{38}{chapter.5}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Limita\c c\~oes}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trabalhos Futuros}{39}{section.4.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{39}{section*.39}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{40}{section*.39}
