@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  29 OCT 2018 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  2 NOV 2018 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2180,37 +2180,11 @@ Package pdftex.def Info: Fichacatalografica.jpg  used on input line 139.
  <./Fichacatalografica.jpg>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 143.
-<brasao.png, id=24, 260.8947pt x 261.6174pt>
-File: brasao.png Graphic file (type png)
-<use brasao.png>
-Package pdftex.def Info: brasao.png  used on input line 143.
-(pdftex.def)             Requested size: 62.59605pt x 62.76949pt.
-<logo-utfpr.png, id=26, 48.56544pt x 17.77843pt>
-File: logo-utfpr.png Graphic file (type png)
-<use logo-utfpr.png>
-Package pdftex.def Info: logo-utfpr.png  used on input line 143.
-(pdftex.def)             Requested size: 85.35826pt x 31.24886pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (59.40894pt): 
- Make it at least 70.14018pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-
-Package Fancyhdr Warning: \footskip is too small (0.0pt): 
- Make it at least 10.14995pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 \openout4 = `modelo_dissertacao.mw'.
 
-[3
+ [3
 
- <c:/texlive/texmf-local/tex/latex/utfprcptex2/brasao.png> <c:/texlive/texmf-lo
-cal/tex/latex/utfprcptex2/logo-utfpr.png>] (./modelo_dissertacao.mw)
+] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
@@ -2219,12 +2193,13 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 10.79993pt on input line 164.
 \openout4 = `modelo_dissertacao.mw'.
 
- [4
+
+[4
 
 
 
-]
-(./modelo_dissertacao.mw)
+
+] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 \openout4 = `modelo_dissertacao.mw'.
@@ -2290,23 +2265,6 @@ LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
 \openout4 = `modelo_dissertacao.mw'.
 
  (./capitulo1/cap1.tex
-\openout4 = `modelo_dissertacao.mw'.
-
-
-[10
-
-
-] (./modelo_dissertacao.mw)
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 21.
 
 (c:/texlive/2017/texmf-dist/tex/latex/psnfss/omsphv.fd
@@ -2314,6 +2272,29 @@ File: omsphv.fd
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 24.
+\openout4 = `modelo_dissertacao.mw'.
+
+ [10
+
+
+]
+(./modelo_dissertacao.mw)
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
+\openout4 = `modelo_dissertacao.mw'.
+
 
 
 LaTeX Warning: Reference `cap4' on page 11 undefined on input line 31.
@@ -2322,10 +2303,6 @@ LaTeX Warning: Reference `cap4' on page 11 undefined on input line 31.
 \openout4 = `modelo_dissertacao.mw'.
 
  [11] (./modelo_dissertacao.mw)
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
 \openout4 = `modelo_dissertacao.mw'.
 
 \openout4 = `modelo_dissertacao.mw'.
@@ -2340,7 +2317,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 34.
-<figuras/projetograos_ver1.jpg, id=275, 1954.30125pt x 1386.17876pt>
+<figuras/projetograos_ver1.jpg, id=270, 1954.30125pt x 1386.17876pt>
 File: figuras/projetograos_ver1.jpg Graphic file (type jpg)
 <use figuras/projetograos_ver1.jpg>
 Package pdftex.def Info: figuras/projetograos_ver1.jpg  used on input line 37.
@@ -2355,7 +2332,7 @@ Package pdftex.def Info: figuras/projetograos_ver1.jpg  used on input line 37.
  [14 <./figuras/projetograos_ver1.jpg>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/graficoBarras.png, id=304, 426.84468pt x 460.72125pt>
+<figuras/graficoBarras.png, id=299, 426.84468pt x 460.72125pt>
 File: figuras/graficoBarras.png Graphic file (type png)
 <use figuras/graficoBarras.png>
 Package pdftex.def Info: figuras/graficoBarras.png  used on input line 71.
@@ -2365,7 +2342,7 @@ Package pdftex.def Info: figuras/graficoBarras.png  used on input line 71.
  [15] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/graficosPizza.png, id=317, 604.50844pt x 368.87813pt>
+<figuras/graficosPizza.png, id=313, 604.50844pt x 368.87813pt>
 File: figuras/graficosPizza.png Graphic file (type png)
 <use figuras/graficosPizza.png>
 Package pdftex.def Info: figuras/graficosPizza.png  used on input line 89.
@@ -2385,33 +2362,28 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 107.
-
-
-LaTeX Warning: Citation `pwaPete' on page 18 undefined on input line 111.
-
-
-LaTeX Warning: Citation `pwaPete' on page 18 undefined on input line 113.
-
 ) (./capitulo3/cap3.tex
 \openout4 = `modelo_dissertacao.mw'.
 
- [18] (./modelo_dissertacao.mw)
-\openout4 = `modelo_dissertacao.mw'.
-
-\openout4 = `modelo_dissertacao.mw'.
-
- [19]
+ [18]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/kanbangithub.jpg, id=345, 1120.185pt x 659.46375pt>
+
+
+LaTeX Warning: Citation `pwaPete' on page 19 undefined on input line 15.
+
+
+LaTeX Warning: Citation `pwaPete' on page 19 undefined on input line 17.
+
+<figuras/kanbangithub.jpg, id=337, 1120.185pt x 659.46375pt>
 File: figuras/kanbangithub.jpg Graphic file (type jpg)
 <use figuras/kanbangithub.jpg>
-Package pdftex.def Info: figuras/kanbangithub.jpg  used on input line 22.
+Package pdftex.def Info: figuras/kanbangithub.jpg  used on input line 27.
 (pdftex.def)             Requested size: 455.24411pt x 268.00711pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [20
+[19
 
 ] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
@@ -2426,118 +2398,124 @@ Package pdftex.def Info: figuras/kanbangithub.jpg  used on input line 22.
 
 \openout4 = `modelo_dissertacao.mw'.
 
- [21 <./figuras/kanbangithub.jpg>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/Deploy.png, id=370, 776.9025pt x 582.67688pt>
+\openout4 = `modelo_dissertacao.mw'.
+
+ [20 <./figuras/kanbangithub.jpg>]
+(./modelo_dissertacao.mw)
+\openout4 = `modelo_dissertacao.mw'.
+
+<figuras/Deploy.png, id=362, 776.9025pt x 582.67688pt>
 File: figuras/Deploy.png Graphic file (type png)
 <use figuras/Deploy.png>
-Package pdftex.def Info: figuras/Deploy.png  used on input line 57.
+Package pdftex.def Info: figuras/Deploy.png  used on input line 62.
 (pdftex.def)             Requested size: 455.24411pt x 341.43806pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [22] (./modelo_dissertacao.mw)
+ [21] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/classdiagrama.png, id=377, 853.1875pt x 652.4375pt>
+<figuras/classdiagrama.png, id=369, 853.1875pt x 652.4375pt>
 File: figuras/classdiagrama.png Graphic file (type png)
 <use figuras/classdiagrama.png>
-Package pdftex.def Info: figuras/classdiagrama.png  used on input line 67.
+Package pdftex.def Info: figuras/classdiagrama.png  used on input line 72.
 (pdftex.def)             Requested size: 455.24411pt x 348.1397pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [23 <./figuras/Deploy.png>] (./modelo_dissertacao.mw)
+ [22 <./figuras/Deploy.png>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/classdiagramb.png, id=383, 981.6675pt x 630.355pt>
+<figuras/classdiagramb.png, id=375, 981.6675pt x 630.355pt>
 File: figuras/classdiagramb.png Graphic file (type png)
 <use figuras/classdiagramb.png>
-Package pdftex.def Info: figuras/classdiagramb.png  used on input line 75.
+Package pdftex.def Info: figuras/classdiagramb.png  used on input line 80.
 (pdftex.def)             Requested size: 455.24411pt x 292.32333pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [24 <./figuras/classdiagrama.png (PNG copy)>] (./modelo_dissertacao.mw)
+ [23 <./figuras/classdiagrama.png (PNG copy)>]
+(./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/classdiagramc.png, id=389, 1043.9pt x 663.47874pt>
+<figuras/classdiagramc.png, id=380, 1043.9pt x 663.47874pt>
 File: figuras/classdiagramc.png Graphic file (type png)
 <use figuras/classdiagramc.png>
-Package pdftex.def Info: figuras/classdiagramc.png  used on input line 83.
+Package pdftex.def Info: figuras/classdiagramc.png  used on input line 88.
 (pdftex.def)             Requested size: 455.24411pt x 289.33983pt.
 
-Underfull \hbox (badness 2635) in paragraph at lines 88--89
+Underfull \hbox (badness 2635) in paragraph at lines 93--94
 []\T1/phv/m/n/12 (+20) Nas Fi-gu-ras [][]6[][], [][]7[][], [][]8[][] é pos-sí-v
 el vi-su-a-li-zar as clas-ses que par-ti-ci-pa-rão da
  []
 
 \openout4 = `modelo_dissertacao.mw'.
 
-[25 <./figuras/classdiagramb.png (PNG copy)> <./figuras/classdiagramc.png (PNG 
+[24 <./figuras/classdiagramb.png (PNG copy)> <./figuras/classdiagramc.png (PNG 
 copy)>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/communicationdiagram.png, id=398, 1023.825pt x 772.38562pt>
+<figuras/communicationdiagram.png, id=390, 1023.825pt x 772.38562pt>
 File: figuras/communicationdiagram.png Graphic file (type png)
 <use figuras/communicationdiagram.png>
 Package pdftex.def Info: figuras/communicationdiagram.png  used on input line 9
-4.
+9.
 (pdftex.def)             Requested size: 455.24411pt x 343.43355pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [26 <./figuras/communicationdiagram.png>]
+ [25 <./figuras/communicationdiagram.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/livreto.jpg, id=410, 484.81125pt x 688.07062pt>
+<figuras/livreto.jpg, id=402, 484.81125pt x 688.07062pt>
 File: figuras/livreto.jpg Graphic file (type jpg)
 <use figuras/livreto.jpg>
-Package pdftex.def Info: figuras/livreto.jpg  used on input line 112.
+Package pdftex.def Info: figuras/livreto.jpg  used on input line 117.
 (pdftex.def)             Requested size: 142.26378pt x 201.90816pt.
-<figuras/planilha.jpg, id=412, 1416.04031pt x 514.17094pt>
+<figuras/planilha.jpg, id=404, 1416.04031pt x 514.17094pt>
 File: figuras/planilha.jpg Graphic file (type jpg)
 <use figuras/planilha.jpg>
-Package pdftex.def Info: figuras/planilha.jpg  used on input line 123.
+Package pdftex.def Info: figuras/planilha.jpg  used on input line 128.
 (pdftex.def)             Requested size: 455.24411pt x 165.29909pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [27 <./figuras/livreto.jpg>] (./modelo_dissertacao.mw)
+ [26 <./figuras/livreto.jpg>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/prot_home1_menu.png, id=419, 1371.1225pt x 770.88pt>
+<figuras/prot_home1_menu.png, id=411, 1371.1225pt x 770.88pt>
 File: figuras/prot_home1_menu.png Graphic file (type png)
 <use figuras/prot_home1_menu.png>
-Package pdftex.def Info: figuras/prot_home1_menu.png  used on input line 133.
+Package pdftex.def Info: figuras/prot_home1_menu.png  used on input line 138.
 (pdftex.def)             Requested size: 455.24411pt x 255.94386pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [28 <./figuras/planilha.jpg> <./figuras/prot_home1_menu.png>]
+ [27 <./figuras/planilha.jpg> <./figuras/prot_home1_menu.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 \openout4 = `modelo_dissertacao.mw'.
 
- [29] (./modelo_dissertacao.mw)
+ [28] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/CasoDeUso.png, id=438, 496.85625pt x 593.21625pt>
+<figuras/CasoDeUso.png, id=430, 496.85625pt x 593.21625pt>
 File: figuras/CasoDeUso.png Graphic file (type png)
 <use figuras/CasoDeUso.png>
-Package pdftex.def Info: figuras/CasoDeUso.png  used on input line 263.
+Package pdftex.def Info: figuras/CasoDeUso.png  used on input line 268.
 (pdftex.def)             Requested size: 284.52756pt x 339.71178pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [30]
+ [29]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/home1_no_graph.png, id=444, 1444.64719pt x 706.13812pt>
+<figuras/home1_no_graph.png, id=435, 1444.64719pt x 706.13812pt>
 File: figuras/home1_no_graph.png Graphic file (type png)
 <use figuras/home1_no_graph.png>
-Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 278.
+Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 283.
 (pdftex.def)             Requested size: 455.24411pt x 222.52087pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [31 <./figuras/CasoDeUso.png>]
+ [30 <./figuras/CasoDeUso.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2545,97 +2523,97 @@ Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 278.
 
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/menu-acao.png, id=451, 562.1pt x 352.31625pt>
+<figuras/menu-acao.png, id=443, 562.1pt x 352.31625pt>
 File: figuras/menu-acao.png Graphic file (type png)
 <use figuras/menu-acao.png>
-Package pdftex.def Info: figuras/menu-acao.png  used on input line 291.
+Package pdftex.def Info: figuras/menu-acao.png  used on input line 296.
 (pdftex.def)             Requested size: 455.24411pt x 285.34233pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [32 <./figuras/home1_no_graph.png>]
+ [31 <./figuras/home1_no_graph.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/contadores.png, id=458, 929.72343pt x 100.12407pt>
+<figuras/contadores.png, id=450, 929.72343pt x 100.12407pt>
 File: figuras/contadores.png Graphic file (type png)
 <use figuras/contadores.png>
-Package pdftex.def Info: figuras/contadores.png  used on input line 303.
+Package pdftex.def Info: figuras/contadores.png  used on input line 308.
 (pdftex.def)             Requested size: 455.24411pt x 49.02608pt.
-<figuras/filtros.png, id=460, 682.04813pt x 262.73157pt>
+<figuras/filtros.png, id=452, 682.04813pt x 262.73157pt>
 File: figuras/filtros.png Graphic file (type png)
 <use figuras/filtros.png>
-Package pdftex.def Info: figuras/filtros.png  used on input line 315.
+Package pdftex.def Info: figuras/filtros.png  used on input line 320.
 (pdftex.def)             Requested size: 455.24411pt x 175.36774pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [33 <./figuras/menu-acao.png> <./figuras/contadores.png>] (./modelo_dissertaca
+ [32 <./figuras/menu-acao.png> <./figuras/contadores.png>] (./modelo_dissertaca
 o.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/abas.png, id=467, 181.42781pt x 57.96657pt>
+<figuras/abas.png, id=459, 181.42781pt x 57.96657pt>
 File: figuras/abas.png Graphic file (type png)
 <use figuras/abas.png>
-Package pdftex.def Info: figuras/abas.png  used on input line 326.
+Package pdftex.def Info: figuras/abas.png  used on input line 331.
 (pdftex.def)             Requested size: 199.16928pt x 63.63603pt.
-<figuras/tabela-lagartas.png, id=469, 676.02562pt x 249.18094pt>
+<figuras/tabela-lagartas.png, id=461, 676.02562pt x 249.18094pt>
 File: figuras/tabela-lagartas.png Graphic file (type png)
 <use figuras/tabela-lagartas.png>
-Package pdftex.def Info: figuras/tabela-lagartas.png  used on input line 338.
+Package pdftex.def Info: figuras/tabela-lagartas.png  used on input line 343.
 (pdftex.def)             Requested size: 455.24411pt x 167.80583pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [34 <./figuras/filtros.png> <./figuras/abas.png>] (./modelo_dissertacao.mw)
+ [33 <./figuras/filtros.png> <./figuras/abas.png>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/grafico_barras_lagartas.png, id=477, 673.76718pt x 408.02437pt>
+<figuras/grafico_barras_lagartas.png, id=469, 673.76718pt x 408.02437pt>
 File: figuras/grafico_barras_lagartas.png Graphic file (type png)
 <use figuras/grafico_barras_lagartas.png>
 Package pdftex.def Info: figuras/grafico_barras_lagartas.png  used on input lin
-e 350.
+e 355.
 (pdftex.def)             Requested size: 455.24411pt x 275.69096pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [35 <./figuras/tabela-lagartas.png>]
+ [34 <./figuras/tabela-lagartas.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/grafico_pizza_percevejos.png, id=484, 676.02562pt x 407.27156pt>
+<figuras/grafico_pizza_percevejos.png, id=476, 676.02562pt x 407.27156pt>
 File: figuras/grafico_pizza_percevejos.png Graphic file (type png)
 <use figuras/grafico_pizza_percevejos.png>
 Package pdftex.def Info: figuras/grafico_pizza_percevejos.png  used on input li
-ne 362.
+ne 367.
 (pdftex.def)             Requested size: 455.24411pt x 274.26877pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [36 <./figuras/grafico_barras_lagartas.png>]
+ [35 <./figuras/grafico_barras_lagartas.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 373.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 378.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 373.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 378.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 8.99994pt on input line 373.
-<figuras/home1_celular_1.png, id=492, 1224.575pt x 960.58875pt>
+(Font)              scaled to size 8.99994pt on input line 378.
+<figuras/home1_celular_1.png, id=483, 1224.575pt x 960.58875pt>
 File: figuras/home1_celular_1.png Graphic file (type png)
 <use figuras/home1_celular_1.png>
-Package pdftex.def Info: figuras/home1_celular_1.png  used on input line 375.
+Package pdftex.def Info: figuras/home1_celular_1.png  used on input line 380.
 (pdftex.def)             Requested size: 455.24411pt x 357.09787pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [37 <./figuras/grafico_pizza_percevejos.png>]
+ [36 <./figuras/grafico_pizza_percevejos.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/pwa.jpg, id=499, 4679.4825pt x 1927.2pt>
+<figuras/pwa.jpg, id=491, 4679.4825pt x 1927.2pt>
 File: figuras/pwa.jpg Graphic file (type jpg)
 <use figuras/pwa.jpg>
-Package pdftex.def Info: figuras/pwa.jpg  used on input line 387.
+Package pdftex.def Info: figuras/pwa.jpg  used on input line 392.
 (pdftex.def)             Requested size: 455.24411pt x 187.4675pt.
 \openout4 = `modelo_dissertacao.mw'.
 
- [38 <./figuras/home1_celular_1.png>]
+ [37 <./figuras/home1_celular_1.png>]
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2643,7 +2621,7 @@ Package pdftex.def Info: figuras/pwa.jpg  used on input line 387.
 \openout4 = `modelo_dissertacao.mw'.
 
 
-[39 <./figuras/pwa.jpg>] (./modelo_dissertacao.mw)
+[38 <./figuras/pwa.jpg>] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 ) (./modelo_dissertacao.bbl
@@ -2653,7 +2631,7 @@ Package pdftex.def Info: figuras/pwa.jpg  used on input line 387.
 
 \openout4 = `modelo_dissertacao.mw'.
 
- [40
+ [39
 
 ] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
@@ -2682,7 +2660,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 96--96
 
 \openout4 = `modelo_dissertacao.mw'.
 
-[41
+[40
 
 ] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
@@ -2693,7 +2671,7 @@ ssertacao.glg -o modelo_dissertacao.gls)...executed safely (allowed).
 
 \openout4 = `modelo_dissertacao.mw'.
 
- [42] (./modelo_dissertacao.mw)
+ [41] (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
 
@@ -3241,7 +3219,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
 \openout4 = `modelo_dissertacao.brf'.
 
 Package rerunfilecheck Info: File `modelo_dissertacao.brf' has not changed.
-(rerunfilecheck)             Checksum: 33FDFA430CE4AF38ED6C98A1150EEE6F;1924.
+(rerunfilecheck)             Checksum: DEB826861D7A5F06A1F08003C549A9BC;1938.
 
 
 LaTeX Warning: There were undefined references.
@@ -3270,13 +3248,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
 
  ) 
 Here is how much of TeX's memory you used:
- 46697 strings out of 492982
- 863824 string characters out of 6136225
- 1169885 words of memory out of 5000000
- 49010 multiletter control sequences out of 15000+600000
- 584771 words of font info for 211 fonts, out of 8000000 for 9000
+ 46679 strings out of 492982
+ 863582 string characters out of 6136225
+ 1170012 words of memory out of 5000000
+ 49003 multiletter control sequences out of 15000+600000
+ 584143 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,17n,102p,10398b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,13n,102p,10398b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section*.40} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -3288,10 +3266,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/hel
 vetic/uhvbo8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on modelo_dissertacao.pdf (43 pages, 5142172 bytes).
+Output written on modelo_dissertacao.pdf (42 pages, 4848949 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
- 703 compressed objects within 8 object streams
- 158 named destinations out of 1000 (max. 500000)
- 24143 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 790 PDF objects out of 1000 (max. 8388607)
+ 697 compressed objects within 7 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 24133 words of extra memory for PDF output out of 24883 (max. 10000000)
 
