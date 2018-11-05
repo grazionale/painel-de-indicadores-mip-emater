@@ -1150,10 +1150,6 @@ $(function(){
     //Percevejos
     //gerarGraficoPizzaDistribuicaoPercentualPercevejosNoParana();
 
-    //Extras, contadores, arrumar um local correto para colocar as funções depois
-    totalareacultivada();
-    numero_de_unidades_de_referencia();
-    numero_de_analises_realizadas();
 
 });
 
