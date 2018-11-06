@@ -53,17 +53,20 @@ O \textit{Wireframe} pode ser usado no início do projeto para representar o ente
 Segundo \cite{pressman2009engenharia}, "Arquitetura é um conjunto de artefatos que refletem diferentes visões do sistema". Na descrição arquitetural da aplicação, será utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si \cite{guedesuml} e diagrama de deploy para representar como a aplicação está distribuída. Cada um desses diagramas representam um tipo de visão do sistema, onde cada uma das visões é necessária segundo a perspectiva do interessado \cite{pressman2009engenharia}.
 \end{comment}
 
-Para representar a descrição arquitetural da aplicação, foi utilizado diagrama de classes para definir como as classes se comunicam e trocam informações, diagramas de comunicação para representar quais mensagens os elementos trocam entre si e diagrama de \textit{deploy} para representar como a aplicação está distribuída.
+Para representar a descrição arquitetural da aplicação, foi utilizado diagramas de comunicação para representar quais mensagens os elementos trocam entre si e o diagrama de \textit{deploy} para representar como a aplicação está distribuída. Além disso, será apresentado uma visualização resumida de como é o JSON que a API REST gera para a coleta dos dados.
 
 \subsection{Diagrama de Deploy}
 \begin{figure}[H]
 	\caption{Diagrama de Deploy da Aplicação}	
 	\centering
-	\includegraphics[width=\textwidth]{figuras/Deploy.png}
+	\includegraphics[width=\textwidth]{figuras/Deploy.jpeg}
 	\fonte{Autoria Própria}
 	\label{fig:deploy}
 \end{figure}
-Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em um servidor web, um repositório do Github. Essa aplicação receberá acesso de usuários por meio de seus navegadores pelo protocolo HTTPS. Além disso, as coletas dos dados serão feitas por uma API REST. 
+Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em um servidor web, um repositório do Github, onde contém um "index.html"\ responsável por iniciar a aplicação, e uma pasta nomeda "dist"\, que contém duas sub-pastas, "style"\ e "js", responsáveis pelo armazenamento das folhas de estilo e das bibliotecas Javascript, respectivamente. Essa aplicação receberá acesso de usuários por meio de seus navegadores pelo protocolo HTTPS. Além disso, as coletas dos dados serão feitas por uma API REST. 
+
+\begin{comment}
+	conteúdo...
 
 \subsection{Diagrama de Classes}
 \begin{figure}[H]
@@ -91,7 +94,7 @@ Na Figura \ref{fig:deploy} é possível observar que a aplicação está hospedada em
 \end{figure}		
 
 Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possível visualizar as classes que participarão da \linebreak aplicação e suas relações. Neste versão da aplicação o diagrama de classes foi utilizado como um guia para a criação do formato da estrutura do arquivo "dados.json"\ localizado em \linebreak \url{https://grazionale.github.io/dados.json} que serviu como API. 
-
+\end{comment}
 \subsection{Diagrama de Comunicação}
 \begin{figure}[H]
 	\caption{Diagrama de Comunicação}	
@@ -104,6 +107,20 @@ Nas Figuras \ref{fig:classesA}, \ref{fig:classesB}, \ref{fig:classesC} é possíve
 Na Figura \ref{fig:comunicacao} é possível observar uma ilustração da sequência de atividades que participam da geração de gráficos, a partir de filtros escolhidos pelo usuário. 
 
 A princípio, o usuário entrará na aplicação, escolherá alguns filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da unidade de referência, cultivar, seleciona se a soja é bt ou não bt e se possuí ou não resistência a ferrugem. O único filtro obrigatório é o ano da safra. Após as escolhas das opções, uma requisição para API REST será realizada, a requisição retornará os dados no formato JSON e os gráficos e tabelas serão apresentados na tela do usuário. 
+
+\subsection{Estrutura do arquivo JSON}
+
+\begin{figure}[H]
+	\caption{Arquivo JSON}	
+	\centering
+	\includegraphics[width=\textwidth]{figuras/json.jpg} 
+	\fonte{Autoria Própria}
+	\label{fig:json}
+\end{figure}
+
+Na Figura \ref{fig:json} é apresentado a estrutura dos dados que a API REST gerou para ser utilizada por esta aplicação. 
+
+Na  área A é possível observar os dados referentes aos proprietários das UR', na área B os dados fazem referência ao espaço que houve a realização das análises, na área C e D temos informações do proprietário da UR e dos técnicos envolvidos na coleta. Por fim, a área D mostra todas as análises que foram realizadas em uma unidade de referência, sendo possível visualizar dados referentes a soja na data da análise e dados sobre a praga.  
 
 \section{Requisitos}
 \label{sec:caprequisitos}

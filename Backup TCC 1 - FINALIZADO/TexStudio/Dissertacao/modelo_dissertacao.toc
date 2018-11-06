@@ -36,27 +36,27 @@
 \contentsline {subsection}{\numberline {3.2.4}\textit {Wireframes}}{21}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Arquitetura do Aplicativo}{21}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Diagrama de Deploy}{22}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Diagrama de Classes}{23}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Diagrama de Comunica\c c\~ao}{25}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Requisitos}{26}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Requisitos Funcionais}{28}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Requisitos N\~ao Funcionais}{29}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Diagramas de Caso de uso}{29}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Telas da Aplica\c c\~ao}{30}{subsection.3.4.4}
-\contentsline {subsubsection}{\numberline {3.4.4.1}Tela Inicial}{31}{subsubsection.3.4.4.1}
-\contentsline {subsubsection}{\numberline {3.4.4.2}Menu Lateral Expans\IeC {\'\i }vel}{32}{subsubsection.3.4.4.2}
-\contentsline {subsection}{\numberline {3.4.5}Contadores}{32}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Filtros}{33}{subsection.3.4.6}
-\contentsline {subsection}{\numberline {3.4.7}Abas para escolha de pragas}{33}{subsection.3.4.7}
-\contentsline {subsection}{\numberline {3.4.8}Tabela de Pragas - Lagartas}{34}{subsection.3.4.8}
-\contentsline {subsection}{\numberline {3.4.9}Gr\'afico de Barras - Lagartas}{35}{subsection.3.4.9}
-\contentsline {subsection}{\numberline {3.4.10}Gr\'afico de Composi\c c\~ao em Setores - Percevejos}{36}{subsection.3.4.10}
-\contentsline {subsection}{\numberline {3.4.11}Vers\~ao \textit {mobile} da aplica\c c\~ao}{37}{subsection.3.4.11}
-\contentsline {subsection}{\numberline {3.4.12}Demonstra\c c\~ao da instala\c c\~ao da aplica\c c\~ao (PWA)}{38}{subsection.3.4.12}
+\contentsline {subsection}{\numberline {3.3.2}Diagrama de Comunica\c c\~ao}{23}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Estrutura do arquivo JSON}{24}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Requisitos}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Requisitos Funcionais}{27}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Requisitos N\~ao Funcionais}{28}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Diagramas de Caso de uso}{28}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Telas da Aplica\c c\~ao}{29}{subsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.1}Tela Inicial}{30}{subsubsection.3.4.4.1}
+\contentsline {subsubsection}{\numberline {3.4.4.2}Menu Lateral Expans\IeC {\'\i }vel}{31}{subsubsection.3.4.4.2}
+\contentsline {subsection}{\numberline {3.4.5}Contadores}{31}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Filtros}{32}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Abas para escolha de pragas}{32}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Tabela de Pragas - Lagartas}{33}{subsection.3.4.8}
+\contentsline {subsection}{\numberline {3.4.9}Gr\'afico de Barras - Lagartas}{34}{subsection.3.4.9}
+\contentsline {subsection}{\numberline {3.4.10}Gr\'afico de Composi\c c\~ao em Setores - Percevejos}{35}{subsection.3.4.10}
+\contentsline {subsection}{\numberline {3.4.11}Vers\~ao \textit {mobile} da aplica\c c\~ao}{36}{subsection.3.4.11}
+\contentsline {subsection}{\numberline {3.4.12}Demonstra\c c\~ao da instala\c c\~ao da aplica\c c\~ao (PWA)}{37}{subsection.3.4.12}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Limita\c c\~oes}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Trabalhos Futuros}{39}{section.4.2}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {CONSIDERA\c C\~OES FINAIS}}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}Limita\c c\~oes}{38}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trabalhos Futuros}{38}{section.4.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{40}{section*.39}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{39}{section*.37}
