@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  6 NOV 2018 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  6 NOV 2018 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2406,11 +2406,11 @@ Package pdftex.def Info: figuras/kanbangithub.jpg  used on input line 27.
 (./modelo_dissertacao.mw)
 \openout4 = `modelo_dissertacao.mw'.
 
-<figuras/Deploy.jpeg, id=358, 930.47626pt x 578.16pt>
+<figuras/Deploy.jpeg, id=358, 560.99588pt x 588.54881pt>
 File: figuras/Deploy.jpeg Graphic file (type jpg)
 <use figuras/Deploy.jpeg>
 Package pdftex.def Info: figuras/Deploy.jpeg  used on input line 62.
-(pdftex.def)             Requested size: 455.24411pt x 282.86859pt.
+(pdftex.def)             Requested size: 455.24411pt x 477.61998pt.
 \openout4 = `modelo_dissertacao.mw'.
 
  [21] (./modelo_dissertacao.mw)
@@ -3219,7 +3219,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
 Here is how much of TeX's memory you used:
  46669 strings out of 492982
  863233 string characters out of 6136225
- 1168585 words of memory out of 5000000
+ 1167589 words of memory out of 5000000
  48996 multiletter control sequences out of 15000+600000
  584394 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3235,7 +3235,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/hel
 vetic/uhvbo8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on modelo_dissertacao.pdf (41 pages, 5072563 bytes).
+Output written on modelo_dissertacao.pdf (41 pages, 5091594 bytes).
 PDF statistics:
  775 PDF objects out of 1000 (max. 8388607)
  686 compressed objects within 7 object streams
