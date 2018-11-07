@@ -171,19 +171,17 @@ Requisitos funcionais são funcionalidades que o sistema deve possuir, como ele i
 	\\
 	\hline
 	\textbf{ID} & \textbf{FUNCIONALIDADE} & \textbf{PRIORIDADE} \\ \hline
-	RF 01 & Permitir a análise dos dados coletados no MIP. & Essencial  \\ \hline
-	RF 02 & Apresentar gráficos sobre a ocorrência dos 4 grupos de lagartas presentes no projeto MIP: \textit{Antiarisia Gematalis} (lagarta-da-soja), \textit{Chrysodeixis includens} (lagarta-falsa-medideira), \textit{Spodoptera spp} e Grupo Heliothinae. & Essencial  \\ \hline
-	RF 2.1 & Um gráfico representando a ocorrência das lagartas no PR e outros cinco gráficos que devem estar separados por regiões (Norte, Noroeste, Oeste, Sudoeste, Sul).
-	& Essencial  \\ \hline
-	RF 2.1.1 & A análise de lagartas deve ser representada por gráficos de barras mostrando o período no qual o MIP se encontra (0-30, 31-60, 61-150 dias) e a porcentagem de ocorrência das lagartas. & Essencial  \\ \hline
-	RF 2.1.2 & A análise de lagartas também deve ser representada por gráficos de composição em setores, representando o percentual do valor total de ocorrência das lagartas no período de 150 dias de aplicação MIP.  & Essencial  \\ \hline
-	RF 2.2 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja Bt (RR2). & Essencial  \\ \hline
-	RF 2.3 & Apresentar um gráfico em barras e um de composição em setores sobre a análise de lagartas em plantações cultivadas com soja não Bt (RR1). & Essencial  \\ \hline
-	RF 03 & Criar um gráfico de composição em setores para os grupos de percevejos (\textit{Nezara viridula}, \textit{Piezodorus guildinii}, \textit{Euschistus heros},\textit{Dichelops melacanthus	} e outros), representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades referências participantes do MIP. & Essencial  \\ \hline
-	RF 04 & Criar gráficos de composição em setores para os grupos de percevejos de acordo com as respectivas regiões, representando sua ocorrência durante o desenvolvimento da soja nas URs participantes. & Essencial  \\ \hline
-	RF 05 & Permitir uma filtragem das análises por regiões, pragas, cidades e ano. & Essencial  \\ \hline
-	RF 06 & Permitir que o usuário possa filtrar suas buscas através da concatenação de itens, como diferentes regiões e pragas. & Essencial  \\ \hline
-	RF 07 & Permitir que o usuário localize análises dos anos anteriores. & Essencial  \\ \hline
+	RF 01 & Permitir a análise sobre dados dos 4 grupos de lagartas coletados no MIP, sendo elas: \textit{Antiarisia Gematalis} (lagarta-da-soja), \textit{Chrysodeixis includens} (lagarta-falsa-medideira), \textit{Spodoptera spp} e Grupo Heliothinae. & Essencial  \\ \hline
+	RF 1.1 & Apresentar gráfico de barras sobre a ocorrência dos 4 grupos de lagartas presentes no programa MIP. & Essencial  \\ \hline
+	RF 1.2 & Apresentar uma tabela com os dados gerados pelo gráfico de barras sobre a ocorrência dos 4 grupos de lagartas presentes no programa MIP.
+	& Essencial	  \\ \hline
+	RF 1.3 & Apresentar um gráfico de composição em setores para os 4 grupos de lagartas, representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades de referência participantes do MIP. & Essencial  \\ \hline
+	RF 2 & Permitir a análise sobre dados dos grupos de percevejos coletados no MIP, sendo eles: \textit{Nezara viridula}, \textit{Piezodorus guildinii}, \textit{Euschistus heros},\ \textit{Dichelops melacanthus	} e outros.  & Essencial  \\ \hline
+	RF 2.1 & Apresentar gráfico de barras sobre a ocorrência dos grupos de percevejos presentes no programa MIP. & Essencial  \\ \hline
+	RF 2.2 & Apresentar uma tabela com os dados gerados pelo gráfico de barras sobre a ocorrência dos grupos de percevejos presentes no programa MIP. & Essencial  \\ \hline
+	RF 2.3 & Apresentar um gráfico de composição em setores para os grupos de percevejos, representando a distribuição percentual de suas ocorrências no Paraná durante o ciclo do desenvolvimento da soja nas unidades de referência participantes do MIP. & Essencial  \\ \hline
+	RF 3 & Os gráficos de barras devem apresentar dados referentes ao período que o MIP se encontra, sendo eles de: 0-30 dias, 31-60 dias e 61-150 dias. & Essencial  \\ \hline
+	RF 04 & Deve haver a possibilidade da geração das análises por meio de filtros, sendo eles: ano da safra, região, município, produtor, período da amostra, responsável técnico, identificação da UR, cultivar, soja bt ou não bt, plantação com resistência ou não a ferrugem.  & Essencial  \\ \hline
 \end{longtable}
 
 
@@ -268,8 +266,7 @@ Requisitos não funcionais são restrições as funcionalidades que o sistema fornec
 		RFN 02 & A aplicação deverá realizar a interação com os usuários por meio de navegadores web.  & Essencial \\ \hline
 		RFN 03 & A aplicação deverá estar hospedada em um servidor online. & Desejável  \\ \hline
 		RFN 04 & A aplicação deverá ser responsiva permitindo o acesso por meio de dispositivos móveis ou desktops/notebooks. & Essencial  \\ \hline
-		RFN 05 & Dados das UR's que participam do MIP e de seus proprietários, não poderam ser acessados por usuários sem permissões. & Essencial \\ \hline
-		RFN 06 & A aplicação deverá funcionar \textit{offline} caso o usuário opte em instalar em seu dispositivo. & Desejável \\ \hline	
+		RFN 05 & A aplicação deverá funcionar \textit{offline} caso o usuário opte em instalar em seu dispositivo. & Desejável \\ \hline	
 	\end{tabular}
 \end{table}
 

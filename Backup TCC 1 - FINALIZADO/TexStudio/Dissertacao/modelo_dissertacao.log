@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  6 NOV 2018 00:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.10)  7 NOV 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2479,7 +2479,7 @@ tacao.mw)
 <figuras/CasoDeUso.png, id=416, 496.85625pt x 593.21625pt>
 File: figuras/CasoDeUso.png Graphic file (type png)
 <use figuras/CasoDeUso.png>
-Package pdftex.def Info: figuras/CasoDeUso.png  used on input line 284.
+Package pdftex.def Info: figuras/CasoDeUso.png  used on input line 281.
 (pdftex.def)             Requested size: 284.52756pt x 339.71178pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2489,7 +2489,7 @@ Package pdftex.def Info: figuras/CasoDeUso.png  used on input line 284.
 <figuras/home1_no_graph.png, id=421, 1444.64719pt x 706.13812pt>
 File: figuras/home1_no_graph.png Graphic file (type png)
 <use figuras/home1_no_graph.png>
-Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 299.
+Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 296.
 (pdftex.def)             Requested size: 455.24411pt x 222.52087pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2503,7 +2503,7 @@ Package pdftex.def Info: figuras/home1_no_graph.png  used on input line 299.
 <figuras/menu-acao.png, id=428, 562.1pt x 352.31625pt>
 File: figuras/menu-acao.png Graphic file (type png)
 <use figuras/menu-acao.png>
-Package pdftex.def Info: figuras/menu-acao.png  used on input line 316.
+Package pdftex.def Info: figuras/menu-acao.png  used on input line 313.
 (pdftex.def)             Requested size: 455.24411pt x 285.34233pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2514,12 +2514,12 @@ Package pdftex.def Info: figuras/menu-acao.png  used on input line 316.
 <figuras/contadores.png, id=436, 929.72343pt x 100.12407pt>
 File: figuras/contadores.png Graphic file (type png)
 <use figuras/contadores.png>
-Package pdftex.def Info: figuras/contadores.png  used on input line 328.
+Package pdftex.def Info: figuras/contadores.png  used on input line 325.
 (pdftex.def)             Requested size: 455.24411pt x 49.02608pt.
 <figuras/filtros.png, id=438, 682.04813pt x 262.73157pt>
 File: figuras/filtros.png Graphic file (type png)
 <use figuras/filtros.png>
-Package pdftex.def Info: figuras/filtros.png  used on input line 340.
+Package pdftex.def Info: figuras/filtros.png  used on input line 337.
 (pdftex.def)             Requested size: 455.24411pt x 175.36774pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2530,12 +2530,12 @@ o.mw)
 <figuras/abas.png, id=445, 181.42781pt x 57.96657pt>
 File: figuras/abas.png Graphic file (type png)
 <use figuras/abas.png>
-Package pdftex.def Info: figuras/abas.png  used on input line 351.
+Package pdftex.def Info: figuras/abas.png  used on input line 348.
 (pdftex.def)             Requested size: 199.16928pt x 63.63603pt.
 <figuras/tabela-lagartas.png, id=447, 676.02562pt x 249.18094pt>
 File: figuras/tabela-lagartas.png Graphic file (type png)
 <use figuras/tabela-lagartas.png>
-Package pdftex.def Info: figuras/tabela-lagartas.png  used on input line 363.
+Package pdftex.def Info: figuras/tabela-lagartas.png  used on input line 360.
 (pdftex.def)             Requested size: 455.24411pt x 167.80583pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2546,7 +2546,7 @@ Package pdftex.def Info: figuras/tabela-lagartas.png  used on input line 363.
 File: figuras/grafico_barras_lagartas.png Graphic file (type png)
 <use figuras/grafico_barras_lagartas.png>
 Package pdftex.def Info: figuras/grafico_barras_lagartas.png  used on input lin
-e 375.
+e 372.
 (pdftex.def)             Requested size: 455.24411pt x 275.69096pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2558,7 +2558,7 @@ e 375.
 File: figuras/grafico_pizza_percevejos.png Graphic file (type png)
 <use figuras/grafico_pizza_percevejos.png>
 Package pdftex.def Info: figuras/grafico_pizza_percevejos.png  used on input li
-ne 387.
+ne 384.
 (pdftex.def)             Requested size: 455.24411pt x 274.26877pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2567,15 +2567,15 @@ ne 387.
 \openout4 = `modelo_dissertacao.mw'.
 
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 398.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 395.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 398.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 395.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 8.99994pt on input line 398.
+(Font)              scaled to size 8.99994pt on input line 395.
 <figuras/home1_celular_1.png, id=469, 1224.575pt x 960.58875pt>
 File: figuras/home1_celular_1.png Graphic file (type png)
 <use figuras/home1_celular_1.png>
-Package pdftex.def Info: figuras/home1_celular_1.png  used on input line 400.
+Package pdftex.def Info: figuras/home1_celular_1.png  used on input line 397.
 (pdftex.def)             Requested size: 455.24411pt x 357.09787pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -2586,7 +2586,7 @@ Package pdftex.def Info: figuras/home1_celular_1.png  used on input line 400.
 <figuras/pwa.jpg, id=476, 4679.4825pt x 1927.2pt>
 File: figuras/pwa.jpg Graphic file (type jpg)
 <use figuras/pwa.jpg>
-Package pdftex.def Info: figuras/pwa.jpg  used on input line 412.
+Package pdftex.def Info: figuras/pwa.jpg  used on input line 409.
 (pdftex.def)             Requested size: 455.24411pt x 187.4675pt.
 \openout4 = `modelo_dissertacao.mw'.
 
@@ -3217,11 +3217,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
 
  ) 
 Here is how much of TeX's memory you used:
- 46669 strings out of 492982
- 863233 string characters out of 6136225
- 1167589 words of memory out of 5000000
+ 46666 strings out of 492982
+ 863209 string characters out of 6136225
+ 1165591 words of memory out of 5000000
  48996 multiletter control sequences out of 15000+600000
- 584394 words of font info for 209 fonts, out of 8000000 for 9000
+ 584269 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,13n,102p,10398b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section*.38} has been referenced but does not exi
@@ -3235,7 +3235,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/hel
 vetic/uhvbo8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on modelo_dissertacao.pdf (41 pages, 5091594 bytes).
+Output written on modelo_dissertacao.pdf (41 pages, 5091071 bytes).
 PDF statistics:
  775 PDF objects out of 1000 (max. 8388607)
  686 compressed objects within 7 object streams
