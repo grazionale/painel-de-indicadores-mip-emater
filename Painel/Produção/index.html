@@ -214,8 +214,8 @@
                         <i class="fa fa-fw fa-bar-chart"></i>
                       </span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Nº Análises</span>
-                        <span class="info-box-text">Realizadas: </span>
+                        <span class="info-box-text">Nº </span>
+                        <span class="info-box-text">Análises</span>
                         <span class="info-box-number" id="num_analises"></span>
                       </div>
                     </div>
@@ -226,8 +226,8 @@
                         <i class="fa fa-fw fa-road"></i>
                       </span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Nº de Unidades</span>
-                        <span class="info-box-text">De Referência: </span>
+                        <span class="info-box-text">Nº de</span>
+                        <span class="info-box-text">UR's</span>
                         <span class="info-box-number" id="num_un_ref"></span>
                       </div>
                     </div>
@@ -238,8 +238,8 @@
                         <i class="fa fa-fw fa-area-chart"></i>
                       </span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Total de Área</span>
-                        <span class="info-box-text">Cultivada: </span>
+                        <span class="info-box-text">Área</span>
+                        <span class="info-box-text">Cultivada</span>
                         <span class="info-box-number" id="total_area_cultivada"></span>
                       </div>
                     </div>
@@ -250,9 +250,9 @@
                         <i class="fa fa-bug"></i>
                       </span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Quantidade de </span>
-                        <span class="info-box-text">Lagartas: </span>
-                        <span class="info-box-number">41,410</span>
+                        <span class="info-box-text">Nº de </span>
+                        <span class="info-box-text">Pragas: </span>
+                        <span class="info-box-number" id="total_num_pragas">41410</span>
                       </div>
                     </div>
                   </div>
@@ -296,9 +296,12 @@
                                   <option value="Todas" selected="selected">Todas</option>
                                   <option value="Norte">Norte</option>
                                   <option value="Noroeste">Noroeste</option>
+                                  <option value="Noroeste">Nordeste</option>
                                   <option value="Sul">Sul</option>
                                   <option value="Sudoeste">Sudoeste</option>
+                                  <option value="Sudoeste">Sudeste</option>
                                   <option value="Oeste">Oeste</option>
+                                  <option value="Oeste">Leste</option>
                                 </select>
 
                                 <!-- <input type="checkbox" name="todas" value="Todas" id="regiao-todas-safra" checked
@@ -338,7 +341,12 @@
                                 <label>Produtor</label>
                               </div>
                               <div class="col-xs-8">
-                                <input type="text" id="produtor-safra" class="form-control" placeholder="Produtor">
+                                <select id="produtor-safra" class="select-basic-single form-control">
+                                  <option value="Todos">Todos</option>
+                                  <option value="LUIZ ARCANGELO GIORDANI">LUIZ ARCANGELO GIORDANI</option>
+                                  <option value="Dono da Fazenda de Cornélio">Dono da Fazenda de Cornélio</option>
+                                </select>
+
                               </div>
 
                             </div>
@@ -380,7 +388,11 @@
                                 <label>Identificação da UR</label>
                               </div>
                               <div class="col-xs-8">
-                                <input type="text" id="id-ur" class="form-control">
+                                <select id="id-ur" class="form-control select-basic-single">
+                                    <option value="Todos">Todos</option>
+                                    <option value="MIP E MID">MIP E MID</option>
+                                    <option value="Carnieletto">Carnieletto</option>
+                                  </select>
                               </div>
                             </div>
 

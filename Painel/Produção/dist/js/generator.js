@@ -791,6 +791,5 @@ $(function(){
     //buscarTipoSoja();
     //console.log(gerarDadosPorFase("primeira"));
     //console.log(gerarDadosPorFaseETipoDeSoja("primeira", false));
-
 });
 

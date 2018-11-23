@@ -30,3 +30,11 @@ function numero_de_analises_realizadas(){
     $("#num_analises").text(num_analises);
     //console.log(num_analises);
 }
+
+
+$(function(){
+    //Counters
+    totalareacultivada();
+    numero_de_unidades_de_referencia();
+    numero_de_analises_realizadas();
+});

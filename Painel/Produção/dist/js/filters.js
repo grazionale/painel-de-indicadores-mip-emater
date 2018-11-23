@@ -279,6 +279,7 @@ function filterByCounty(name_county, dados) {
 }
 //Retorna um objeto apenas com análises de um produtor específico
 function filterByProducer(name_producer, dados) {
+    console.log(name_producer);
     if (dados == "" || dados == null) {
         var data = JSON.parse(localStorage.getItem("dados"));
     } else {
@@ -309,6 +310,7 @@ function filterByProducer(name_producer, dados) {
 
     //console.log(producer);
     return producer;
+    
 }
 //Retorna um objeto apenas com análises de um responsável técnico específico
 function filterByTechnical(name_technical, dados) {
